@@ -154,6 +154,9 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
       box-shadow: 0 2px 8px rgba(13, 41, 20, 0.04);
       position: relative;
       z-index: 995;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .strip-inner {

@@ -413,6 +413,7 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     /* Main Header: Antigravity Glassmorphism */
     .main-header {
       position: relative;
+      overflow: hidden;
       background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);

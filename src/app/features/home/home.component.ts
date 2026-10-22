@@ -383,6 +383,8 @@ import { Product } from '../../core/models/product.model';
       font-weight: 700;
       font-size: 0.88rem;
       width: fit-content;
+      max-width: 100%;
+      white-space: normal;
       border: 1px solid rgba(118, 164, 34, 0.3);
     }
     .hero-title {
@@ -408,6 +410,7 @@ import { Product } from '../../core/models/product.model';
       align-items: center;
       gap: 1rem;
       margin-top: 0.5rem;
+      flex-wrap: wrap;
     }
     .btn-lg {
       padding: 0.95rem 2rem;
@@ -416,10 +419,11 @@ import { Product } from '../../core/models/product.model';
     .hero-perks {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
       margin-top: 1.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid rgba(29, 77, 41, 0.12);
+      flex-wrap: wrap;
     }
     .perk-item {
       display: flex;
@@ -761,6 +765,9 @@ import { Product } from '../../core/models/product.model';
       background: linear-gradient(135deg, var(--fruitella-green-900) 0%, #15361d 100%);
       color: #ffffff;
       padding-block: 4.5rem;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
     }
     .spotlight-grid {
       display: grid;
@@ -839,6 +846,7 @@ import { Product } from '../../core/models/product.model';
     }
     .spotlight-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 0.75rem;
     }
@@ -972,6 +980,7 @@ import { Product } from '../../core/models/product.model';
     @media (max-width: 992px) {
       .hero-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
       }
       .collections-grid {
         grid-template-columns: 1fr;
@@ -983,9 +992,21 @@ import { Product } from '../../core/models/product.model';
       }
       .spotlight-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .spotlight-title {
+        font-size: 1.8rem;
+      }
+      .spotlight-stamp {
+        top: 10px;
+        right: 10px;
       }
       .weekend-promo-card {
         grid-template-columns: 1fr;
+      }
+      .promo-visual {
+        min-height: 220px;
+        max-height: 280px;
       }
       .store-grid {
         grid-template-columns: 1fr;
@@ -1011,25 +1032,85 @@ import { Product } from '../../core/models/product.model';
     }
 
     @media (max-width: 640px) {
+      .hero-section {
+        padding-block: 2rem 2.25rem;
+      }
       .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
       }
-      .hero-subtitle {
-        font-size: 0.9rem;
-      }
-      .hero-actions {
-        flex-direction: column;
-        width: 100%;
-      }
-      .hero-actions .btn {
+      .hero-badge {
+        font-size: 0.76rem;
+        padding: 0.35rem 0.75rem;
         width: 100%;
         justify-content: center;
+        text-align: center;
+      }
+      .hero-description {
+        font-size: 0.95rem;
+      }
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+      .hero-cta-group .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-perks {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+      }
+      .hero-spotlight-card {
+        padding: 0.75rem 0.85rem;
+        gap: 0.75rem;
+      }
+      .spotlight-thumb {
+        width: 56px;
+        height: 56px;
+      }
+      .spotlight-name {
+        font-size: 0.95rem;
+      }
+      .spotlight-title {
+        font-size: 1.5rem;
+      }
+      .spotlight-desc {
+        font-size: 0.9rem;
+      }
+      .signature-list strong {
+        font-size: 0.88rem;
+      }
+      .signature-list p {
+        font-size: 0.8rem;
+      }
+      .spotlight-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+      .spotlight-actions .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
       }
       .promo-text {
         padding: 1.5rem 1rem;
       }
       .promo-title {
         font-size: 1.5rem;
+      }
+      .promo-features {
+        gap: 0.75rem;
+        font-size: 0.82rem;
+      }
+      .promo-btn {
+        width: 100%;
+        justify-content: center;
       }
       .store-actions-bar {
         padding: 1rem;
