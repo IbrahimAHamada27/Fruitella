@@ -77,6 +77,15 @@ import { EditCartItemModalComponent } from '../../shared/components/edit-cart-it
                         }
                         <span class="meta-pill"><i class="fa-solid fa-snowflake"></i> {{ getIceLabel(c.iceLevel) }}</span>
                       }
+                      @if (item.iceCreamCustomization; as ic) {
+                        <span class="meta-pill ice-cream-pill"><i class="fa-solid fa-ice-cream"></i> النكهات: {{ ic.selectedFlavors.join(' • ') }}</span>
+                        @if (ic.servingType) {
+                          <span class="meta-pill"><i class="fa-solid fa-cookie-bite"></i> {{ ic.servingType }}</span>
+                        }
+                        @if (ic.sauce) {
+                          <span class="meta-pill addon-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> {{ ic.sauce }}</span>
+                        }
+                      }
                       @for (addon of item.selectedAddons; track addon.id) {
                         <span class="meta-pill addon-pill">+ {{ addon.nameAr }}</span>
                       }
@@ -376,6 +385,12 @@ import { EditCartItemModalComponent } from '../../shared/components/edit-cart-it
       background: #fff8e1;
       color: #8c6403;
       border: 1px solid #ffe082;
+    }
+    .ice-cream-pill {
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+      font-weight: 700;
     }
     .special-note {
       font-size: 0.82rem;

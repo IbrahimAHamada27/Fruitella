@@ -23,8 +23,10 @@ export interface TableServiceDetails {
 
 export interface CarServiceDetails {
   parkingSpot?: string;
-  vehiclePlate: string;
-  vehicleModelColor: string;
+  vehiclePlate?: string;
+  vehicleModel?: string;
+  vehicleColor?: string;
+  vehicleModelColor?: string;
   meetingPointAr?: string;
   notes?: string;
 }
@@ -40,6 +42,7 @@ export interface TakeawayDetails {
 export interface DeliveryDetails {
   customerName?: string;
   customerPhone?: string;
+  alternativePhone?: string;
   governorate?: string;
   city: string;
   district: string;

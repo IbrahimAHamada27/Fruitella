@@ -1,5 +1,5 @@
 import { Injectable, computed, effect, inject, signal } from '@angular/core';
-import { BeverageCustomization, CartItem, CartSummary } from '../models/cart.model';
+import { BeverageCustomization, CartItem, CartSummary, IceCreamCustomization } from '../models/cart.model';
 import { Product, ProductAddon, ProductSizeOption } from '../models/product.model';
 import { ToastService } from './toast.service';
 import { FulfillmentService } from './fulfillment.service';
@@ -63,16 +63,18 @@ export class CartService {
     selectedAddons: ProductAddon[] = [],
     specialInstructions = '',
     quantity = 1,
-    customization?: BeverageCustomization
+    customization?: BeverageCustomization,
+    iceCreamCustomization?: IceCreamCustomization
   ): void {
     const addonsTotal = selectedAddons.reduce((sum, a) => sum + a.price, 0);
     const sweetenerExtra = customization?.sweetenerPrice ?? (customization?.sweetenerType === 'honey' ? 10 : 0);
     const unitPrice = selectedSize.price + addonsTotal + sweetenerExtra;
     
-    // Create unique signature based on size, addons, customization, and instructions
+    // Create unique signature based on size, addons, customization, ice cream flavors, and instructions
     const addonsSig = selectedAddons.map(a => a.id).sort().join('-');
     const custSig = customization ? `${customization.blendType}_${customization.sweetenerType}_${customization.sugarLevel}_${customization.iceLevel}` : '';
-    const cartItemId = `${product.id}_${selectedSize.id}_${addonsSig}_${custSig}_${specialInstructions.trim()}`;
+    const iceSig = iceCreamCustomization ? `ice_${(iceCreamCustomization.selectedFlavors || []).slice().sort().join('-')}_${iceCreamCustomization.servingType || ''}_${iceCreamCustomization.sauce || ''}` : '';
+    const cartItemId = `${product.id}_${selectedSize.id}_${addonsSig}_${custSig}_${iceSig}_${specialInstructions.trim()}`;
 
     const existingIndex = this.items().findIndex(item => item.cartItemId === cartItemId);
 
@@ -100,6 +102,7 @@ export class CartService {
         selectedSize,
         selectedAddons: [...selectedAddons],
         customization: customization ? { ...customization, sweetenerPrice: sweetenerExtra } : undefined,
+        iceCreamCustomization: iceCreamCustomization ? { ...iceCreamCustomization } : undefined,
         specialInstructions: specialInstructions.trim(),
         unitPrice,
         quantity,

@@ -72,6 +72,17 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
                         <span class="custom-tag"><i class="fa-solid fa-snowflake"></i> {{ getIceLabel(c.iceLevel) }}</span>
                       </div>
                     }
+                    @if (item.iceCreamCustomization; as ic) {
+                      <div class="custom-tags-list">
+                        <span class="custom-tag ice-cream-tag"><i class="fa-solid fa-ice-cream"></i> النكهات: {{ ic.selectedFlavors.join(' • ') }}</span>
+                        @if (ic.servingType) {
+                          <span class="custom-tag"><i class="fa-solid fa-cookie-bite"></i> {{ ic.servingType }}</span>
+                        }
+                        @if (ic.sauce) {
+                          <span class="custom-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> {{ ic.sauce }}</span>
+                        }
+                      </div>
+                    }
                     @if (item.selectedAddons.length > 0) {
                       <div class="addons-list">
                         @for (ad of item.selectedAddons; track ad.id) {
@@ -136,8 +147,16 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
               <!-- Car Details -->
               @if (ord.fulfillmentType === 'car' && ord.carDetails; as c) {
                 <div class="info-block specific-block">
-                  <span class="block-label">بيانات السيارة:</span>
-                  <span class="block-value">لوحة: <strong>{{ c.vehiclePlate }}</strong> — {{ c.vehicleModelColor }}</span>
+                  <span class="block-label">بيانات استلام السيارة:</span>
+                  @if (c.vehiclePlate || c.vehicleModelColor) {
+                    <span class="block-value">
+                      @if (c.vehiclePlate) { لوحة: <strong>{{ c.vehiclePlate }}</strong> }
+                      @if (c.vehiclePlate && c.vehicleModelColor) { — }
+                      @if (c.vehicleModelColor) { {{ c.vehicleModelColor }} }
+                    </span>
+                  } @else {
+                    <span class="block-value">طلب تسليم للسيارة (سيتم التواصل عبر الهاتف عند التجهيز)</span>
+                  }
                   <span class="block-subtext">مكان التسليم: {{ c.meetingPointAr }}</span>
                   @if (c.parkingSpot) {
                     <span class="block-subtext">الموقف: {{ c.parkingSpot }}</span>
@@ -156,13 +175,16 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
               <!-- Delivery Details -->
               @if (ord.fulfillmentType === 'delivery' && ord.deliveryDetails; as d) {
                 <div class="info-block specific-block">
-                  <span class="block-label">عنوان التوصيل في العبور:</span>
-                  <span class="block-value">{{ d.district }} - {{ d.street }}</span>
+                  <span class="block-label">عنوان التوصيل في نطاق العبور:</span>
+                  <span class="block-value"><strong>{{ d.district }}</strong> - {{ d.street }}</span>
                   @if (d.building) {
-                    <span class="block-subtext">{{ d.building }}</span>
+                    <span class="block-subtext">العمارة / الشقة: {{ d.building }}</span>
                   }
                   @if (d.landmark) {
                     <span class="block-subtext">علامة مميزة: {{ d.landmark }}</span>
+                  }
+                  @if (d.alternativePhone) {
+                    <span class="block-subtext">رقم هاتف بديل: <strong dir="ltr">{{ d.alternativePhone }}</strong></span>
                   }
                 </div>
               }

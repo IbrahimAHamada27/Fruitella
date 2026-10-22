@@ -312,62 +312,84 @@ type CheckoutStep = 1 | 2 | 3;
                   <!-- SPECIFIC TO CAR SERVICE -->
                   @if (selectedType() === 'car') {
                     <div class="specific-fields-box animate-fade-in car-box">
-                      <h4 class="box-title">
-                        <i class="fa-solid fa-car"></i> بيانات وتحديد السيارة (أمام مول حياة تاون مدخل 2)
-                      </h4>
+                      <div class="box-badge-header">
+                        <h4 class="box-title">
+                          <i class="fa-solid fa-car-side"></i> بيانات طلب واستلام السيارة (أمام مول حياة تاون مدخل 2)
+                        </h4>
+                        <span class="box-badge-pill">اسمك ورقمك إجباريان — بيانات السيارة اختيارية</span>
+                      </div>
 
                       <div class="form-row">
                         <div class="field-group">
-                          <label for="carPlate">أرقام وحروف اللوحة *</label>
+                          <label for="carModel">
+                            نوع وموديل السيارة <span class="opt-hint">(اختياري)</span>
+                          </label>
+                          <input 
+                            id="carModel" 
+                            type="text" 
+                            [(ngModel)]="carModel" 
+                            placeholder="مثال: كيا سيراتو / هيونداي إلنترا / تويوتا" 
+                            class="form-input" />
+                        </div>
+
+                        <div class="field-group">
+                          <label for="carColor">
+                            لون السيارة <span class="opt-hint">(اختياري)</span>
+                          </label>
+                          <input 
+                            id="carColor" 
+                            type="text" 
+                            [(ngModel)]="carColor" 
+                            placeholder="مثال: فضي / أبيض / أسود / رمادي" 
+                            class="form-input" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="field-group">
+                          <label for="carPlate">
+                            رقم اللوحة / نمرة العربية <span class="opt-hint">(اختياري)</span>
+                          </label>
                           <input 
                             id="carPlate" 
                             type="text" 
                             [(ngModel)]="carPlate" 
                             placeholder="مثال: أ ب ج 1234 أو 1234" 
-                            class="form-input"
-                            [class.input-error]="fieldErrors['carPlate']" />
-                          @if (fieldErrors['carPlate']) {
-                            <span class="field-error-msg">{{ fieldErrors['carPlate'] }}</span>
-                          }
+                            class="form-input" />
                         </div>
 
                         <div class="field-group">
-                          <label for="carModel">لون وموديل السيارة *</label>
+                          <label for="carSpot">
+                            مكان الانتظار أو رقم الباكية <span class="opt-hint">(اختياري)</span>
+                          </label>
                           <input 
-                            id="carModel" 
+                            id="carSpot" 
                             type="text" 
-                            [(ngModel)]="carModel" 
-                            placeholder="مثال: هيونداي النترا فضي / تويوتا بيضاء" 
-                            class="form-input"
-                            [class.input-error]="fieldErrors['carModel']" />
-                          @if (fieldErrors['carModel']) {
-                            <span class="field-error-msg">{{ fieldErrors['carModel'] }}</span>
-                          }
+                            [(ngModel)]="carSpot" 
+                            placeholder="مثال: أمام مدخل 2 مباشرة أو عند الصيدلية" 
+                            class="form-input" />
                         </div>
-                      </div>
-
-                      <div class="field-group">
-                        <label for="carSpot">مكان الانتظار أو رقم الموقف (اختياري)</label>
-                        <input 
-                          id="carSpot" 
-                          type="text" 
-                          [(ngModel)]="carSpot" 
-                          placeholder="مثال: أمام مدخل 2 مباشرة أو بالقرب من الصيدلية" 
-                          class="form-input" />
                       </div>
                     </div>
                   }
 
-                  <!-- SPECIFIC TO DELIVERY -->
+                  <!-- SPECIFIC TO DELIVERY (EL OBOUR CITY ONLY) -->
                   @if (selectedType() === 'delivery') {
                     <div class="specific-fields-box animate-fade-in delivery-box">
-                      <h4 class="box-title">
-                        <i class="fa-solid fa-map-location-dot"></i> عنوان التوصيل داخل مدينة العبور
-                      </h4>
+                      <div class="obour-delivery-banner">
+                        <div class="odb-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                        <div class="odb-text">
+                          <strong>دليفري سريع ومثلج داخل نطاق مدينة العبور</strong>
+                          <span>يتم تغليف العصائر والآيس كريم بحافظات حرارية مثلجة لتصلك طازجة إلى باب منزلك في كافة أحياء العبور.</span>
+                        </div>
+                      </div>
 
                       <div class="form-row">
                         <div class="field-group">
-                          <label for="delDistrict">الحي / المنطقة في العبور *</label>
+                          <label for="delDistrict">
+                            الحي / المنطقة داخل مدينة العبور *
+                            <span class="label-hint">(اختر منطقتك بالعبور)</span>
+                          </label>
                           <select id="delDistrict" [(ngModel)]="deliveryDistrict" class="form-input">
                             @for (d of districtsList; track d) {
                               <option [value]="d">{{ d }}</option>
@@ -376,39 +398,92 @@ type CheckoutStep = 1 | 2 | 3;
                         </div>
 
                         <div class="field-group">
-                          <label for="delStreet">اسم الشارع ورقم العقار *</label>
+                          <label for="delAltPhone">
+                            رقم هاتف إضافي / بديل <span class="opt-hint">(اختياري للطوارئ)</span>
+                          </label>
                           <input 
-                            id="delStreet" 
-                            type="text" 
-                            [(ngModel)]="deliveryStreet" 
-                            placeholder="اسم الشارع ورقم العمارة" 
-                            class="form-input"
-                            [class.input-error]="fieldErrors['deliveryStreet']" />
-                          @if (fieldErrors['deliveryStreet']) {
-                            <span class="field-error-msg">{{ fieldErrors['deliveryStreet'] }}</span>
+                            id="delAltPhone" 
+                            type="tel" 
+                            [(ngModel)]="deliveryAltPhone" 
+                            placeholder="مثال: 01198765432" 
+                            class="form-input" 
+                            dir="ltr"
+                            [class.input-error]="fieldErrors['deliveryAltPhone']" />
+                          @if (fieldErrors['deliveryAltPhone']) {
+                            <span class="field-error-msg">{{ fieldErrors['deliveryAltPhone'] }}</span>
                           }
                         </div>
                       </div>
 
                       <div class="form-row">
                         <div class="field-group">
-                          <label for="delBuilding">رقم الدور والشقة (اختياري)</label>
+                          <label for="delStreet">
+                            اسم الشارع ورقم العمارة / الفيلا *
+                          </label>
+                          <input 
+                            id="delStreet" 
+                            type="text" 
+                            [(ngModel)]="deliveryStreet" 
+                            placeholder="مثال: شارع الجامعة، عمارة 45 أو فيلا 12" 
+                            class="form-input"
+                            [class.input-error]="fieldErrors['deliveryStreet']" />
+                          @if (fieldErrors['deliveryStreet']) {
+                            <span class="field-error-msg">{{ fieldErrors['deliveryStreet'] }}</span>
+                          }
+                        </div>
+
+                        <div class="field-group">
+                          <label for="delBuilding">
+                            رقم الدور والشقة *
+                          </label>
                           <input 
                             id="delBuilding" 
                             type="text" 
                             [(ngModel)]="deliveryBuilding" 
                             placeholder="مثال: الدور 3، شقة 6" 
-                            class="form-input" />
+                            class="form-input"
+                            [class.input-error]="fieldErrors['deliveryBuilding']" />
+                          @if (fieldErrors['deliveryBuilding']) {
+                            <span class="field-error-msg">{{ fieldErrors['deliveryBuilding'] }}</span>
+                          }
                         </div>
+                      </div>
 
+                      <div class="form-row">
                         <div class="field-group">
-                          <label for="delLandmark">علامة مميزة قريبة (اختياري)</label>
+                          <label for="delLandmark">
+                            أقرب علامة مميزة <span class="opt-hint">(اختياري)</span>
+                          </label>
                           <input 
                             id="delLandmark" 
                             type="text" 
                             [(ngModel)]="deliveryLandmark" 
-                            placeholder="مثال: بجوار مدرسة / مسجد / صيدلية" 
+                            placeholder="مثال: بجوار مسجد النور / خلف مدرسة / أمام صيدلية" 
                             class="form-input" />
+                        </div>
+
+                        <div class="field-group">
+                          <label for="delNotes">
+                            تعليمات التوصيل للطيار <span class="opt-hint">(اختياري)</span>
+                          </label>
+                          <input 
+                            id="delNotes" 
+                            type="text" 
+                            [(ngModel)]="orderNotes" 
+                            placeholder="مثال: يرجي رن الجرس / الاتصال عند الوصول للشارع" 
+                            class="form-input" />
+                        </div>
+                      </div>
+
+                      <!-- Delivery Fee & Time Highlights -->
+                      <div class="delivery-perks-row">
+                        <div class="perk-chip">
+                          <i class="fa-solid fa-clock"></i>
+                          <span>التوصيل خلال: <strong>25 - 35 دقيقة</strong></span>
+                        </div>
+                        <div class="perk-chip">
+                          <i class="fa-solid fa-coins"></i>
+                          <span>رسوم التوصيل: <strong>{{ deliveryFee() === 0 ? 'مجاناً (طلبك أكثر من 250 ج)' : deliveryFee() + ' ج.م' }}</strong></span>
                         </div>
                       </div>
                     </div>
@@ -543,7 +618,13 @@ type CheckoutStep = 1 | 2 | 3;
                     @if (selectedType() === 'car') {
                       <div class="info-cell">
                         <span class="cell-label">بيانات السيارة:</span>
-                        <span class="cell-value highlight">لوحة: {{ carPlate }} — {{ carModel }}</span>
+                        <span class="cell-value highlight">
+                          @if (carModel || carColor || carPlate) {
+                            {{ carModel || 'سيارة' }} {{ carColor ? '(' + carColor + ')' : '' }} {{ carPlate ? '— نمرة: ' + carPlate : '' }}
+                          } @else {
+                            استلام بالسيارة (أمام مدخل 2)
+                          }
+                        </span>
                       </div>
                       @if (carSpot) {
                         <div class="info-cell">
@@ -555,13 +636,19 @@ type CheckoutStep = 1 | 2 | 3;
 
                     @if (selectedType() === 'delivery') {
                       <div class="info-cell">
-                        <span class="cell-label">عنوان التوصيل:</span>
+                        <span class="cell-label">عنوان التوصيل بالعبور:</span>
                         <span class="cell-value">
                           {{ deliveryDistrict }} - {{ deliveryStreet }}
                           @if (deliveryBuilding) { ، {{ deliveryBuilding }} }
                           @if (deliveryLandmark) { (علامة: {{ deliveryLandmark }}) }
                         </span>
                       </div>
+                      @if (deliveryAltPhone) {
+                        <div class="info-cell">
+                          <span class="cell-label">رقم هاتف بديل:</span>
+                          <span class="cell-value" dir="ltr">{{ deliveryAltPhone }}</span>
+                        </div>
+                      }
                     }
 
                     <div class="info-cell">
@@ -622,6 +709,17 @@ type CheckoutStep = 1 | 2 | 3;
                                 <span class="r-custom-tag"><i class="fa-solid fa-cubes-stacked"></i> {{ getSugarLabel(c.sugarLevel) }}</span>
                               }
                               <span class="r-custom-tag"><i class="fa-solid fa-snowflake"></i> {{ getIceLabel(c.iceLevel) }}</span>
+                            </div>
+                          }
+                          @if (item.iceCreamCustomization; as ic) {
+                            <div class="r-custom-tags">
+                              <span class="r-custom-tag ice-cream-tag"><i class="fa-solid fa-ice-cream"></i> النكهات: {{ ic.selectedFlavors.join(' • ') }}</span>
+                              @if (ic.servingType) {
+                                <span class="r-custom-tag"><i class="fa-solid fa-cookie-bite"></i> {{ ic.servingType }}</span>
+                              }
+                              @if (ic.sauce) {
+                                <span class="r-custom-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> {{ ic.sauce }}</span>
+                              }
                             </div>
                           }
                           @if (item.selectedAddons.length > 0) {
@@ -1231,6 +1329,88 @@ type CheckoutStep = 1 | 2 | 3;
       gap: 0.5rem;
       margin: 0;
     }
+    .box-badge-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .box-badge-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 0.2rem 0.65rem;
+      border-radius: var(--radius-full);
+    }
+    .opt-hint {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .obour-delivery-banner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #ffffff;
+      border: 1px dashed #f472b6;
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+    }
+    .odb-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fce7f3;
+      color: #be185d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .odb-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .odb-text strong {
+      font-size: 0.88rem;
+      color: #831843;
+    }
+    .odb-text span {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+    .delivery-perks-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding-top: 0.4rem;
+    }
+    .perk-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: #374151;
+      background: #ffffff;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid #fbcfe8;
+    }
+    .perk-chip i {
+      color: #db2777;
+    }
+    .r-custom-tag.ice-cream-tag {
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+      font-weight: 700;
+    }
 
     /* Payment Section */
     .payment-section {
@@ -1719,14 +1899,16 @@ export class CheckoutComponent {
   // Car specific
   carPlate = '';
   carModel = '';
+  carColor = '';
   carSpot = '';
 
-  // Delivery specific
+  // Delivery specific (El Obour city)
   readonly districtsList = this.fulfillmentService.deliveryConfig.districtsAr;
-  deliveryDistrict = 'الحي السادس (بجوار مول حياة تاون)';
+  deliveryDistrict = this.districtsList[0] || 'الحي السادس (بجوار مول حياة تاون — التوصيل الأسرع)';
   deliveryStreet = '';
   deliveryBuilding = '';
   deliveryLandmark = '';
+  deliveryAltPhone = '';
 
   // Payment
   readonly selectedPayment = signal<PaymentMethod>('cash');
@@ -1835,22 +2017,21 @@ export class CheckoutComponent {
       }
     }
 
-    // Car specific checks
-    if (this.selectedType() === 'car') {
-      if (!this.carPlate.trim()) {
-        this.fieldErrors['carPlate'] = 'أرقام وحروف اللوحة مطلوبة لتسليم الطلب لسيارتك';
-        isValid = false;
-      }
-      if (!this.carModel.trim()) {
-        this.fieldErrors['carModel'] = 'موديل ولون السيارة مطلوبان للتعرف عليها بسهولة';
-        isValid = false;
-      }
-    }
+    // Car specific checks: Customer Name & Phone are already validated above as mandatory.
+    // Car type/model, color, plate, and spot are OPTIONAL as requested.
 
-    // Delivery specific checks
+    // Delivery specific checks (El Obour city)
     if (this.selectedType() === 'delivery') {
       if (!this.deliveryStreet.trim()) {
-        this.fieldErrors['deliveryStreet'] = 'اسم الشارع ورقم العقار مطلوبان لتوصيل الطلب';
+        this.fieldErrors['deliveryStreet'] = 'اسم الشارع ورقم العقار مطلوبان لتوصيل الطلب داخل العبور';
+        isValid = false;
+      }
+      if (!this.deliveryBuilding.trim()) {
+        this.fieldErrors['deliveryBuilding'] = 'رقم الدور والشقة مطلوبان لتسليم الطلب لباب منزلك';
+        isValid = false;
+      }
+      if (this.deliveryAltPhone.trim() && !egyptPhoneRegex.test(this.deliveryAltPhone.trim())) {
+        this.fieldErrors['deliveryAltPhone'] = 'رقم الهاتف البديل غير صحيح (11 رقماً)';
         isValid = false;
       }
     }
@@ -1883,9 +2064,12 @@ export class CheckoutComponent {
       };
       this.fulfillmentService.setTable(this.selectedTableNumber()!, this.diningArea());
     } else if (this.selectedType() === 'car') {
+      const modelColor = [this.carModel.trim(), this.carColor.trim()].filter(Boolean).join(' - ');
       carServiceDetails = {
-        vehiclePlate: this.carPlate.trim(),
-        vehicleModelColor: this.carModel.trim(),
+        vehiclePlate: this.carPlate.trim() || undefined,
+        vehicleModel: this.carModel.trim() || undefined,
+        vehicleColor: this.carColor.trim() || undefined,
+        vehicleModelColor: modelColor || 'استلام بالسيارة (أمام مدخل 2)',
         parkingSpot: this.carSpot.trim() || undefined,
         meetingPointAr: this.fulfillmentService.carConfig.meetingPointAr
       };
@@ -1903,6 +2087,7 @@ export class CheckoutComponent {
       deliveryDetails = {
         customerName: this.customerName.trim(),
         customerPhone: this.customerPhone.trim(),
+        alternativePhone: this.deliveryAltPhone.trim() || undefined,
         governorate: 'القليوبية',
         city: 'مدينة العبور',
         district: this.deliveryDistrict,

@@ -1,5 +1,5 @@
 import { Component, computed, inject, input, output, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Product, ProductSizeOption } from '../../../core/models/product.model';
 import { CartService } from '../../../core/services/cart.service';
 import { ToastService } from '../../../core/services/toast.service';
@@ -592,6 +592,7 @@ import { ToastService } from '../../../core/services/toast.service';
 export class ProductCardComponent {
   private cartService = inject(CartService);
   private toast = inject(ToastService);
+  private router = inject(Router);
 
   readonly product = input.required<Product>();
   readonly quickAdd = output<Product>();
@@ -641,9 +642,17 @@ export class ProductCardComponent {
   increment(event: Event): void {
     event.stopPropagation();
     event.preventDefault();
+    const prod = this.product();
+    const isIceCream = prod.categorySlug === 'ice-cream' || prod.slug.includes('ice-cream') || prod.nameAr.includes('آيس كريم');
+    if (isIceCream) {
+      this.toast.show(`اختر أطعمتك المفضلة (مانجو، شوكولاتة...) في صفحة الآيس كريم 🍨`, 'info');
+      this.router.navigate(['/product', prod.slug]);
+      return;
+    }
+
     const size = this.activeSize();
     if (size) {
-      this.cartService.addItem(this.product(), size, [], '', 1);
+      this.cartService.addItem(prod, size, [], '', 1);
     }
   }
 

@@ -5,7 +5,7 @@ import { ProductService } from '../../core/services/product.service';
 import { CartService } from '../../core/services/cart.service';
 import { ToastService } from '../../core/services/toast.service';
 import { Product, ProductAddon, ProductSizeOption } from '../../core/models/product.model';
-import { BlendType, SweetenerType, SugarLevel, IceLevel } from '../../core/models/cart.model';
+import { BlendType, SweetenerType, SugarLevel, IceLevel, FRUITELLA_ICE_CREAM_FLAVORS, IceCreamCustomization } from '../../core/models/cart.model';
 import { PriceDisplayComponent } from '../../shared/components/price-display/price-display.component';
 import { QuantitySelectorComponent } from '../../shared/components/quantity-selector/quantity-selector.component';
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
@@ -154,15 +154,131 @@ import { SeoService } from '../../core/services/seo.service';
               </div>
             </div>
 
-            <!-- 2. "خانة التعديلات كـ فورم تفاعلي" (Interactive Customizations Form Accordion) -->
-            <div class="config-block customizations-form-card">
-              <div class="customizations-form-header">
-                <div class="cfh-title">
-                  <i class="fa-solid fa-sliders"></i>
-                  <h3>تعديلات وتخصيص الكوب</h3>
+            <!-- 2. "تخصيص أطعمة ونكهات الآيس كريم" في عالم الآيس كريم -->
+            @if (isIceCreamProduct()) {
+              <div class="config-block ice-cream-customization-card animate-fade-in">
+                <div class="ice-card-header">
+                  <div class="ich-title">
+                    <i class="fa-solid fa-ice-cream"></i>
+                    <div>
+                      <h3>اختر أطعمة ونكهات الآيس كريم *</h3>
+                      <span class="ich-badge">عالم الآيس كريم — حدد حتى {{ maxIceCreamFlavors() }} أطعمة</span>
+                    </div>
+                  </div>
+                  <div class="ich-counter" [class.complete]="selectedIceCreamFlavors().length === maxIceCreamFlavors()">
+                    <span>{{ selectedIceCreamFlavors().length }} / {{ maxIceCreamFlavors() }}</span>
+                    <small>أطعمة محددة</small>
+                  </div>
                 </div>
-                <p class="cfh-hint">اضغط على أي خانة لتعديل خيارات التحضير وفق ذوقك</p>
+
+                <!-- Selected Flavors Preview Tags -->
+                @if (selectedIceCreamFlavors().length > 0) {
+                  <div class="selected-flavors-bar">
+                    <span class="sfb-label">الطعوم المختارة:</span>
+                    <div class="sfb-tags">
+                      @for (flv of selectedIceCreamFlavors(); track flv) {
+                        <span class="flavor-chosen-tag">
+                          <i class="fa-solid fa-check"></i> {{ flv }}
+                          <button type="button" (click)="toggleIceCreamFlavor(flv)" title="إزالة">×</button>
+                        </span>
+                      }
+                    </div>
+                  </div>
+                } @else {
+                  <div class="no-flavors-warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>يرجى اختيار نكهة واحدة على الأقل من القائمة (مانجو، شوكولاتة، فانيليا...)</span>
+                  </div>
+                }
+
+                <!-- Flavors Grid -->
+                <div class="flavors-selection-grid">
+                  @for (flv of availableIceCreamFlavors; track flv.id) {
+                    <button 
+                      type="button" 
+                      class="flavor-pick-btn" 
+                      [class.active]="isFlavorSelected(flv.nameAr)"
+                      (click)="toggleIceCreamFlavor(flv.nameAr)">
+                      <span class="flv-icon">{{ flv.icon }}</span>
+                      <div class="flv-info">
+                        <span class="flv-name">{{ flv.nameAr }}</span>
+                        <span class="flv-desc">{{ flv.desc }}</span>
+                      </div>
+                      <span class="flv-status-badge">
+                        @if (isFlavorSelected(flv.nameAr)) {
+                          <i class="fa-solid fa-circle-check"></i>
+                        } @else {
+                          <i class="fa-regular fa-circle"></i>
+                        }
+                      </span>
+                    </button>
+                  }
+                </div>
+
+                <!-- Serving Style (كاس أو بسكوتة وافل) -->
+                <div class="ice-sub-option-row">
+                  <span class="iso-title"><i class="fa-solid fa-cookie-bite"></i> طريقة التقديم المفضلة:</span>
+                  <div class="iso-pills">
+                    <button 
+                      type="button" 
+                      class="iso-pill-btn" 
+                      [class.active]="selectedServingType() === 'كاس كرتون فاخر مع معلقة'"
+                      (click)="selectedServingType.set('كاس كرتون فاخر مع معلقة')">
+                      <i class="fa-solid fa-bowl-food"></i> كاس كرتون مع معلقة
+                    </button>
+                    <button 
+                      type="button" 
+                      class="iso-pill-btn" 
+                      [class.active]="selectedServingType() === 'بسكوتة وافل مقرمشة طازجة'"
+                      (click)="selectedServingType.set('بسكوتة وافل مقرمشة طازجة')">
+                      <i class="fa-solid fa-ice-cream"></i> بسكوتة وافل مقرمشة 🍦
+                    </button>
+                    <button 
+                      type="button" 
+                      class="iso-pill-btn" 
+                      [class.active]="selectedServingType() === 'علبة تيك أواي محكمة الغلق'"
+                      (click)="selectedServingType.set('علبة تيك أواي محكمة الغلق')">
+                      <i class="fa-solid fa-box-archive"></i> علبة تيك أواي مغلقة
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Optional Sauce Drizzle -->
+                <div class="ice-sub-option-row">
+                  <span class="iso-title"><i class="fa-solid fa-wand-magic-sparkles"></i> صوص تزيين إضافي (مجاناً):</span>
+                  <div class="iso-pills">
+                    @for (sc of ['بدون صوص إضافي', 'صوص شوكولاتة نوتيلا', 'صوص لوتس مكرمل', 'صوص كراميل ذهبي', 'صوص فراولة بيور']; track sc) {
+                      <button 
+                        type="button" 
+                        class="iso-pill-btn" 
+                        [class.active]="selectedIceCreamSauce() === sc"
+                        (click)="selectedIceCreamSauce.set(sc)">
+                        {{ sc }}
+                      </button>
+                    }
+                  </div>
+                </div>
+
+                <!-- Special Notes for Ice cream -->
+                <div class="ice-sub-option-row">
+                  <span class="iso-title"><i class="fa-solid fa-pen-to-square"></i> ملاحظات خاصة لتحضير الآيس كريم:</span>
+                  <textarea 
+                    [(ngModel)]="specialInstructions"
+                    rows="2"
+                    placeholder="مثال: وضع البسكوتة جانباً، صوص زيادة، مكسرات على جنب..."
+                    class="special-notes-textarea"></textarea>
+                </div>
               </div>
+            } @else {
+              <!-- 2. "خانة التعديلات كـ فورم تفاعلي" (Interactive Customizations Form Accordion) -->
+              <div class="config-block customizations-form-card">
+                <div class="customizations-form-header">
+                  <div class="cfh-title">
+                    <i class="fa-solid fa-sliders"></i>
+                    <h3>تعديلات وتخصيص الكوب</h3>
+                  </div>
+                  <p class="cfh-hint">اضغط على أي خانة لتعديل خيارات التحضير وفق ذوقك</p>
+                </div>
 
               <!-- Section A: Sweetener & Sugar Level -->
               <div class="form-accordion-section" [class.is-open]="isSectionOpen('sweetener')">
@@ -447,6 +563,7 @@ import { SeoService } from '../../core/services/seo.service';
                 }
               </div>
             </div>
+          }
 
             <!-- 3. Purchase Action Bar (Sticky, Tactile & High Contrast) -->
             <div class="sticky-purchase-bar">
@@ -884,6 +1001,256 @@ import { SeoService } from '../../core/services/seo.service';
     .size-check-icon {
       color: var(--fruitella-green-700);
       font-size: 1.05rem;
+    }
+
+    /* 2. Ice Cream Customization Card */
+    .ice-cream-customization-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+      border: 1.5px solid rgba(27, 94, 32, 0.18);
+      border-radius: var(--radius-lg, 20px);
+      padding: 1.4rem;
+      box-shadow: 0 4px 20px rgba(13, 41, 20, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .ice-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1.5px solid rgba(13, 41, 20, 0.08);
+    }
+    .ich-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .ich-title i {
+      font-size: 1.6rem;
+      color: #e11d48;
+      background: #ffe4e6;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ich-title h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--fruitella-green-900);
+      margin: 0 0 0.2rem 0;
+    }
+    .ich-badge {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .ich-counter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      padding: 0.35rem 0.75rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      min-width: 65px;
+    }
+    .ich-counter span {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--fruitella-green-800);
+      line-height: 1;
+    }
+    .ich-counter small {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .ich-counter.complete {
+      background: #ecfdf5;
+      border-color: #a7f3d0;
+    }
+    .ich-counter.complete span {
+      color: #059669;
+    }
+
+    /* Selected Flavors Bar */
+    .selected-flavors-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      background: #f0fdf4;
+      border: 1px dashed #86efac;
+      padding: 0.65rem 0.85rem;
+      border-radius: 12px;
+    }
+    .sfb-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--fruitella-green-900);
+    }
+    .sfb-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .flavor-chosen-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--fruitella-green-800);
+      color: #ffffff;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(27, 94, 32, 0.2);
+    }
+    .flavor-chosen-tag button {
+      background: rgba(255, 255, 255, 0.25);
+      border: none;
+      color: #ffffff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .flavor-chosen-tag button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .no-flavors-warning {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      padding: 0.65rem 0.85rem;
+      border-radius: 12px;
+      color: #b45309;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* Flavors Selection Grid */
+    .flavors-selection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 0.65rem;
+    }
+    .flavor-pick-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.65rem 0.75rem;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      cursor: pointer;
+      text-align: right;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+    .flavor-pick-btn:hover {
+      border-color: var(--fruitella-lime);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .flavor-pick-btn.active {
+      background: #f0fdf4;
+      border-color: var(--fruitella-green-700);
+      box-shadow: 0 3px 10px rgba(27, 94, 32, 0.12);
+    }
+    .flv-icon {
+      font-size: 1.45rem;
+      flex-shrink: 0;
+    }
+    .flv-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+    }
+    .flv-name {
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .flavor-pick-btn.active .flv-name {
+      color: var(--fruitella-green-900);
+    }
+    .flv-desc {
+      font-size: 0.67rem;
+      color: var(--text-muted);
+      line-height: 1.25;
+      margin-top: 1px;
+    }
+    .flv-status-badge {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      flex-shrink: 0;
+    }
+    .flavor-pick-btn.active .flv-status-badge {
+      color: var(--fruitella-green-700);
+    }
+
+    /* Sub options: serving style & sauces */
+    .ice-sub-option-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(13, 41, 20, 0.08);
+    }
+    .iso-title {
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: var(--fruitella-green-900);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .iso-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .iso-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .iso-pill-btn:hover {
+      border-color: var(--fruitella-lime);
+      color: var(--fruitella-green-900);
+    }
+    .iso-pill-btn.active {
+      background: var(--fruitella-green-800);
+      border-color: var(--fruitella-green-800);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(27, 94, 32, 0.2);
     }
 
     /* 2. Customizations Form Card (Accordion Style) */
@@ -1411,7 +1778,56 @@ export class ProductDetailComponent {
   readonly activeImage = signal<string>('');
   specialInstructions = '';
 
-  // Granular customization signals
+  // Ice cream customizations state
+  readonly availableIceCreamFlavors = FRUITELLA_ICE_CREAM_FLAVORS;
+  readonly selectedIceCreamFlavors = signal<string[]>(['مانجو فريش طبيعي']);
+  readonly selectedServingType = signal<string>('كاس كرتون فاخر مع معلقة');
+  readonly selectedIceCreamSauce = signal<string>('بدون صوص إضافي');
+
+  readonly isIceCreamProduct = computed(() => {
+    const prod = this.product();
+    if (!prod) return false;
+    return prod.categorySlug === 'ice-cream' || prod.slug.includes('ice-cream') || prod.nameAr.includes('آيس كريم') || prod.nameAr.includes('ايس كريم');
+  });
+
+  readonly maxIceCreamFlavors = computed(() => {
+    const prod = this.product();
+    if (!prod) return 2;
+    if (prod.slug === 'ice-cream-1-scoop') return 1;
+    if (prod.slug === 'ice-cream-2-scoops') return 2;
+    if (prod.slug === 'ice-cream-3-scoops') return 3;
+    if (prod.slug === 'fattet-ice-cream' || prod.slug === 'the-dinosaur-cup') return 4;
+    return 3;
+  });
+
+  toggleIceCreamFlavor(flavorName: string): void {
+    const current = this.selectedIceCreamFlavors();
+    const max = this.maxIceCreamFlavors();
+    
+    if (current.includes(flavorName)) {
+      if (current.length === 1) {
+        this.toast.show('يجب اختيار نكهة واحدة على الأقل 🍨', 'info');
+        return;
+      }
+      this.selectedIceCreamFlavors.set(current.filter(f => f !== flavorName));
+    } else {
+      if (current.length < max) {
+        this.selectedIceCreamFlavors.set([...current, flavorName]);
+      } else {
+        if (max === 1) {
+          this.selectedIceCreamFlavors.set([flavorName]);
+        } else {
+          this.toast.show(`يمكنك اختيار حتى ${max} أطعمة فقط لهذا الصنف 🍨`, 'info');
+        }
+      }
+    }
+  }
+
+  isFlavorSelected(flavorName: string): boolean {
+    return this.selectedIceCreamFlavors().includes(flavorName);
+  }
+
+  // Granular beverage customization signals
   readonly selectedBlend = signal<BlendType>('full');
   readonly selectedSweetener = signal<SweetenerType>('white_sugar');
   readonly selectedSugarLevel = signal<SugarLevel>('regular');
@@ -1567,22 +1983,47 @@ export class ProductDetailComponent {
   addToCart(): void {
     const prod = this.product();
     const size = this.selectedSize();
-    if (prod && size) {
+    if (!prod || !size) return;
+
+    if (this.isIceCreamProduct()) {
+      if (this.selectedIceCreamFlavors().length === 0) {
+        this.toast.show(`يرجى اختيار أطعمة الآيس كريم المفضلة (مانجو، شوكولاتة، فانيليا...) 🍨`, 'warning');
+        return;
+      }
+
+      const iceCustom: IceCreamCustomization = {
+        selectedFlavors: [...this.selectedIceCreamFlavors()],
+        servingType: this.selectedServingType(),
+        sauce: this.selectedIceCreamSauce() === 'بدون صوص إضافي' ? undefined : this.selectedIceCreamSauce()
+      };
+
       this.cartService.addItem(
         prod,
         size,
         this.selectedAddons(),
         this.specialInstructions,
         this.quantity(),
-        {
-          blendType: this.selectedBlend(),
-          sweetenerType: this.selectedSweetener(),
-          sugarLevel: this.selectedSweetener() === 'none' ? 'none' : this.selectedSugarLevel(),
-          iceLevel: this.selectedIceLevel()
-        }
+        undefined,
+        iceCustom
       );
-      this.toast.show(`تمت إضافة "${prod.nameAr} (${size.nameAr})" إلى طلبك بنجاح 🥤`, 'success');
+      this.toast.show(`تمت إضافة "${prod.nameAr} (${size.nameAr})" بنكهات (${this.selectedIceCreamFlavors().join('، ')}) بنجاح! 🍨`, 'success');
+      return;
     }
+
+    this.cartService.addItem(
+      prod,
+      size,
+      this.selectedAddons(),
+      this.specialInstructions,
+      this.quantity(),
+      {
+        blendType: this.selectedBlend(),
+        sweetenerType: this.selectedSweetener(),
+        sugarLevel: this.selectedSweetener() === 'none' ? 'none' : this.selectedSugarLevel(),
+        iceLevel: this.selectedIceLevel()
+      }
+    );
+    this.toast.show(`تمت إضافة "${prod.nameAr} (${size.nameAr})" إلى طلبك بنجاح 🥤`, 'success');
   }
 
   onQuickAddRelated(product: Product): void {
