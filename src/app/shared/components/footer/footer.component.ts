@@ -15,7 +15,7 @@ import { ConfigService } from '../../../core/services/config.service';
           <div class="footer-brand">
             <img src="/images/brand/fruitella-logo.jpg" alt="فروتيلا" class="footer-logo" />
             <div>
-              <h3 class="footer-brand-title">فروتيلا</h3>
+              <h3 class="footer-brand-title">فروتيلا • Fruitella</h3>
               <p class="footer-brand-sub">{{ business().taglineAr }}</p>
             </div>
           </div>

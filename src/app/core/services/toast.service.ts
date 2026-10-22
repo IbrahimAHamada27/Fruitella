@@ -14,7 +14,7 @@ export interface ToastMessage {
 export class ToastService {
   readonly toasts = signal<ToastMessage[]>([]);
 
-  show(message: string, type: 'success' | 'info' | 'warning' | 'error' = 'success', durationMs = 2000): void {
+  show(message: string, type: 'success' | 'info' | 'warning' | 'error' = 'success', durationMs = 1500): void {
     const id = Math.random().toString(36).substring(2, 9);
     let icon = 'fa-solid fa-circle-check';
     if (type === 'info') icon = 'fa-solid fa-circle-info';

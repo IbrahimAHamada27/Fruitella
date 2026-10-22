@@ -67,11 +67,14 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     <!-- Main Navigation Bar -->
     <header class="main-header" [class.scrolled]="isScrolled()">
       <div class="container header-inner">
-        <!-- Brand Logo & Identity -->
-        <a routerLink="/" class="brand-link" aria-label="فروتيلا الصفحة الرئيسية">
-          <img src="/images/brand/fruitella-logo.jpg" alt="شعار فروتيلا" class="brand-logo" />
+        <!-- Brand Logo & Bilingual Identity (فروتيلا • Fruitella) -->
+        <a routerLink="/" class="brand-link" aria-label="فروتيلا الصفحة الرئيسية - Fruitella">
+          <img src="/images/brand/fruitella-logo.jpg" alt="شعار فروتيلا Fruitella" class="brand-logo" />
           <div class="brand-text">
-            <span class="brand-name">فروتيلا</span>
+            <div class="brand-names">
+              <span class="brand-name-ar">فروتيلا</span>
+              <span class="brand-name-en">Fruitella</span>
+            </div>
             <span class="brand-tagline">غيرنا مفهوم العصير</span>
           </div>
         </a>
@@ -165,20 +168,24 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
           </button>
         </div>
       </div>
+    </header>
 
-      <!-- Mobile Navigation Drawer Overlay -->
-      @if (mobileMenuOpen()) {
-        <div class="mobile-drawer-backdrop" (click)="closeMobileMenu()">
-          <nav class="mobile-nav-panel" (click)="$event.stopPropagation()">
-            <!-- Drawer Brand & Close Header -->
-            <div class="drawer-header">
-              <div class="drawer-brand">
-                <img src="/images/brand/fruitella-logo.jpg" alt="فروتيلا" class="drawer-logo" />
-                <div class="drawer-brand-text">
-                  <span class="drawer-title">فروتيلا</span>
-                  <span class="drawer-tagline">غيرنا مفهوم العصير</span>
+    <!-- Mobile Navigation Drawer Overlay (Outside header to prevent clipping) -->
+    @if (mobileMenuOpen()) {
+      <div class="mobile-drawer-backdrop" (click)="closeMobileMenu()">
+        <nav class="mobile-nav-panel" (click)="$event.stopPropagation()">
+          <!-- Drawer Brand & Close Header -->
+          <div class="drawer-header">
+            <div class="drawer-brand">
+              <img src="/images/brand/fruitella-logo.jpg" alt="فروتيلا Fruitella" class="drawer-logo" />
+              <div class="drawer-brand-text">
+                <div class="brand-names">
+                  <span class="drawer-title-ar">فروتيلا</span>
+                  <span class="drawer-title-en">Fruitella</span>
                 </div>
+                <span class="drawer-tagline">غيرنا مفهوم العصير</span>
               </div>
+            </div>
               <button 
                 type="button" 
                 class="drawer-close-btn" 
@@ -300,7 +307,6 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
           </nav>
         </div>
       }
-    </header>
   `,
   styles: [`
     :host {
@@ -436,13 +442,13 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     .brand-link {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.65rem;
       text-decoration: none;
       flex-shrink: 0;
     }
     .brand-logo {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -451,20 +457,46 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     .brand-text {
       display: flex;
       flex-direction: column;
+      line-height: 1.15;
     }
-    .brand-name {
+    .brand-names {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+    }
+    .brand-name-ar {
       font-family: var(--font-heading);
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 900;
       color: var(--fruitella-green-800);
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.01em;
     }
+    .brand-name-en {
+      font-family: 'Alexandria', 'Cairo', system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--fruitella-green-600);
+      letter-spacing: 0.02em;
+    }
     .brand-tagline {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       color: var(--fruitella-lime);
       letter-spacing: 0.02em;
+      margin-top: 0.1rem;
+    }
+    .drawer-title-ar {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--fruitella-green-800);
+    }
+    .drawer-title-en {
+      font-family: 'Alexandria', 'Cairo', system-ui, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--fruitella-green-600);
     }
 
     /* Desktop Navigation */
@@ -634,35 +666,46 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     /* Mobile Menu Button */
     .mobile-menu-btn {
       display: none;
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: var(--radius-sm);
       background: #f1f5f2;
-      border: 1px solid var(--border-subtle);
+      border: 1.5px solid var(--border-subtle);
       color: var(--fruitella-green-900);
       align-items: center;
       justify-content: center;
       font-size: 1.25rem;
       cursor: pointer;
+      transition: all var(--transition-fast) ease;
+    }
+    .mobile-menu-btn:hover {
+      background: var(--fruitella-lime-bg);
+      color: var(--fruitella-green-900);
+    }
+    .mobile-menu-btn:active {
+      transform: scale(0.93);
     }
 
     /* Mobile Drawer Fullscreen Overlay & Panel */
     .mobile-drawer-backdrop {
       position: fixed;
-      inset: 0;
-      background: rgba(13, 41, 20, 0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 999999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(13, 41, 20, 0.7);
+      z-index: 99999999;
       display: flex;
       justify-content: flex-start;
-      animation: drawerFadeIn 0.22s ease-out;
+      animation: drawerFadeIn 0.2s ease-out;
     }
 
     .mobile-nav-panel {
       background: #ffffff;
       width: 86%;
-      max-width: 340px;
+      max-width: 320px;
       height: 100%;
       padding: 1.25rem 1rem;
       display: flex;
@@ -670,8 +713,8 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
       gap: 0.85rem;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
-      box-shadow: -8px 0 32px rgba(13, 41, 20, 0.3);
-      animation: drawerSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
+      animation: drawerSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @keyframes drawerFadeIn {
@@ -992,11 +1035,14 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
         width: 40px;
         height: 40px;
       }
-      .brand-name {
-        font-size: 1.2rem;
+      .brand-name-ar {
+        font-size: 1.15rem;
+      }
+      .brand-name-en {
+        font-size: 0.82rem;
       }
       .brand-tagline {
-        font-size: 0.65rem;
+        font-size: 0.62rem;
       }
       .header-actions {
         gap: 0.45rem;
@@ -1020,8 +1066,11 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
         width: 36px;
         height: 36px;
       }
-      .brand-name {
-        font-size: 1.1rem;
+      .brand-name-ar {
+        font-size: 1.05rem;
+      }
+      .brand-name-en {
+        font-size: 0.74rem;
       }
       .brand-tagline {
         display: none;
