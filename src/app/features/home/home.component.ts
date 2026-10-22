@@ -6,6 +6,7 @@ import { ConfigService } from '../../core/services/config.service';
 import { ToastService } from '../../core/services/toast.service';
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
+import { SeoService } from '../../core/services/seo.service';
 import { Product } from '../../core/models/product.model';
 
 @Component({
@@ -1122,10 +1123,15 @@ export class HomeComponent {
   private productService = inject(ProductService);
   private cartService = inject(CartService);
   private configService = inject(ConfigService);
+  private seoService = inject(SeoService);
 
   readonly business = this.configService.business;
   readonly categories = this.productService.categories;
   readonly bestSellers = this.productService.bestSellers;
+
+  constructor() {
+    this.seoService.setDefaultSeo();
+  }
 
   addHeroSpotlightItem(): void {
     const spotlightItem = this.bestSellers().find(p => p.id === 'p1') || this.bestSellers()[0];

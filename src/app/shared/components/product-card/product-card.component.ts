@@ -40,6 +40,16 @@ import { ToastService } from '../../../core/services/toast.service';
           [attr.aria-label]="isFavorite() ? 'إزالة من المفضلة' : 'إضافة للمفضلة'">
           <i [class]="isFavorite() ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></i>
         </button>
+
+        <!-- Share Button -->
+        <button 
+          type="button" 
+          class="card-share-btn" 
+          (click)="shareProduct($event)"
+          title="مشاركة رابط المشروب وصورته"
+          aria-label="مشاركة رابط المشروب">
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
       </div>
 
       <!-- Content Section -->
@@ -238,6 +248,37 @@ import { ToastService } from '../../../core/services/toast.service';
     .fav-btn.active {
       color: #e11d48;
       background: #ffffff;
+    }
+
+    /* Share Button */
+    .card-share-btn {
+      position: absolute;
+      top: 2.5rem;
+      left: 0.45rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: var(--fruitella-green-800);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      cursor: pointer;
+      z-index: 2;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    }
+    .card-share-btn:hover {
+      background: #ffffff;
+      color: var(--fruitella-lime);
+      transform: scale(1.1);
+    }
+    .card-share-btn:active {
+      transform: scale(0.9) !important;
     }
 
     /* Card Content */
@@ -638,5 +679,25 @@ export class ProductCardComponent {
   onImageError(event: Event): void {
     const target = event.target as HTMLImageElement;
     target.src = '/images/brand/fruitella-hero-banner.jpg';
+  }
+
+  shareProduct(event: Event): void {
+    event.stopPropagation();
+    event.preventDefault();
+    const prod = this.product();
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/product/${prod.slug}` : `https://fruitella-seven.vercel.app/product/${prod.slug}`;
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      navigator.share({
+        title: `${prod.nameAr} | فروتيلا Fruitella`,
+        text: prod.descriptionAr || `اطلب ${prod.nameAr} طازجاً من فروتيلا مول حياة تاون بالعبور`,
+        url: url
+      }).catch(() => {});
+    } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        this.toast.show(`تم نسخ رابط "${prod.nameAr}" للمشاركة بنجاح! 📋`, 'success');
+      }).catch(() => {
+        this.toast.show(`الرابط: ${url}`, 'info');
+      });
+    }
   }
 }

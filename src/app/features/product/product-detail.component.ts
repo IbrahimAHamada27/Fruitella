@@ -11,6 +11,7 @@ import { QuantitySelectorComponent } from '../../shared/components/quantity-sele
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 import { EmptyStateComponent } from '../../shared/components/empty-state/empty-state.component';
 import { CategoryInformationComponent } from '../../shared/components/category-information/category-information.component';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -96,6 +97,10 @@ import { CategoryInformationComponent } from '../../shared/components/category-i
             <div class="prod-header-box">
               <div class="category-meta-row">
                 <span class="cat-pill">{{ prod.categoryNameAr }}</span>
+                <button type="button" class="prod-share-btn" (click)="shareProduct(prod)" title="مشاركة رابط المشروب وصورته">
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <span>مشاركة الرابط</span>
+                </button>
               </div>
 
               <h1 class="prod-title">{{ prod.nameAr }}</h1>
@@ -680,7 +685,33 @@ import { CategoryInformationComponent } from '../../shared/components/category-i
     .category-meta-row {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 0.65rem;
+    }
+    .prod-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: #ffffff;
+      border: 1px solid rgba(13, 41, 20, 0.15);
+      color: var(--fruitella-green-800);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: all var(--transition-fast);
+    }
+    .prod-share-btn:hover {
+      background: var(--fruitella-green-800);
+      color: #ffffff;
+      border-color: var(--fruitella-green-800);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(13, 41, 20, 0.15);
+    }
+    .prod-share-btn:active {
+      transform: scale(0.97);
     }
     .cat-pill {
       background: var(--fruitella-lime-bg);
@@ -1371,6 +1402,7 @@ export class ProductDetailComponent {
   private cartService = inject(CartService);
   private toast = inject(ToastService);
   private route = inject(ActivatedRoute);
+  private seoService = inject(SeoService);
 
   readonly product = signal<Product | undefined>(undefined);
   readonly selectedSize = signal<ProductSizeOption | undefined>(undefined);
@@ -1457,6 +1489,9 @@ export class ProductDetailComponent {
       if (slug) {
         const prod = this.productService.getProductBySlug(slug);
         this.product.set(prod);
+        if (prod) {
+          this.seoService.setProductSeo(prod);
+        }
         this.activeImage.set(prod?.image || '');
         if (prod && prod.sizes.length > 0) {
           this.selectedSize.set(prod.sizes[0]);
@@ -1554,5 +1589,22 @@ export class ProductDetailComponent {
     const defaultSize = product.sizes[0];
     this.cartService.addItem(product, defaultSize);
     this.toast.show(`تمت إضافة "${product.nameAr}" إلى السلة 🥤`, 'success');
+  }
+
+  shareProduct(prod: Product): void {
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/product/${prod.slug}` : `https://fruitella-seven.vercel.app/product/${prod.slug}`;
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      navigator.share({
+        title: `${prod.nameAr} | فروتيلا Fruitella`,
+        text: prod.descriptionAr || `اطلب ${prod.nameAr} طازجاً من فروتيلا مول حياة تاون العبور`,
+        url: url
+      }).catch(() => {});
+    } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        this.toast.show(`تم نسخ رابط "${prod.nameAr}" بنجاح! جاهز للمشاركة 📋`, 'success');
+      }).catch(() => {
+        this.toast.show(`الرابط: ${url}`, 'info');
+      });
+    }
   }
 }
