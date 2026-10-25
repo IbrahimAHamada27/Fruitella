@@ -8,7 +8,7 @@ export const FRUITELLA_BUSINESS_INFO: BusinessInfo = {
   secondaryTaglineAr: 'طبيعي .. منعش .. صحي',
   addressAr: 'العبور، الحي السادس، مدخل 2، مول حياة تاون، مصر',
   addressEn: 'Hayah Town Mall, Entrance 2, 6th District, El Obour, Egypt',
-  management: 'إدارة / فؤاد السمنودي',
+  management: '',
   contacts: {
     phone1: '01037221133',
     phone2: '01104606760',
@@ -25,7 +25,7 @@ export const FRUITELLA_BUSINESS_INFO: BusinessInfo = {
   },
   currencyAr: 'ج.م',
   currencyEn: 'EGP',
-  deliveryEstimatedMinutes: 35
+  deliveryEstimatedMinutes: 6
 };
 
 export const FRUITELLA_ANNOUNCEMENTS = [

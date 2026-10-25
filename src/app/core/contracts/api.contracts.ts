@@ -34,7 +34,7 @@ export interface IProductCatalogApi {
 // 2. Table Layout & QR Validation API
 export interface ITableLayoutApi {
   getAllTables(): Promise<ApiResponse<RestaurantTable[]>>;
-  validateTableQr(tableNumber: number, area?: DiningArea): Promise<ApiResponse<{ isValid: boolean; table?: RestaurantTable }>>;
+  validateTableQr(tableNumber: number): Promise<ApiResponse<{ isValid: boolean; table?: RestaurantTable }>>;
   getOccupancyStatus(tableNumber: number): Promise<ApiResponse<{ isOccupied: boolean }>>;
 }
 
@@ -49,7 +49,6 @@ export interface CreateOrderRequestDto {
     type: FulfillmentType;
     tableDetails?: {
       tableNumber: number;
-      area: DiningArea;
     };
     carDetails?: {
       vehiclePlate: string;

@@ -23,7 +23,7 @@ import { ConfigService } from '../../core/services/config.service';
       <section class="section-padding container">
         <div class="story-grid">
           <div class="story-text">
-            <span class="badge badge-fresh">إدارة فؤاد السمنودي</span>
+            <span class="badge badge-fresh">قصتنا وشغفنا</span>
             <h2 class="section-heading">شغف تقديم الطعم الطبيعي الحقيقي</h2>
             <p>
               في قلب مدينة العبور وتحديداً في <strong>مول حياة تاون بالحي السادس</strong>، افتتحت فروتيلا أبوابها لتكون الوجهة الأولى لكل باحث عن الانتعاش الحقيقي والصحة والمذاق الذي لا يُنسى.

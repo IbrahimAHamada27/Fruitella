@@ -36,7 +36,9 @@ if (catIndex !== -1) {
 let products = [];
 const prodIndex = menuContent.indexOf('export const FRUITELLA_PRODUCTS: Product[] = [');
 if (prodIndex !== -1) {
-  const prodJsonStr = menuContent.slice(prodIndex + 'export const FRUITELLA_PRODUCTS: Product[] = '.length).trim().replace(/;$/, '');
+  const prodEndIndex = menuContent.indexOf('export const FRUITELLA_ADDONS', prodIndex);
+  const endSlice = prodEndIndex !== -1 ? prodEndIndex : menuContent.length;
+  const prodJsonStr = menuContent.slice(prodIndex + 'export const FRUITELLA_PRODUCTS: Product[] = '.length, endSlice).trim().replace(/;$/, '');
   try {
     products = JSON.parse(prodJsonStr);
   } catch (e) {
@@ -136,7 +138,7 @@ for (const cat of categories) {
 // 3. Static main pages
 const staticPages = [
   { path: 'menu', title: `قائمة المنيو بالكامل | ${SITE_NAME}`, desc: 'استعرض قائمة منيو فروتيلا الكاملة: عصائر طبيعية، سموذي، أفوكادو بالمكسرات، وافل، وحلويات في مول حياة تاون العبور.', image: DEFAULT_LOGO },
-  { path: 'about', title: `قصة فروتيلا وفؤاد السمنودي | ${SITE_NAME}`, desc: 'تعرف على قصة تأسيس فروتيلا في مول حياة تاون العبور، معايير الجودة، وإدارة فؤاد السمنودي.', image: DEFAULT_LOGO },
+  { path: 'about', title: `قصة براند فروتيلا | ${SITE_NAME}`, desc: 'تعرف على قصة تأسيس فروتيلا في مول حياة تاون العبور ومعايير الجودة والنظافة العالية.', image: DEFAULT_LOGO },
   { path: 'contact', title: `تواصل معنا والفرع | ${SITE_NAME}`, desc: 'أرقام طلبات وتوصيل فروتيلا بالعبور 01037221133 - 01019183355، مول حياة تاون.', image: DEFAULT_LOGO }
 ];
 

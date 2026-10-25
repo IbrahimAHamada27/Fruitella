@@ -1,7 +1,7 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
 import { FulfillmentService } from '../../../core/services/fulfillment.service';
-import { DiningArea, RestaurantTable } from '../../../core/models/fulfillment.model';
-import { getTablesByArea } from '../../../core/data/restaurant-layout.config';
+import { RestaurantTable } from '../../../core/models/fulfillment.model';
+import { getAllTables } from '../../../core/data/restaurant-layout.config';
 
 @Component({
   selector: 'app-table-selector-modal',
@@ -18,55 +18,25 @@ import { getTablesByArea } from '../../../core/data/restaurant-layout.config';
           <div class="modal-header">
             <div>
               <span class="badge badge-brand">فرع مول حياة تاون</span>
-              <h2 id="tableModalTitle" class="modal-title">اختر رقم الترابيزة والمنطقة</h2>
+              <h2 id="tableModalTitle" class="modal-title">اختر رقم طاولتك</h2>
+              <p class="modal-subtitle">كل طاولة مزودة بستاند ورقم رسمي لتقديم الطلب مباشرة إليك</p>
             </div>
             <button type="button" class="btn-close" (click)="close()" aria-label="إغلاق">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
 
-          <!-- Area Toggle: Indoor vs Outdoor -->
-          <div class="area-toggle">
-            <button 
-              type="button" 
-              class="area-btn" 
-              [class.active]="selectedArea() === 'indoor'"
-              (click)="selectedArea.set('indoor')">
-              <i class="fa-solid fa-couch"></i>
-              <div>
-                <strong>الصالة الداخلية</strong>
-                <span>مكيفة بإطلالة على بار الفواكه</span>
-              </div>
-            </button>
-
-            <button 
-              type="button" 
-              class="area-btn" 
-              [class.active]="selectedArea() === 'outdoor'"
-              (click)="selectedArea.set('outdoor')">
-              <i class="fa-solid fa-cloud-sun"></i>
-              <div>
-                <strong>الجلسات الخارجية</strong>
-                <span>إطلالة على ممشى حياة تاون</span>
-              </div>
-            </button>
-          </div>
-
-          <!-- Table Grid for Selected Area -->
+          <!-- All Tables Grid (Unified, no indoor/outdoor barrier) -->
           <div class="tables-section">
-            <p class="tables-hint">اختر رقم الطاولة التي تجلس عليها حالياً:</p>
             <div class="tables-grid">
-              @for (tbl of currentAreaTables(); track tbl.id) {
+              @for (tbl of allTables; track tbl.id) {
                 <button 
                   type="button" 
                   class="table-tile" 
                   [class.selected]="selectedTable()?.id === tbl.id"
                   (click)="selectTable(tbl)">
                   <span class="t-num">#{{ tbl.tableNumber }}</span>
-                  <span class="t-cap">
-                    <i class="fa-solid fa-user-group"></i> {{ tbl.capacity }} أفراد
-                  </span>
-                  <span class="t-desc">{{ tbl.descriptionAr }}</span>
+                  <span class="t-desc">طاولة رقم {{ tbl.tableNumber }}</span>
                 </button>
               }
             </div>
@@ -82,7 +52,12 @@ import { getTablesByArea } from '../../../core/data/restaurant-layout.config';
               class="btn btn-primary" 
               [disabled]="!selectedTable()"
               (click)="confirmSelection()">
-              <i class="fa-solid fa-check"></i> تأكيد اختيار الترابيزة
+              <i class="fa-solid fa-check"></i>
+              @if (selectedTable(); as t) {
+                تأكيد اختيار طاولة #{{ t.tableNumber }}
+              } @else {
+                يرجى اختيار طاولة أولاً
+              }
             </button>
           </div>
         </div>
@@ -104,7 +79,7 @@ import { getTablesByArea } from '../../../core/data/restaurant-layout.config';
     .modal-card {
       background: #ffffff;
       border-radius: var(--radius-xl);
-      max-width: 650px;
+      max-width: 680px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
@@ -112,180 +87,126 @@ import { getTablesByArea } from '../../../core/data/restaurant-layout.config';
       border: 1px solid rgba(13, 41, 20, 0.08);
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      padding: 2rem;
+      gap: 1.25rem;
+      padding: 1.75rem;
+      animation: modalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes modalPop {
+      from { opacity: 0; transform: scale(0.96) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 1rem;
       border-bottom: 1px solid var(--border-subtle);
       padding-bottom: 1rem;
     }
     .modal-title {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--fruitella-green-900);
       margin-top: 0.35rem;
+      font-weight: 800;
+    }
+    .modal-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
     }
     .btn-close {
+      background: #f1f5f2;
+      border: none;
       width: 36px;
       height: 36px;
-      border-radius: 50%;
-      background: #f1f5f2;
-      color: var(--text-muted);
+      border-radius: var(--radius-full);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
-      transition: all var(--transition-fast);
+      color: var(--text-secondary);
       cursor: pointer;
-      user-select: none;
+      font-size: 1.1rem;
+      transition: all var(--transition-fast) ease;
     }
     .btn-close:hover {
-      background: var(--fruitella-berry-bg);
-      color: var(--fruitella-berry);
-      transform: scale(1.08);
-    }
-    .btn-close:active {
-      transform: scale(0.92) !important;
-    }
-    .area-toggle {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-    .area-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      padding: 1rem;
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      background: #fafbfa;
-      cursor: pointer;
-      text-align: right;
-      transition: all var(--transition-fast);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--shadow-xs);
-      user-select: none;
-    }
-    .area-btn:hover {
-      border-color: var(--fruitella-lime);
-      transform: translateY(-2px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), var(--shadow-sm);
-    }
-    .area-btn:active {
-      transform: scale(0.97) !important;
-    }
-    .area-btn i {
-      font-size: 1.6rem;
-      color: var(--fruitella-green-700);
-    }
-    .area-btn strong {
-      display: block;
+      background: #e2ece5;
       color: var(--fruitella-green-900);
-      font-size: 0.95rem;
+      transform: rotate(90deg);
     }
-    .area-btn span {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.78rem;
-    }
-    .area-btn.active {
-      border-color: var(--fruitella-green-700);
-      background: var(--fruitella-lime-bg);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 14px rgba(29, 77, 41, 0.16);
-    }
+
+    /* Tables Grid */
     .tables-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .tables-hint {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-secondary);
+      max-height: 52vh;
+      overflow-y: auto;
+      padding-inline-end: 0.25rem;
     }
     .tables-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 0.85rem;
-      max-height: 280px;
-      overflow-y: auto;
-      padding: 0.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+      gap: 0.65rem;
     }
     .table-tile {
+      background: #fbfdfb;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 0.5rem;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 1rem 0.5rem;
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      background: #ffffff;
+      gap: 0.35rem;
       cursor: pointer;
-      gap: 0.25rem;
-      transition: all var(--transition-fast);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--shadow-xs);
-      user-select: none;
+      transition: all var(--transition-fast) cubic-bezier(0.16, 1, 0.3, 1);
     }
     .table-tile:hover {
       border-color: var(--fruitella-lime);
       transform: translateY(-2px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), var(--shadow-sm);
-    }
-    .table-tile:active {
-      transform: scale(0.95) !important;
+      box-shadow: var(--shadow-antigravity-xs);
     }
     .table-tile.selected {
+      background: #eef8ee;
       border-color: var(--fruitella-green-700);
-      background: var(--fruitella-lime-bg);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 0 2px var(--fruitella-green-700);
+      box-shadow: 0 0 0 2px var(--fruitella-green-700);
     }
     .t-num {
       font-size: 1.35rem;
       font-weight: 900;
       color: var(--fruitella-green-900);
-      font-family: var(--font-heading);
       font-variant-numeric: tabular-nums;
     }
     .t-cap {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 700;
       color: var(--fruitella-green-700);
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
+      background: rgba(29, 77, 41, 0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
     }
     .t-desc {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 110px;
+      line-height: 1.3;
+      margin-top: 0.2rem;
     }
+
     .modal-footer {
       display: flex;
       justify-content: flex-end;
-      gap: 0.75rem;
-      padding-top: 1rem;
+      gap: 0.85rem;
       border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .modal-card {
         padding: 1.25rem 1rem;
-        gap: 1rem;
-      }
-      .modal-title {
-        font-size: 1.25rem;
-      }
-      .area-toggle {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
       }
       .tables-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        gap: 0.65rem;
       }
       .modal-footer {
         flex-direction: column-reverse;
@@ -302,20 +223,17 @@ export class TableSelectorModalComponent {
   private fulfillmentService = inject(FulfillmentService);
 
   readonly isOpen = signal<boolean>(false);
-  readonly selectedArea = signal<DiningArea>('indoor');
   readonly selectedTable = signal<RestaurantTable | undefined>(undefined);
+  readonly allTables = getAllTables();
 
-  currentAreaTables(): RestaurantTable[] {
-    return getTablesByArea(this.selectedArea());
-  }
-
-  open(initialArea?: DiningArea): void {
-    if (initialArea) {
-      this.selectedArea.set(initialArea);
-    } else if (this.fulfillmentService.tableDetails()?.area) {
-      this.selectedArea.set(this.fulfillmentService.tableDetails()!.area);
+  open(): void {
+    const currentTableNum = this.fulfillmentService.tableDetails()?.tableNumber;
+    if (currentTableNum) {
+      const match = this.allTables.find(t => t.tableNumber === currentTableNum);
+      this.selectedTable.set(match);
+    } else {
+      this.selectedTable.set(undefined);
     }
-    this.selectedTable.set(undefined);
     this.isOpen.set(true);
   }
 
@@ -337,7 +255,7 @@ export class TableSelectorModalComponent {
   confirmSelection(): void {
     const tbl = this.selectedTable();
     if (tbl) {
-      this.fulfillmentService.setTable(tbl.tableNumber, tbl.area, false);
+      this.fulfillmentService.setTable(tbl.tableNumber, undefined, false);
       this.close();
     }
   }

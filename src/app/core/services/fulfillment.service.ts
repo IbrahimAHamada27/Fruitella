@@ -47,14 +47,14 @@ export class FulfillmentService {
     switch (type) {
       case 'table': {
         const t = this.tableDetails();
-        return t ? `طلب من الترابيزة #${t.tableNumber} (${t.areaNameAr})` : 'طلب من الترابيزة (يرجى اختيار رقم الترابيزة)';
+        return t ? `طلب من الترابيزة #${t.tableNumber}` : 'طلب صالة (يرجى اختيار رقم الترابيزة)';
       }
       case 'car': {
         const c = this.carDetails();
-        return c ? `الطلب من العربية (لوحة: ${c.vehiclePlate})` : 'الطلب من العربية';
+        return c ? `الطلب من العربية (لوحة: ${c.vehiclePlate || 'مسجلة'})` : 'الطلب من العربية';
       }
       case 'takeaway':
-        return `استلام من المحل (تيك أواي - جاهز خلال ${this.takeawayConfig.estimatedMinutes} دقيقة)`;
+        return `استلام من المحل (تيك أواي - جاهز خلال 4 - 8 دقائق)`;
       case 'delivery': {
         const d = this.deliveryDetails();
         return d ? `توصيل إلى ${d.district}` : `دليفري لمدينة العبور (رسوم ${this.deliveryConfig.standardFee} ج.م)`;
@@ -87,18 +87,16 @@ export class FulfillmentService {
     this.activeType.set(type);
   }
 
-  setTable(tableNumber: number, area: DiningArea, fromQr = false): boolean {
-    const table = findTable(tableNumber, area);
-    if (!table) {
-      this.toastService.show(`رقم الترابيزة ${tableNumber} غير متاح في ${area === 'indoor' ? 'الصالة الداخلية' : 'الجلسات الخارجية'}`, 'warning');
+  setTable(tableNumber: number, _area?: DiningArea, fromQr = false): boolean {
+    const table = findTable(tableNumber);
+    if (!table || !table.isAvailable) {
+      this.toastService.show(`رقم الترابيزة #${tableNumber} غير مسجل أو غير متاح حالياً`, 'warning');
       return false;
     }
 
     const details: TableServiceDetails = {
       tableNumber: table.tableNumber,
-      area: table.area,
-      tableNameAr: `ترابيزة ${table.tableNumber}`,
-      areaNameAr: table.areaNameAr,
+      tableNameAr: `ترابيزة #${table.tableNumber}`,
       detectedFromQr: fromQr
     };
 
@@ -106,9 +104,9 @@ export class FulfillmentService {
     this.tableDetails.set(details);
 
     if (fromQr) {
-      this.toastService.show(`📍 مرحباً بك في فروتيلا! تم تفعيل الطلب من ترابيزة #${tableNumber} (${table.areaNameAr})`, 'success', 4500);
+      this.toastService.show(`📍 مرحباً بك في فروتيلا! تم تفعيل الطلب من ترابيزة #${tableNumber}`, 'success', 4500);
     } else {
-      this.toastService.show(`تم اختيار ترابيزة #${tableNumber} (${table.areaNameAr})`, 'success');
+      this.toastService.show(`تم اختيار ترابيزة #${tableNumber}`, 'success');
     }
 
     return true;
@@ -130,9 +128,9 @@ export class FulfillmentService {
   }
 
   /**
-   * Parses and validates table & area from URL parameters (e.g. ?table=12&area=outdoor)
+   * Parses and validates table from URL parameters (e.g. ?table=12)
    */
-  processUrlContext(tableParam: string | null, areaParam: string | null): { handled: boolean; valid: boolean } {
+  processUrlContext(tableParam: string | null, _areaParam?: string | null): { handled: boolean; valid: boolean } {
     if (!tableParam) return { handled: false, valid: false };
 
     const tableNum = parseInt(tableParam, 10);
@@ -141,21 +139,16 @@ export class FulfillmentService {
       return { handled: true, valid: false };
     }
 
-    let parsedArea: DiningArea | undefined = undefined;
-    if (areaParam === 'indoor' || areaParam === 'outdoor') {
-      parsedArea = areaParam;
-    }
-
-    if (isValidTable(tableNum, parsedArea)) {
-      const found = findTable(tableNum, parsedArea);
+    if (isValidTable(tableNum)) {
+      const found = findTable(tableNum);
       if (found) {
-        this.setTable(found.tableNumber, found.area, true);
+        this.setTable(found.tableNumber, undefined, true);
         return { handled: true, valid: true };
       }
     }
 
     // Invalid table number in QR
-    this.toastService.show(`رمز QR يشير لترابيزة غير مسجلة (#${tableParam})، يرجى اختيار الترابيزة يدوياً`, 'warning', 5000);
+    this.toastService.show(`رمز QR يشير لترابيزة غير مسجلة (#${tableParam})، يرجى اختيار الترابيزة من القائمة`, 'warning', 5000);
     return { handled: true, valid: false };
   }
 

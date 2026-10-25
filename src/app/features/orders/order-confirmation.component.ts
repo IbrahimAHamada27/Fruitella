@@ -5,6 +5,8 @@ import { ConfigService } from '../../core/services/config.service';
 import { Order } from '../../core/models/order.model';
 import { PriceDisplayComponent } from '../../shared/components/price-display/price-display.component';
 import { EmptyStateComponent } from '../../shared/components/empty-state/empty-state.component';
+import { WhatsAppOrderSubmissionService } from '../../core/services/whatsapp-order-submission.service';
+import { WHATSAPP_ORDER_CONFIG, normalizeWhatsAppNumber } from '../../core/config/order.config';
 
 @Component({
   selector: 'app-order-confirmation',
@@ -19,27 +21,28 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
             <i class="fa-solid fa-circle-check"></i>
           </div>
 
-          <div class="demo-tag-pill">
-            <i class="fa-solid fa-flask"></i> طلب تجريبي • Demo Simulation
+          <div class="demo-tag-pill whatsapp-pill">
+            <i class="fa-brands fa-whatsapp"></i> طلب مجهز للإرسال عبر واتساب
           </div>
 
-          <h1 class="success-title">تم تسجيل طلبك بنجاح!</h1>
-          <p class="order-num-text">رقم الطلب التجريبي: <strong class="order-code">{{ ord.orderNumber }}</strong></p>
+          <h1 class="success-title">تم تجهيز طلبك بنجاح!</h1>
+          <p class="order-num-text">رقم الطلب المرجعي: <strong class="order-code">{{ ord.orderNumber }}</strong></p>
           
-          <div class="demo-explicit-warning">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span>
-              <strong>تنبيه تجريبي:</strong> هذه واجهة محاكاة تجريبية للعميل. لم يتم إرسال هذا الطلب إلى كاشير أو مطبخ حقيقي، ولا يُطلب منك دفع أي مبالغ الآن.
-            </span>
+          <div class="whatsapp-handoff-notice">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>متابعة وتأكيد الطلب مع الفرع:</strong>
+              <span> اضغط على الزر الأخضر لفتح محادثة واتساب وإرسال تفاصيل الطلب لفريق فروتيلا العبور لتأكيد التجهيز ووقت الاستلام فوراً.</span>
+            </div>
           </div>
 
           <!-- Tracking Link & WhatsApp CTA -->
           <div class="actions-cta-bar">
-            <a [routerLink]="['/track-order', ord.orderId]" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-route"></i> تتبع مسار الطلب بالمحاكاة
+            <a [href]="whatsAppShareUrl()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-action btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> إرسال الطلب في واتساب الآن
             </a>
-            <a [href]="whatsAppShareUrl()" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
-              <i class="fa-brands fa-whatsapp"></i> مشاركة الطلب عبر واتساب
+            <a [routerLink]="['/track-order', ord.orderId]" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-route"></i> تتبع مسار الطلب
             </a>
             <a routerLink="/menu" class="btn btn-outline btn-lg">
               <i class="fa-solid fa-book-open"></i> العودة للمنيو
@@ -58,7 +61,7 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
             <div class="items-list">
               @for (item of ord.items; track item.cartItemId) {
                 <div class="item-row">
-                  <img [src]="item.image" [alt]="item.nameAr" class="item-img" />
+                  <img [src]="item.image" [alt]="item.nameAr" class="item-img" (error)="onImageError($event)" />
                   <div class="item-info">
                     <h3 class="item-title">{{ item.nameAr }} (x{{ item.quantity }})</h3>
                     <span class="item-size">{{ item.selectedSize.nameAr }}</span>
@@ -214,7 +217,7 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
 
               <div class="info-block">
                 <span class="block-label">الوقت التقديري للتجهيز:</span>
-                <span class="block-value prep-time">{{ ord.estimatedMinutes }} دقيقة تقريباً</span>
+                <span class="block-value prep-time">4 - 8 دقائق تقريباً</span>
               </div>
 
               @if (ord.customer.notes) {
@@ -308,25 +311,42 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
       letter-spacing: 0.05em;
       font-variant-numeric: tabular-nums;
     }
-    .demo-explicit-warning {
-      background: rgba(254, 242, 242, 0.9);
-      border: 1.5px solid #fecaca;
+    .whatsapp-pill {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+    .whatsapp-handoff-notice {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 1.5px solid #a7f3d0;
       border-radius: var(--radius-md);
-      padding: 0.75rem 1.25rem;
-      color: #991b1b;
-      font-size: 0.85rem;
+      padding: 0.95rem 1.25rem;
+      color: #065f46;
+      font-size: 0.9rem;
       max-width: 620px;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.85rem;
       text-align: right;
+      line-height: 1.6;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
-      text-wrap: pretty;
     }
-    .demo-explicit-warning i {
-      font-size: 1.2rem;
+    .whatsapp-handoff-notice i {
+      font-size: 1.4rem;
+      color: #25d366;
       flex-shrink: 0;
-      color: #dc2626;
+    }
+    .btn-whatsapp-action {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      font-weight: 800;
+    }
+    .btn-whatsapp-action:hover {
+      background: linear-gradient(135deg, #22bf5b 0%, #0e7064 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
     }
     .actions-cta-bar {
       display: flex;
@@ -566,6 +586,7 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
 export class OrderConfirmationComponent {
   private orderService = inject(OrderService);
   private configService = inject(ConfigService);
+  private whatsappSubmissionService = inject(WhatsAppOrderSubmissionService);
   private route = inject(ActivatedRoute);
 
   readonly order = signal<Order | undefined>(undefined);
@@ -610,25 +631,31 @@ export class OrderConfirmationComponent {
     const ord = this.order();
     if (!ord) return '';
 
-    let fulfillmentDesc = '';
-    if (ord.fulfillmentType === 'table') {
-      fulfillmentDesc = `طلب من ترابيزة #${ord.tableDetails?.tableNumber} (${ord.tableDetails?.areaNameAr})`;
-    } else if (ord.fulfillmentType === 'car') {
-      fulfillmentDesc = `طلب من العربية (لوحة: ${ord.carDetails?.vehiclePlate} - ${ord.carDetails?.vehicleModelColor})`;
-    } else if (ord.fulfillmentType === 'takeaway') {
-      fulfillmentDesc = `استلام تيك أواي من الفرع`;
-    } else if (ord.fulfillmentType === 'delivery') {
-      fulfillmentDesc = `توصيل لـ ${ord.deliveryDetails?.district} - ${ord.deliveryDetails?.street}`;
-    }
+    const payload = {
+      customer: ord.customer,
+      fulfillmentType: ord.fulfillmentType,
+      paymentMethod: ord.paymentMethod,
+      items: ord.items,
+      summary: ord.summary,
+      tableDetails: ord.tableDetails,
+      carDetails: ord.carDetails,
+      takeawayDetails: ord.takeawayDetails,
+      deliveryDetails: ord.deliveryDetails,
+      notes: ord.customer.notes
+    };
 
-    const text = encodeURIComponent(
-      `مرحباً فروتيلا، قمت بتأكيد طلب جديد برقم: ${ord.orderNumber}\n` +
-      `الإجمالي: ${ord.summary.total} ج.م\n` +
-      `طريقة الاستلام: ${fulfillmentDesc}\n` +
-      `الاسم: ${ord.customer.fullName}\n` +
-      `الهاتف: ${ord.customer.phone}\n` +
-      `حالة الطلب: محاكاة تجريبية (Phase 2 Demo)`
-    );
-    return `https://wa.me/${this.business().contacts.whatsapp}?text=${text}`;
+    const text = this.whatsappSubmissionService.buildWhatsAppMessage(ord, payload);
+    const businessWhatsApp = this.business().contacts.whatsapp || WHATSAPP_ORDER_CONFIG.phoneNumber;
+    const targetPhone = normalizeWhatsAppNumber(businessWhatsApp);
+
+    return `https://wa.me/${targetPhone}?text=${encodeURIComponent(text)}`;
+  }
+
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    if (target.dataset['fallbackApplied']) return;
+    target.dataset['fallbackApplied'] = 'true';
+    target.src = '/images/brand/fruitella-logo.jpg';
+    target.classList.add('fruitella-logo-fallback');
   }
 }

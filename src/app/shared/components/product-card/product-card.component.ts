@@ -687,7 +687,10 @@ export class ProductCardComponent {
 
   onImageError(event: Event): void {
     const target = event.target as HTMLImageElement;
-    target.src = '/images/brand/fruitella-hero-banner.jpg';
+    if (target.dataset['fallbackApplied']) return;
+    target.dataset['fallbackApplied'] = 'true';
+    target.src = '/images/brand/fruitella-logo.jpg';
+    target.classList.add('fruitella-logo-fallback');
   }
 
   shareProduct(event: Event): void {

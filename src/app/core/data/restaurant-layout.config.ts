@@ -24,25 +24,36 @@ export interface TakeawayServiceConfig {
 }
 
 export const RESTAURANT_TABLES: RestaurantTable[] = [
-  // --- Indoor Tables (صالة المحل الداخلية المكيفة) ---
-  { id: 'in-1', tableNumber: 1, area: 'indoor', capacity: 2, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة ثنائية بجوار بار العصائر', isAvailable: true },
-  { id: 'in-2', tableNumber: 2, area: 'indoor', capacity: 2, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة ثنائية هادئة', isAvailable: true },
-  { id: 'in-3', tableNumber: 3, area: 'indoor', capacity: 4, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة عائلية وسط الصالة', isAvailable: true },
-  { id: 'in-4', tableNumber: 4, area: 'indoor', capacity: 4, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة عائلية مريحة', isAvailable: true },
-  { id: 'in-5', tableNumber: 5, area: 'indoor', capacity: 6, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'كنبة عائلية كبيرة', isAvailable: true },
-  { id: 'in-6', tableNumber: 6, area: 'indoor', capacity: 4, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة رباعية بإطلالة زجاجية', isAvailable: true },
-  { id: 'in-7', tableNumber: 7, area: 'indoor', capacity: 2, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة ثنائية سريعة', isAvailable: true },
-  { id: 'in-8', tableNumber: 8, area: 'indoor', capacity: 6, areaNameAr: 'الصالة الداخلية', areaNameEn: 'Indoor Area', descriptionAr: 'طاولة ركنية واسعة للمجموعات', isAvailable: true },
-
-  // --- Outdoor Tables (الجلسات الخارجية في ممشى مول حياة تاون) ---
-  { id: 'out-11', tableNumber: 11, area: 'outdoor', capacity: 4, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة خارجية أمام نافورة المول', isAvailable: true },
-  { id: 'out-12', tableNumber: 12, area: 'outdoor', capacity: 4, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة خارجية مميزة في الهواء الطلق', isAvailable: true },
-  { id: 'out-13', tableNumber: 13, area: 'outdoor', capacity: 4, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة مظللة مريحة', isAvailable: true },
-  { id: 'out-14', tableNumber: 14, area: 'outdoor', capacity: 6, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة عائلية كبيرة بالخارج', isAvailable: true },
-  { id: 'out-15', tableNumber: 15, area: 'outdoor', capacity: 2, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'طاولة ثنائية خارجية', isAvailable: true },
-  { id: 'out-16', tableNumber: 16, area: 'outdoor', capacity: 4, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة خارجية بجوار مدخل 2', isAvailable: true },
-  { id: 'out-17', tableNumber: 17, area: 'outdoor', capacity: 4, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'جلسة خارجية مسائية هادئة', isAvailable: true },
-  { id: 'out-18', tableNumber: 18, area: 'outdoor', capacity: 6, areaNameAr: 'الجلسات الخارجية', areaNameEn: 'Outdoor Patio', descriptionAr: 'طاولة عائلية واسعة', isAvailable: true }
+  { id: 'tbl-1', tableNumber: 1, descriptionAr: 'طاولة رقم 1', isAvailable: true },
+  { id: 'tbl-2', tableNumber: 2, descriptionAr: 'طاولة رقم 2', isAvailable: true },
+  { id: 'tbl-3', tableNumber: 3, descriptionAr: 'طاولة رقم 3', isAvailable: true },
+  { id: 'tbl-4', tableNumber: 4, descriptionAr: 'طاولة رقم 4', isAvailable: true },
+  { id: 'tbl-5', tableNumber: 5, descriptionAr: 'طاولة رقم 5', isAvailable: true },
+  { id: 'tbl-6', tableNumber: 6, descriptionAr: 'طاولة رقم 6', isAvailable: true },
+  { id: 'tbl-7', tableNumber: 7, descriptionAr: 'طاولة رقم 7', isAvailable: true },
+  { id: 'tbl-8', tableNumber: 8, descriptionAr: 'طاولة رقم 8', isAvailable: true },
+  { id: 'tbl-9', tableNumber: 9, descriptionAr: 'طاولة رقم 9', isAvailable: true },
+  { id: 'tbl-10', tableNumber: 10, descriptionAr: 'طاولة رقم 10', isAvailable: true },
+  { id: 'tbl-11', tableNumber: 11, descriptionAr: 'طاولة رقم 11', isAvailable: true },
+  { id: 'tbl-12', tableNumber: 12, descriptionAr: 'طاولة رقم 12', isAvailable: true },
+  { id: 'tbl-13', tableNumber: 13, descriptionAr: 'طاولة رقم 13', isAvailable: true },
+  { id: 'tbl-14', tableNumber: 14, descriptionAr: 'طاولة رقم 14', isAvailable: true },
+  { id: 'tbl-15', tableNumber: 15, descriptionAr: 'طاولة رقم 15', isAvailable: true },
+  { id: 'tbl-16', tableNumber: 16, descriptionAr: 'طاولة رقم 16', isAvailable: true },
+  { id: 'tbl-17', tableNumber: 17, descriptionAr: 'طاولة رقم 17', isAvailable: true },
+  { id: 'tbl-18', tableNumber: 18, descriptionAr: 'طاولة رقم 18', isAvailable: true },
+  { id: 'tbl-19', tableNumber: 19, descriptionAr: 'طاولة رقم 19', isAvailable: true },
+  { id: 'tbl-20', tableNumber: 20, descriptionAr: 'طاولة رقم 20', isAvailable: true },
+  { id: 'tbl-21', tableNumber: 21, descriptionAr: 'طاولة رقم 21', isAvailable: true },
+  { id: 'tbl-22', tableNumber: 22, descriptionAr: 'طاولة رقم 22', isAvailable: true },
+  { id: 'tbl-23', tableNumber: 23, descriptionAr: 'طاولة رقم 23', isAvailable: true },
+  { id: 'tbl-24', tableNumber: 24, descriptionAr: 'طاولة رقم 24', isAvailable: true },
+  { id: 'tbl-25', tableNumber: 25, descriptionAr: 'طاولة رقم 25', isAvailable: true },
+  { id: 'tbl-26', tableNumber: 26, descriptionAr: 'طاولة رقم 26', isAvailable: true },
+  { id: 'tbl-27', tableNumber: 27, descriptionAr: 'طاولة رقم 27', isAvailable: true },
+  { id: 'tbl-28', tableNumber: 28, descriptionAr: 'طاولة رقم 28', isAvailable: true },
+  { id: 'tbl-29', tableNumber: 29, descriptionAr: 'طاولة رقم 29', isAvailable: true },
+  { id: 'tbl-30', tableNumber: 30, descriptionAr: 'طاولة رقم 30', isAvailable: true }
 ];
 
 export const CAR_SERVICE_CONFIG: CarServiceConfig = {
@@ -65,7 +76,7 @@ export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
   minimumOrderAmount: 50,
   standardFee: 25,
   freeDeliveryThreshold: 250,
-  estimatedMinutes: 30,
+  estimatedMinutes: 6,
   cityAr: 'مدينة العبور',
   districtsAr: [
     'الحي السادس (بجوار مول حياة تاون — التوصيل الأسرع)',
@@ -93,26 +104,26 @@ export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
 
 export const TAKEAWAY_SERVICE_CONFIG: TakeawayServiceConfig = {
   enabled: true,
-  estimatedMinutes: 12,
+  estimatedMinutes: 6,
   pickupCounterAr: 'كاونتر الاستلام السريع بفرع مول حياة تاون (مدخل 2)'
 };
 
-export function isValidTable(tableNumber: number, area?: DiningArea): boolean {
+export function isValidTable(tableNumber: number, _area?: DiningArea): boolean {
   if (isNaN(tableNumber)) return false;
-  return RESTAURANT_TABLES.some(t => {
-    const matchesNum = t.tableNumber === tableNumber;
-    return area ? matchesNum && t.area === area : matchesNum;
-  });
+  return RESTAURANT_TABLES.some(t => t.tableNumber === tableNumber && t.isAvailable);
 }
 
-export function findTable(tableNumber: number, area?: DiningArea): RestaurantTable | undefined {
+export function findTable(tableNumber: number, _area?: DiningArea): RestaurantTable | undefined {
   if (isNaN(tableNumber)) return undefined;
-  return RESTAURANT_TABLES.find(t => {
-    const matchesNum = t.tableNumber === tableNumber;
-    return area ? matchesNum && t.area === area : matchesNum;
-  });
+  return RESTAURANT_TABLES.find(t => t.tableNumber === tableNumber);
 }
 
-export function getTablesByArea(area: DiningArea): RestaurantTable[] {
-  return RESTAURANT_TABLES.filter(t => t.area === area);
+export function getAllTables(): RestaurantTable[] {
+  return RESTAURANT_TABLES;
 }
+
+export function getTablesByArea(_area?: DiningArea): RestaurantTable[] {
+  // Indoor/outdoor classification has been unified; returns all available tables
+  return RESTAURANT_TABLES;
+}
+

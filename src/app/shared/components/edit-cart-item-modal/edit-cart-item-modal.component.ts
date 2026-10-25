@@ -22,7 +22,7 @@ import { QuantitySelectorComponent } from '../quantity-selector/quantity-selecto
         <div class="modal-card" (click)="$event.stopPropagation()">
           <div class="modal-header">
             <div class="header-product">
-              <img [src]="itm.image" [alt]="itm.nameAr" class="item-thumb" />
+              <img [src]="itm.image" [alt]="itm.nameAr" class="item-thumb" (error)="onImageError($event)" />
               <div>
                 <span class="badge badge-brand">{{ itm.categoryNameAr }}</span>
                 <h3 id="editItemModalTitle" class="item-name">{{ itm.nameAr }}</h3>
@@ -641,5 +641,13 @@ export class EditCartItemModalComponent {
       );
       this.close();
     }
+  }
+
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    if (target.dataset['fallbackApplied']) return;
+    target.dataset['fallbackApplied'] = 'true';
+    target.src = '/images/brand/fruitella-logo.jpg';
+    target.classList.add('fruitella-logo-fallback');
   }
 }

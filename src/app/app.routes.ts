@@ -17,6 +17,16 @@ export const routes: Routes = [
     title: 'قائمة الأصناف | فروتيلا Fruitella'
   },
   {
+    path: 't/:tableId',
+    loadComponent: () => import('./features/table-qr/table-qr.component').then(m => m.TableQrComponent),
+    title: 'التعرف على الطاولة | فروتيلا Fruitella'
+  },
+  {
+    path: 'table/:tableId',
+    loadComponent: () => import('./features/table-qr/table-qr.component').then(m => m.TableQrComponent),
+    title: 'التعرف على الطاولة | فروتيلا Fruitella'
+  },
+  {
     path: 'product/:productSlug',
     loadComponent: () => import('./features/product/product-detail.component').then(m => m.ProductDetailComponent),
     title: 'تفاصيل الصنف | فروتيلا Fruitella'

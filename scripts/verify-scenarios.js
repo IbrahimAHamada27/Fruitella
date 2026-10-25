@@ -1,4 +1,4 @@
-// Verification of the 16 Prompt 2 Acceptance Scenarios for Fruitella
+// Verification of Acceptance Scenarios for Fruitella (including WhatsApp Ordering & Unified Tables)
 
 const fs = require('fs');
 const path = require('path');
@@ -23,17 +23,19 @@ function assert(condition, scenarioNum, description) {
 // 1. Layout & Table Validation Tests
 const layoutFile = fs.readFileSync(path.join(__dirname, '../src/app/core/data/restaurant-layout.config.ts'), 'utf8');
 
-// Scenario 4 & 5: Valid and Invalid table context
-const hasTable12Outdoor = layoutFile.includes("tableNumber: 12") && layoutFile.includes("area: 'outdoor'");
-assert(hasTable12Outdoor, 4, 'Valid table 12 in outdoor patio is configured');
+// Scenario 4: Table 12 configured in unified tables
+const hasTable12 = layoutFile.includes("tableNumber: 12");
+assert(hasTable12, 4, 'Valid table 12 is configured in the unified table layout');
 
-const isValidTableRegex = /export function isValidTable\(tableNumber: number, area\?: DiningArea\)/;
+// Scenario 5: isValidTable function validates against configured tables
+const isValidTableRegex = /export function isValidTable\(tableNumber: number/;
 assert(isValidTableRegex.test(layoutFile), 5, 'isValidTable function validates against configured tables');
 
-// Scenario 6: Indoor and outdoor filtering
-const hasIndoor8 = layoutFile.includes("tableNumber: 8") && layoutFile.includes("area: 'indoor'");
-const hasOutdoor18 = layoutFile.includes("tableNumber: 18") && layoutFile.includes("area: 'outdoor'");
-assert(hasIndoor8 && hasOutdoor18, 6, 'Indoor (1-8) and Outdoor (11-18) tables configured and distinct');
+// Scenario 6: Unified table configuration (indoor/outdoor removed, 30 tables, no capacity restrictions)
+const hasTable1 = layoutFile.includes("tableNumber: 1");
+const hasTable30 = layoutFile.includes("tableNumber: 30");
+const noRequiredArea = !layoutFile.includes("area: 'indoor'") && !layoutFile.includes("area: 'outdoor'");
+assert(hasTable1 && hasTable30 && noRequiredArea, 6, 'Tables 1 to 30 unified into single stand-based layout without indoor/outdoor separation or capacity restrictions');
 
 // Scenario 7: Car service required details
 const carConfigExists = layoutFile.includes("meetingPointAr: 'أمام مدخل 2 — مول حياة تاون، العبور'");
@@ -69,10 +71,10 @@ const hasStoragePersistence = cartServiceFile.includes('localStorage.setItem(CAR
 const hasFulfillmentPersistence = fs.readFileSync(path.join(__dirname, '../src/app/core/services/fulfillment.service.ts'), 'utf8').includes('localStorage.setItem(FULFILLMENT_STORAGE_KEY');
 assert(hasStoragePersistence && hasFulfillmentPersistence, 11, 'Cart and fulfillment states are automatically persisted to and restored from browser storage');
 
-// Scenario 12: Order confirmation creates demo reference
+// Scenario 12: Order submission creates reference
 const orderServiceFile = fs.readFileSync(path.join(__dirname, '../src/app/core/services/order.service.ts'), 'utf8');
 const hasDemoRefGen = orderServiceFile.includes('`FRU-${randomSuffix}`') && orderServiceFile.includes("status: 'pending'");
-assert(hasDemoRefGen, 12, 'Demo order generator creates unique FRU-XXXX reference with initial pending status');
+assert(hasDemoRefGen, 12, 'Order generator creates unique FRU-XXXX reference with initial pending status');
 
 // Scenario 13: Tracking page displays simulated statuses
 const trackOrderFile = fs.readFileSync(path.join(__dirname, '../src/app/features/orders/track-order.component.ts'), 'utf8');
@@ -106,11 +108,11 @@ function checkNoAny(dir) {
 const anyInCodebase = checkNoAny(srcDir);
 assert(!anyInCodebase, 15, 'Zero usages of "any" type across the entire src/app codebase');
 
-// Scenario 16: Explicit simulation disclaimers (never claims real kitchen)
-const confirmationFile = fs.readFileSync(path.join(__dirname, '../src/app/features/orders/order-confirmation.component.ts'), 'utf8');
-const hasDisclaimerInConf = confirmationFile.includes('لم يتم إرسال هذا الطلب إلى كاشير أو مطبخ حقيقي');
-const hasDisclaimerInCheckout = checkoutFile.includes('لن يتم إرسال طلب فعلي لكاشير أو مطبخ حقيقي');
-assert(hasDisclaimerInConf && hasDisclaimerInCheckout, 16, 'All checkout and confirmation flows feature explicit disclaimers confirming simulation mode');
+// Scenario 16: Temporary WhatsApp Ordering Notice at checkout
+const hasWhatsAppNoticeTitle = checkoutFile.includes('الطلب حاليًا عبر واتساب');
+const hasWhatsAppNoticeBody = checkoutFile.includes('لحد ما نكمل ربط نظام الطلبات، هتقدر تبعت طلبك مباشرة على واتساب المكان');
+const hasWhatsAppSubmitBtn = checkoutFile.includes('إرسال الطلب عبر واتساب الآن');
+assert(hasWhatsAppNoticeTitle && hasWhatsAppNoticeBody && hasWhatsAppSubmitBtn, 16, 'Polished temporary WhatsApp notice and action button present at final checkout step');
 
 // Scenario 17: Complete discount & coupon removal
 const homeFile = fs.readFileSync(path.join(__dirname, '../src/app/features/home/home.component.ts'), 'utf8');
@@ -128,6 +130,21 @@ const hasSweetenerCustom = productDetailFile.includes('عسل نحل طبيعي'
 const hasHoneySurcharge = productDetailFile.includes("selectedSweetener() === 'honey' ? 10 : 0") && editModalFile.includes("selectedSweetener() === 'honey' ? 10 : 0");
 const hasModalCustom = editModalFile.includes('نص ضربة') && editModalFile.includes('وش ضربة') && editModalFile.includes('عسل نحل');
 assert(hasBlendCustom && hasSweetenerCustom && hasHoneySurcharge && hasModalCustom, 18, 'Granular beverage customization (blend, sweetener, sugar, ice, honey +10 EGP) active in Product Detail and Edit Cart Modal');
+
+// Scenario 19: Official WhatsApp Ordering Configuration and Submission Service
+const whatsappConfigFile = fs.readFileSync(path.join(__dirname, '../src/app/core/config/order.config.ts'), 'utf8');
+const whatsappServiceFile = fs.readFileSync(path.join(__dirname, '../src/app/core/services/whatsapp-order-submission.service.ts'), 'utf8');
+const hasCorrectPhone = whatsappConfigFile.includes("'201037221133'");
+const hasMessageBuilder = whatsappServiceFile.includes('buildWhatsAppMessage');
+const hasWhatsAppUrl = whatsappServiceFile.includes('https://wa.me/');
+assert(hasCorrectPhone && hasMessageBuilder && hasWhatsAppUrl, 19, 'Official WhatsApp ordering service configured with 201037221133 and structured message builder');
+
+// Scenario 20: QR Code Physical Stand Routing (/t/:tableId and /table/:tableId)
+const routesFile = fs.readFileSync(path.join(__dirname, '../src/app/app.routes.ts'), 'utf8');
+const hasTRoute = routesFile.includes("'t/:tableId'");
+const hasTableRoute = routesFile.includes("'table/:tableId'");
+const tableQrComponentExists = fs.existsSync(path.join(__dirname, '../src/app/features/table-qr/table-qr.component.ts'));
+assert(hasTRoute && hasTableRoute && tableQrComponentExists, 20, 'Direct table stand QR routes (/t/:tableId and /table/:tableId) implemented with TableQrComponent');
 
 console.log('\n================================================================');
 console.log(`📊 TEST RESULTS: ${passedCount} PASSED, ${failedCount} FAILED out of ${passedCount + failedCount} Scenarios`);

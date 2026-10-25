@@ -1,79 +1,4 @@
-import { Product, ProductCategory, ProductAddon } from '../models/product.model';
-
-export const FRUITELLA_ADDONS: ProductAddon[] = [
-  {
-    "id": "flavor-caramel",
-    "nameAr": "إضافة سيرب كراميل",
-    "nameEn": "Caramel Syrup",
-    "price": 25,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "flavor-vanilla",
-    "nameAr": "إضافة سيرب فانيليا",
-    "nameEn": "Vanilla Syrup",
-    "price": 25,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "flavor-hazelnut",
-    "nameAr": "إضافة سيرب بندق",
-    "nameEn": "Hazelnut Syrup",
-    "price": 25,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "flavor-white-cream",
-    "nameAr": "إضافة وايت كريم فاخر",
-    "nameEn": "Premium White Cream",
-    "price": 30,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "nuts",
-    "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-    "nameEn": "Mixed Premium Nuts",
-    "price": 40,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "nutella",
-    "nameAr": "إضافة نوتيلا أصلية",
-    "nameEn": "Nutella Drizzle",
-    "price": 30,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "cream",
-    "nameAr": "قشطة بلدي طبيعية",
-    "nameEn": "Fresh Clotted Cream",
-    "price": 30,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "boba",
-    "nameAr": "حبيبات بوبا Boba Pearls",
-    "nameEn": "Boba Pearls",
-    "price": 30,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "honey",
-    "nameAr": "عسل نحل طبيعي",
-    "nameEn": "Pure Natural Honey",
-    "price": 10,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  }
-];
+import { ProductCategory, Product, ProductAddon } from '../models/product.model';
 
 export const FRUITELLA_CATEGORIES: ProductCategory[] = [
   {
@@ -99,9 +24,9 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "عصائر شرقية",
     "nameEn": "Oriental Juices",
     "descriptionAr": "قصب طبيعي، دوم، خروب، تمر هندي وعناب محضر بالطرق التراثية الأصيلة",
-    "icon": "fa-solid fa-wheat-awn",
+    "icon": "fa-solid fa-seedling",
     "themeColor": "#b45309",
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "displayOrder": 2,
     "informationAr": [
       "قسم العصائر الشرقية بيضم خيارات مختلفة عن عصائر الفاكهة المعتادة، زي القصب والدوم والخروب والعناب.",
@@ -116,7 +41,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "عالم السوبيا",
     "nameEn": "Sobya World",
     "descriptionAr": "سوبيا مثلجة وممزوجة بأشهى النكهات من المانجو واللوتس والنوتيلا والبيستاشيو",
-    "icon": "fa-solid fa-mug-saucer",
+    "icon": "fa-solid fa-droplet",
     "themeColor": "#0284c7",
     "image": "/images/products/signature-four-drinks.jpg",
     "displayOrder": 3,
@@ -133,7 +58,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "عالم المانجو",
     "nameEn": "Mango World",
     "descriptionAr": "عصائر مانجو طازجة ومثلجة وبول آيس كريم وقطع مانجو مانش استوائية",
-    "icon": "fa-solid fa-lemon",
+    "icon": "fa-solid fa-sun",
     "themeColor": "#ea580c",
     "image": "/images/products/mango-chunks-bowl.jpg",
     "displayOrder": 4,
@@ -235,7 +160,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "عالم المكسرات والزبادي",
     "nameEn": "Nuts & Yogurt World",
     "descriptionAr": "مشروبات الكاجو واللوز والبندق مع الفانيليا أو الشوكولاتة، وزبادي العسل والفواكه",
-    "icon": "fa-solid fa-cubes-stacked",
+    "icon": "fa-solid fa-spoon",
     "themeColor": "#92400e",
     "image": "/images/products/avocado-nuts-mango-pair.jpg",
     "displayOrder": 10,
@@ -252,7 +177,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "عالم الميلك شيك",
     "nameEn": "The World of Milkshakes",
     "descriptionAr": "ميلك شيك كريمي كثيف بالأوريو واللوتس والنوتيلا والبيستاشيو والسيريلاك",
-    "icon": "fa-solid fa-ice-cream",
+    "icon": "fa-solid fa-martini-glass",
     "themeColor": "#be185d",
     "image": "/images/products/signature-four-drinks.jpg",
     "displayOrder": 11,
@@ -373,7 +298,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "عبوات عائلية اقتصادية بحجم لتر و4 لتر للمناسبات والجمعات العائلية",
     "icon": "fa-solid fa-boxes-stacked",
     "themeColor": "#047857",
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "displayOrder": 18,
     "informationAr": [
       "العبوات العائلية مخصصة للأحجام الكبيرة (لتر أو 4 لتر) لتوفير اقتصادي ومثالي للمجموعات.",
@@ -390,7 +315,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "إسبريسو، كابتشينو، فلات وايت، لاتيه، هوت شوكليت، قهوة تركي وفرنساوي وشاي",
     "icon": "fa-solid fa-mug-hot",
     "themeColor": "#78350f",
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "displayOrder": 19,
     "informationAr": [
       "اختار حجم المشروب حسب الرموز المطبوعة في المنيو (S للحجم الصغير، D للدبل، M للمتوسط).",
@@ -405,7 +330,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "nameAr": "كولد درينك",
     "nameEn": "Cold Coffee & Drinks",
     "descriptionAr": "آيس لاتيه، آيس بيستاشيو، آيس أمريكانو، وسولتد كراميل مثلج",
-    "icon": "fa-solid fa-glass-water-droplet",
+    "icon": "fa-solid fa-snowflake",
     "themeColor": "#0369a1",
     "image": "/images/products/signature-four-drinks.jpg",
     "displayOrder": 20,
@@ -3313,7 +3238,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -3448,7 +3373,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": true,
     "tags": [
@@ -3583,7 +3508,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3709,7 +3634,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3835,7 +3760,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3970,7 +3895,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4096,7 +4021,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4222,7 +4147,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4357,7 +4282,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4492,7 +4417,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4627,7 +4552,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4753,7 +4678,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4879,7 +4804,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -5005,7 +4930,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-4.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -6293,7 +6218,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -6419,7 +6344,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6669,7 +6594,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6794,7 +6719,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6919,7 +6844,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7044,7 +6969,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7169,7 +7094,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7419,7 +7344,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7544,7 +7469,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7669,7 +7594,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7794,7 +7719,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-cocktail-bar.jpg",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -25092,7 +25017,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "عائلي",
@@ -25217,7 +25142,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -25341,7 +25266,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -25465,7 +25390,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -25580,7 +25505,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -25704,7 +25629,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "عائلي",
@@ -25829,7 +25754,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -25953,7 +25878,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26077,7 +26002,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26201,7 +26126,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26325,7 +26250,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26449,7 +26374,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26573,7 +26498,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -26699,7 +26624,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -26823,7 +26748,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "tags": [
       "عائلي",
@@ -26948,7 +26873,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27063,7 +26988,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27178,7 +27103,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "tags": [
       "عائلي",
@@ -27294,7 +27219,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27418,7 +27343,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27542,7 +27467,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27666,7 +27591,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -27790,7 +27715,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "عائلي",
@@ -27915,7 +27840,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28039,7 +27964,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28163,7 +28088,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28278,7 +28203,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28393,7 +28318,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28508,7 +28433,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28623,7 +28548,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/menu-board-1.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "عائلي",
       "لتر",
@@ -28747,7 +28672,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "ساخن",
@@ -28864,7 +28789,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -28989,7 +28914,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -29114,7 +29039,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "ساخن",
@@ -29240,7 +29165,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -29365,7 +29290,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "tags": [
       "ساخن",
@@ -29491,7 +29416,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -29607,7 +29532,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -29723,7 +29648,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "tags": [
       "ساخن",
@@ -29840,7 +29765,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -29956,7 +29881,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30072,7 +29997,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isFeatured": true,
     "tags": [
       "ساخن",
@@ -30189,7 +30114,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30305,7 +30230,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30430,7 +30355,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "ساخن",
@@ -30547,7 +30472,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30663,7 +30588,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30779,7 +30704,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -30895,7 +30820,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -31011,7 +30936,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -31136,7 +31061,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "isBestSeller": true,
     "tags": [
       "ساخن",
@@ -31253,7 +31178,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -31369,7 +31294,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -31485,7 +31410,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/storefront-night.jpg",
+    "image": "/images/brand/fruitella-logo.jpg",
     "tags": [
       "ساخن",
       "قهوة",
@@ -34918,7 +34843,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/desserts-grid.jpg",
+    "image": "/images/products/waffle-weekend-promo.jpg",
     "isBestSeller": true,
     "tags": [
       "حلويات",
@@ -35158,7 +35083,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/desserts-grid.jpg",
+    "image": "/images/products/kashtouta.jpg",
     "tags": [
       "حلويات",
       "وافل",
@@ -35277,7 +35202,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/menu/desserts-grid.jpg",
+    "image": "/images/products/fruitella-signature-waffle.jpg",
     "tags": [
       "حلويات",
       "وافل",
@@ -36972,6 +36897,81 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     },
     "verifiedFromAsset": "raw_assets/844838847_122230951712500364_198089585914876509_n.jpg",
     "extractionStatus": "verified",
+    "availability": "available"
+  }
+];
+
+export const FRUITELLA_ADDONS: ProductAddon[] = [
+  {
+    "id": "flavor-caramel",
+    "nameAr": "إضافة سيرب كراميل",
+    "nameEn": "Caramel Syrup",
+    "price": 25,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "flavor-vanilla",
+    "nameAr": "إضافة سيرب فانيليا",
+    "nameEn": "Vanilla Syrup",
+    "price": 25,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "flavor-hazelnut",
+    "nameAr": "إضافة سيرب بندق",
+    "nameEn": "Hazelnut Syrup",
+    "price": 25,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "flavor-white-cream",
+    "nameAr": "إضافة وايت كريم فاخر",
+    "nameEn": "Premium White Cream",
+    "price": 30,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "nuts",
+    "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+    "nameEn": "Mixed Premium Nuts",
+    "price": 40,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "nutella",
+    "nameAr": "إضافة نوتيلا أصلية",
+    "nameEn": "Nutella Drizzle",
+    "price": 30,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "cream",
+    "nameAr": "قشطة بلدي طبيعية",
+    "nameEn": "Fresh Clotted Cream",
+    "price": 30,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "boba",
+    "nameAr": "حبيبات بوبا Boba Pearls",
+    "nameEn": "Boba Pearls",
+    "price": 30,
+    "categoryId": "add-flavor",
+    "availability": "available"
+  },
+  {
+    "id": "honey",
+    "nameAr": "عسل نحل طبيعي",
+    "nameEn": "Pure Natural Honey",
+    "price": 10,
+    "categoryId": "add-flavor",
     "availability": "available"
   }
 ];

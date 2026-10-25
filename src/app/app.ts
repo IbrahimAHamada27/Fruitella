@@ -41,10 +41,9 @@ export class App implements OnInit {
   private checkUrlForTableContext(): void {
     const urlTree = this.router.parseUrl(this.router.url);
     const tableParam = urlTree.queryParams['table'];
-    const areaParam = urlTree.queryParams['area'];
 
     if (tableParam) {
-      this.fulfillmentService.processUrlContext(tableParam, areaParam || null);
+      this.fulfillmentService.processUrlContext(tableParam);
     }
   }
 }

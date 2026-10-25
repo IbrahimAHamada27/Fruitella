@@ -22,9 +22,6 @@ import { ConfigService } from '../../../core/services/config.service';
           <p class="brand-desc">
             نقدم لكم تجربة العصائر الطبيعية الطازجة، السموذي الاستوائي، خلطات الأفوكادو الملكية بالمكسرات، والحلويات الفاخرة بأعلى معايير الجودة والنظافة في مدينة العبور.
           </p>
-          <div class="management-badge">
-            <i class="fa-solid fa-crown"></i> {{ business().management }}
-          </div>
           <div class="social-links">
             <a [href]="business().contacts.facebookUrl" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="صفحة فيسبوك">
               <i class="fa-brands fa-facebook-f"></i>
@@ -162,20 +159,7 @@ import { ConfigService } from '../../../core/services/config.service';
       color: rgba(255, 255, 255, 0.7);
       text-wrap: pretty;
     }
-    .management-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 0.4rem 0.85rem;
-      border-radius: var(--radius-full);
-      font-size: 0.82rem;
-      color: var(--fruitella-lime-light);
-      font-weight: 600;
-      width: fit-content;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
+
     .social-links {
       display: flex;
       gap: 0.75rem;

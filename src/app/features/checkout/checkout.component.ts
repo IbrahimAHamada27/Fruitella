@@ -5,11 +5,12 @@ import { CartService } from '../../core/services/cart.service';
 import { OrderService } from '../../core/services/order.service';
 import { ToastService } from '../../core/services/toast.service';
 import { FulfillmentService } from '../../core/services/fulfillment.service';
-import { DiningArea, FulfillmentType } from '../../core/models/fulfillment.model';
+import { FulfillmentType } from '../../core/models/fulfillment.model';
 import { PaymentMethod } from '../../core/models/order.model';
 import { PriceDisplayComponent } from '../../shared/components/price-display/price-display.component';
 import { TableSelectorModalComponent } from '../../shared/components/table-selector-modal/table-selector-modal.component';
-import { getTablesByArea } from '../../core/data/restaurant-layout.config';
+import { getAllTables } from '../../core/data/restaurant-layout.config';
+import { ORDER_SUBMISSION_SERVICE } from '../../core/contracts/order-submission.contract';
 
 type CheckoutStep = 1 | 2 | 3;
 
@@ -25,13 +26,13 @@ type CheckoutStep = 1 | 2 | 3;
         <p class="checkout-subtitle">تجربة طلب سلسة ومخصصة لمشروبات وحلويات فروتيلا — مول حياة تاون، العبور</p>
       </div>
 
-      <!-- Demo Phase Notice -->
-      <div class="demo-banner">
-        <div class="demo-banner-content">
-          <i class="fa-solid fa-circle-info banner-icon"></i>
+      <!-- Temporary WhatsApp Ordering Header Banner -->
+      <div class="whatsapp-top-banner">
+        <div class="whatsapp-top-content">
+          <i class="fa-brands fa-whatsapp top-banner-icon"></i>
           <div>
-            <strong>تنبيه تجربة المحاكاة (Phase 2 Demo):</strong>
-            <span> هذا النظام هو محاكاة كاملة للواجهة الأمامية لطلب العميل. لن يتم إرسال طلب فعلي لكاشير أو مطبخ حقيقي، ولا يتطلب أي دفع إلكتروني حقيقي.</span>
+            <strong>خدمة الطلب المباشر عبر واتساب:</strong>
+            <span> يتم إرسال تفاصيل طلبك تلقائياً وبشكل منسق إلى محادثة واتساب الرسمية لفرع فروتيلا العبور لمتابعة التحضير والاستلام فوراً.</span>
           </div>
         </div>
       </div>
@@ -110,7 +111,7 @@ type CheckoutStep = 1 | 2 | 3;
                     @if (selectedType() === 'table' && tableDetails(); as t) {
                       <div class="f-card-status active-status">
                         <i class="fa-solid fa-check-circle"></i>
-                        <span>ترابيزة #{{ t.tableNumber }} ({{ t.areaNameAr }})</span>
+                        <span>ترابيزة #{{ t.tableNumber }}</span>
                       </div>
                     } @else if (selectedType() === 'table') {
                       <div class="f-card-status pending-status">
@@ -159,7 +160,7 @@ type CheckoutStep = 1 | 2 | 3;
                     @if (selectedType() === 'takeaway') {
                       <div class="f-card-status active-status">
                         <i class="fa-solid fa-check-circle"></i>
-                        <span>جاهز خلال 12-15 دقيقة</span>
+                        <span>جاهز خلال 4 - 8 دقائق</span>
                       </div>
                     }
                   </div>
@@ -187,41 +188,27 @@ type CheckoutStep = 1 | 2 | 3;
                   </div>
                 </div>
 
-                <!-- Sub-step for Table Area & Selection if Table is selected -->
+                <!-- Sub-step for Table Selection if Table is selected -->
                 @if (selectedType() === 'table') {
                   <div class="table-selection-panel animate-fade-in">
-                    <h3 class="sub-panel-title">
-                      <i class="fa-solid fa-compass"></i> حدد صالة الجلوس ورقم طاولتك:
-                    </h3>
-
-                    <!-- Dining Area Toggle -->
-                    <div class="area-toggle-group">
-                      <button 
-                        type="button" 
-                        class="btn-area-tab" 
-                        [class.active]="diningArea() === 'indoor'"
-                        (click)="setDiningArea('indoor')">
-                        <i class="fa-solid fa-couch"></i> الصالة الداخلية (مكيفة)
-                      </button>
-                      <button 
-                        type="button" 
-                        class="btn-area-tab" 
-                        [class.active]="diningArea() === 'outdoor'"
-                        (click)="setDiningArea('outdoor')">
-                        <i class="fa-solid fa-sun"></i> الجلسات الخارجية (مفتوحة)
+                    <div class="panel-header-row">
+                      <h3 class="sub-panel-title">
+                        <i class="fa-solid fa-chair"></i> اختر رقم طاولتك بالفرع:
+                      </h3>
+                      <button type="button" class="btn-qr-scan-hint" (click)="openTableModal()">
+                        <i class="fa-solid fa-list"></i> استعراض كافة الطاولات
                       </button>
                     </div>
 
-                    <!-- Available Tables Grid -->
+                    <!-- Available Tables Grid (Unified) -->
                     <div class="tables-quick-grid">
-                      @for (t of availableTablesForArea(); track t.tableNumber) {
+                      @for (t of allTables; track t.tableNumber) {
                         <button 
                           type="button" 
                           class="table-cell-btn" 
                           [class.selected]="selectedTableNumber() === t.tableNumber"
                           (click)="selectTableDirectly(t.tableNumber)">
                           <span class="t-number">#{{ t.tableNumber }}</span>
-                          <span class="t-seats">{{ t.capacity }} كراسي</span>
                         </button>
                       }
                     </div>
@@ -229,7 +216,7 @@ type CheckoutStep = 1 | 2 | 3;
                     @if (selectedTableNumber()) {
                       <div class="selected-table-callout">
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>أنت الآن تطلب من <strong>ترابيزة #{{ selectedTableNumber() }}</strong> في {{ diningArea() === 'indoor' ? 'الصالة الداخلية' : 'الجلسات الخارجية' }}.</span>
+                        <span>أنت الآن تطلب من <strong>ترابيزة #{{ selectedTableNumber() }}</strong>. سيصلك الطلب مباشرة إلى طاولتك.</span>
                       </div>
                     }
                   </div>
@@ -479,11 +466,11 @@ type CheckoutStep = 1 | 2 | 3;
                       <div class="delivery-perks-row">
                         <div class="perk-chip">
                           <i class="fa-solid fa-clock"></i>
-                          <span>التوصيل خلال: <strong>25 - 35 دقيقة</strong></span>
+                          <span>التوصيل خلال: <strong>4 - 8 دقائق</strong></span>
                         </div>
                         <div class="perk-chip">
                           <i class="fa-solid fa-coins"></i>
-                          <span>رسوم التوصيل: <strong>{{ deliveryFee() === 0 ? 'مجاناً (طلبك أكثر من 250 ج)' : deliveryFee() + ' ج.م' }}</strong></span>
+                          <span>رسوم التوصيل: <strong>{{ deliveryFee() === 0 ? 'مجاناً' : deliveryFee() + ' ج.م' }}</strong></span>
                         </div>
                       </div>
                     </div>
@@ -608,9 +595,9 @@ type CheckoutStep = 1 | 2 | 3;
 
                     @if (selectedType() === 'table') {
                       <div class="info-cell">
-                        <span class="cell-label">رقم الترابيزة والصالة:</span>
+                        <span class="cell-label">رقم الترابيزة:</span>
                         <span class="cell-value highlight">
-                          ترابيزة #{{ selectedTableNumber() }} ({{ diningArea() === 'indoor' ? 'الصالة الداخلية' : 'الجلسات الخارجية' }})
+                          ترابيزة #{{ selectedTableNumber() }}
                         </span>
                       </div>
                     }
@@ -697,7 +684,7 @@ type CheckoutStep = 1 | 2 | 3;
                   <div class="review-items-list">
                     @for (item of items(); track item.cartItemId) {
                       <div class="review-item-row">
-                        <img [src]="item.image" [alt]="item.nameAr" class="r-thumb" />
+                        <img [src]="item.image" [alt]="item.nameAr" class="r-thumb" (error)="onImageError($event)" />
                         <div class="r-details">
                           <span class="r-name">{{ item.nameAr }} (x{{ item.quantity }})</span>
                           <span class="r-size">{{ item.selectedSize.nameAr }}</span>
@@ -739,20 +726,27 @@ type CheckoutStep = 1 | 2 | 3;
                   </div>
                 </div>
 
-                <!-- Final Demo Confirmation Disclaimer Box -->
-                <div class="demo-confirmation-disclaimer">
-                  <i class="fa-solid fa-shield-halved"></i>
-                  <p>
-                    <strong>تأكيد تجريبي:</strong> عند النقر على الزر أدناه، سيتم توليد رقم مرجعي تجريبي للطلب وحفظه في سجلات المتصفح للطلب، ولن يتم إرسال طلب فعلي للمطبخ.
+                <!-- Professional Temporary WhatsApp Notice at Checkout -->
+                <div class="whatsapp-notice-card">
+                  <div class="whatsapp-notice-badge">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>الطلب حاليًا عبر واتساب</span>
+                  </div>
+                  <p class="whatsapp-notice-text">
+                    لحد ما نكمل ربط نظام الطلبات، هتقدر تبعت طلبك مباشرة على واتساب المكان. راجع تفاصيل طلبك واضغط إرسال في واتساب، وفريقنا هيتابع معاك لتأكيد الطلب.
                   </p>
                 </div>
 
                 <div class="step-nav-footer">
-                  <button type="button" class="btn btn-outline" (click)="goToStep(2)">
+                  <button type="button" class="btn btn-outline" (click)="goToStep(2)" [disabled]="isSubmitting()">
                     <i class="fa-solid fa-arrow-right"></i> رجوع لتعديل البيانات
                   </button>
-                  <button type="button" class="btn btn-primary btn-confirm-order" (click)="submitFinalOrder()">
-                    <i class="fa-solid fa-circle-check"></i> تأكيد الطلب التجريبي الآن
+                  <button type="button" class="btn btn-whatsapp-submit" (click)="submitFinalOrder()" [disabled]="isSubmitting()">
+                    @if (isSubmitting()) {
+                      <i class="fa-solid fa-spinner fa-spin"></i> جاري تجهيز الطلب...
+                    } @else {
+                      <i class="fa-brands fa-whatsapp"></i> إرسال الطلب عبر واتساب الآن
+                    }
                   </button>
                 </div>
               </section>
@@ -786,7 +780,7 @@ type CheckoutStep = 1 | 2 | 3;
                   <span>رسوم التوصيل:</span>
                   @if (selectedType() === 'delivery') {
                     @if (deliveryFee() === 0) {
-                      <span class="free-badge">مجاناً (طلب فوق 250 ج.م)</span>
+                      <span class="free-badge">مجاناً</span>
                     } @else {
                       <span class="val">{{ deliveryFee() }} ج.م</span>
                     }
@@ -808,7 +802,7 @@ type CheckoutStep = 1 | 2 | 3;
                 <i class="fa-solid fa-clock"></i>
                 <div>
                   <span class="est-label">الوقت التقديري للتجهيز:</span>
-                  <span class="est-val">{{ estimatedPrepTime() }} دقيقة</span>
+                  <span class="est-val">{{ estimatedPrepTime() }} دقائق</span>
                 </div>
               </div>
 
@@ -1106,54 +1100,48 @@ type CheckoutStep = 1 | 2 | 3;
       align-items: center;
       gap: 0.5rem;
     }
-    .area-toggle-group {
+    .panel-header-row {
       display: flex;
-      gap: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
-    .btn-area-tab {
-      flex: 1;
-      padding: 0.65rem 1rem;
+    .btn-qr-scan-hint {
       background: #ffffff;
-      border: 1.5px solid #86efac;
-      border-radius: var(--radius-md);
-      font-size: 0.88rem;
+      border: 1px solid #86efac;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
       font-weight: 700;
       color: #166534;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      transition: all var(--transition-fast) cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: var(--shadow-antigravity-xs);
+      gap: 0.4rem;
+      transition: all var(--transition-fast) ease;
     }
-    .btn-area-tab:hover {
+    .btn-qr-scan-hint:hover {
+      background: #dcfce7;
       transform: translateY(-1px);
-    }
-    .btn-area-tab:active {
-      transform: scale(0.97);
-    }
-    .btn-area-tab.active {
-      background: #15803d;
-      color: #ffffff;
-      border-color: #15803d;
-      box-shadow: 0 4px 12px rgba(21, 128, 61, 0.3);
     }
     .tables-quick-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+      gap: 0.6rem;
+      max-height: 260px;
+      overflow-y: auto;
+      padding: 0.25rem;
     }
     .table-cell-btn {
       background: #ffffff;
       border: 1.5px solid #bbf7d0;
       border-radius: var(--radius-md);
-      padding: 0.65rem 0.4rem;
+      padding: 0.75rem 0.4rem;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.2rem;
+      justify-content: center;
       transition: all var(--transition-fast) cubic-bezier(0.16, 1, 0.3, 1);
       box-shadow: var(--shadow-antigravity-xs);
     }
@@ -1615,23 +1603,83 @@ type CheckoutStep = 1 | 2 | 3;
       font-variant-numeric: tabular-nums;
     }
 
-    .demo-confirmation-disclaimer {
-      background: rgba(254, 243, 199, 0.8);
-      backdrop-filter: blur(8px);
-      border: 1.5px solid #fde68a;
-      border-radius: var(--radius-md);
-      padding: 0.85rem 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      color: #92400e;
+    /* WhatsApp Notice & Action Button */
+    .whatsapp-top-banner {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 1.5px solid #a7f3d0;
+      border-radius: var(--radius-lg);
+      padding: 0.95rem 1.25rem;
+      margin-bottom: 1.5rem;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
-    .demo-confirmation-disclaimer i {
-      font-size: 1.3rem;
-      color: #d97706;
+    .whatsapp-top-content {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.88rem;
+      color: #065f46;
+      line-height: 1.5;
+    }
+    .top-banner-icon {
+      font-size: 1.5rem;
+      color: #25d366;
       flex-shrink: 0;
+    }
+    .whatsapp-notice-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e6f9ed 100%);
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), var(--shadow-antigravity-xs);
+    }
+    .whatsapp-notice-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #166534;
+    }
+    .whatsapp-notice-badge i {
+      font-size: 1.35rem;
+      color: #25d366;
+    }
+    .whatsapp-notice-text {
+      font-size: 0.88rem;
+      color: #1b4332;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .btn-whatsapp-submit {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.95rem 1.75rem;
+      border-radius: var(--radius-full);
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition: all var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-whatsapp-submit:hover:not(:disabled) {
+      background: linear-gradient(135deg, #22bf5b 0%, #0e7064 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+    .btn-whatsapp-submit:active:not(:disabled) {
+      transform: translateY(0) scale(0.98);
+    }
+    .btn-whatsapp-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
     }
 
     /* Summary Card Sticky */
@@ -1844,10 +1892,14 @@ export class CheckoutComponent {
   private cartService = inject(CartService);
   private orderService = inject(OrderService);
   private toastService = inject(ToastService);
+  private orderSubmissionService = inject(ORDER_SUBMISSION_SERVICE);
   readonly fulfillmentService = inject(FulfillmentService);
   private router = inject(Router);
 
   private tableModal = viewChild(TableSelectorModalComponent);
+
+  readonly allTables = getAllTables();
+  readonly isSubmitting = signal<boolean>(false);
 
   // Cart signals
   readonly items = this.cartService.items;
@@ -1887,7 +1939,6 @@ export class CheckoutComponent {
 
   // Fulfillment signals
   readonly selectedType = signal<FulfillmentType>(this.fulfillmentService.activeType());
-  readonly diningArea = signal<DiningArea>(this.fulfillmentService.tableDetails()?.area || 'indoor');
   readonly selectedTableNumber = signal<number | undefined>(this.fulfillmentService.tableDetails()?.tableNumber);
   readonly tableDetails = this.fulfillmentService.tableDetails;
 
@@ -1916,17 +1967,8 @@ export class CheckoutComponent {
   // Inline Validation Errors
   fieldErrors: Record<string, string> = {};
 
-  readonly availableTablesForArea = computed(() => {
-    return getTablesByArea(this.diningArea());
-  });
-
   readonly estimatedPrepTime = computed(() => {
-    switch (this.selectedType()) {
-      case 'table': return 10;
-      case 'car': return 12;
-      case 'takeaway': return 15;
-      case 'delivery': return 35;
-    }
+    return '4 - 8';
   });
 
   readonly currentTotalWithFulfillment = computed(() => {
@@ -1939,13 +1981,13 @@ export class CheckoutComponent {
     this.fulfillmentService.setFulfillmentType(type);
   }
 
-  setDiningArea(area: DiningArea): void {
-    this.diningArea.set(area);
+  openTableModal(): void {
+    this.tableModal()?.open();
   }
 
   selectTableDirectly(tableNum: number): void {
     this.selectedTableNumber.set(tableNum);
-    this.fulfillmentService.setTable(tableNum, this.diningArea(), false);
+    this.fulfillmentService.setTable(tableNum, undefined, false);
   }
 
   setPayment(method: PaymentMethod): void {
@@ -2043,91 +2085,116 @@ export class CheckoutComponent {
     return isValid;
   }
 
-  submitFinalOrder(): void {
+  async submitFinalOrder(): Promise<void> {
+    if (this.isSubmitting()) return;
     if (!this.validateStep1() || !this.validateStep2()) {
       return;
     }
 
-    // Prepare fulfillment structured details
-    let tableServiceDetails = undefined;
-    let carServiceDetails = undefined;
-    let takeawayDetails = undefined;
-    let deliveryDetails = undefined;
+    this.isSubmitting.set(true);
 
-    if (this.selectedType() === 'table' && this.selectedTableNumber()) {
-      tableServiceDetails = {
-        tableNumber: this.selectedTableNumber()!,
-        area: this.diningArea(),
-        tableNameAr: `ترابيزة ${this.selectedTableNumber()}`,
-        areaNameAr: this.diningArea() === 'indoor' ? 'الصالة الداخلية' : 'الجلسات الخارجية',
-        detectedFromQr: false
-      };
-      this.fulfillmentService.setTable(this.selectedTableNumber()!, this.diningArea());
-    } else if (this.selectedType() === 'car') {
-      const modelColor = [this.carModel.trim(), this.carColor.trim()].filter(Boolean).join(' - ');
-      carServiceDetails = {
-        vehiclePlate: this.carPlate.trim() || undefined,
-        vehicleModel: this.carModel.trim() || undefined,
-        vehicleColor: this.carColor.trim() || undefined,
-        vehicleModelColor: modelColor || 'استلام بالسيارة (أمام مدخل 2)',
-        parkingSpot: this.carSpot.trim() || undefined,
-        meetingPointAr: this.fulfillmentService.carConfig.meetingPointAr
-      };
-      this.fulfillmentService.setCarDetails(carServiceDetails);
-    } else if (this.selectedType() === 'takeaway') {
-      takeawayDetails = {
-        customerName: this.customerName.trim(),
-        customerPhone: this.customerPhone.trim(),
-        pickupCounterAr: this.fulfillmentService.takeawayConfig.pickupCounterAr,
-        pickupTimeEstimateMinutes: this.fulfillmentService.takeawayConfig.estimatedMinutes,
-        notes: this.orderNotes.trim() || undefined
-      };
-      this.fulfillmentService.setTakeawayDetails(takeawayDetails);
-    } else if (this.selectedType() === 'delivery') {
-      deliveryDetails = {
-        customerName: this.customerName.trim(),
-        customerPhone: this.customerPhone.trim(),
-        alternativePhone: this.deliveryAltPhone.trim() || undefined,
-        governorate: 'القليوبية',
-        city: 'مدينة العبور',
-        district: this.deliveryDistrict,
-        street: this.deliveryStreet.trim(),
-        building: this.deliveryBuilding.trim() || undefined,
-        landmark: this.deliveryLandmark.trim() || undefined,
-        notes: this.orderNotes.trim() || undefined,
-        deliveryFee: this.deliveryFee(),
-        estimatedMinutes: this.fulfillmentService.deliveryConfig.estimatedMinutes
-      };
-      this.fulfillmentService.setDeliveryDetails(deliveryDetails);
-    }
+    try {
+      // Prepare fulfillment structured details
+      let tableServiceDetails = undefined;
+      let carServiceDetails = undefined;
+      let takeawayDetails = undefined;
+      let deliveryDetails = undefined;
 
-    // Call demo order service
-    const order = this.orderService.createOrder(
-      {
-        fullName: this.customerName.trim(),
-        phone: this.customerPhone.trim() || 'طلب طاولة بدون هاتف',
-        notes: this.orderNotes.trim() || undefined
-      },
-      this.selectedType(),
-      this.selectedPayment(),
-      this.items(),
-      {
-        ...this.cartService.summary(),
-        deliveryFee: this.selectedType() === 'delivery' ? this.deliveryFee() : 0,
-        total: this.currentTotalWithFulfillment()
-      },
-      {
+      if (this.selectedType() === 'table' && this.selectedTableNumber()) {
+        tableServiceDetails = {
+          tableNumber: this.selectedTableNumber()!,
+          tableNameAr: `ترابيزة #${this.selectedTableNumber()}`,
+          detectedFromQr: this.fulfillmentService.tableDetails()?.detectedFromQr || false
+        };
+        this.fulfillmentService.setTable(this.selectedTableNumber()!, undefined, false);
+      } else if (this.selectedType() === 'car') {
+        const modelColor = [this.carModel.trim(), this.carColor.trim()].filter(Boolean).join(' - ');
+        carServiceDetails = {
+          vehiclePlate: this.carPlate.trim() || undefined,
+          vehicleModel: this.carModel.trim() || undefined,
+          vehicleColor: this.carColor.trim() || undefined,
+          vehicleModelColor: modelColor || 'استلام بالسيارة (أمام مدخل 2)',
+          parkingSpot: this.carSpot.trim() || undefined,
+          meetingPointAr: this.fulfillmentService.carConfig.meetingPointAr
+        };
+        this.fulfillmentService.setCarDetails(carServiceDetails);
+      } else if (this.selectedType() === 'takeaway') {
+        takeawayDetails = {
+          customerName: this.customerName.trim(),
+          customerPhone: this.customerPhone.trim(),
+          pickupCounterAr: this.fulfillmentService.takeawayConfig.pickupCounterAr,
+          pickupTimeEstimateMinutes: this.fulfillmentService.takeawayConfig.estimatedMinutes,
+          notes: this.orderNotes.trim() || undefined
+        };
+        this.fulfillmentService.setTakeawayDetails(takeawayDetails);
+      } else if (this.selectedType() === 'delivery') {
+        deliveryDetails = {
+          customerName: this.customerName.trim(),
+          customerPhone: this.customerPhone.trim(),
+          alternativePhone: this.deliveryAltPhone.trim() || undefined,
+          governorate: 'القليوبية',
+          city: 'مدينة العبور',
+          district: this.deliveryDistrict,
+          street: this.deliveryStreet.trim(),
+          building: this.deliveryBuilding.trim() || undefined,
+          landmark: this.deliveryLandmark.trim() || undefined,
+          notes: this.orderNotes.trim() || undefined,
+          deliveryFee: this.deliveryFee(),
+          estimatedMinutes: this.fulfillmentService.deliveryConfig.estimatedMinutes
+        };
+        this.fulfillmentService.setDeliveryDetails(deliveryDetails);
+      }
+
+      // Submit via OrderSubmissionService (WhatsApp Order Submission)
+      const payload = {
+        customer: {
+          fullName: this.customerName.trim(),
+          phone: this.customerPhone.trim() || 'طلب طاولة بدون هاتف',
+          notes: this.orderNotes.trim() || undefined
+        },
+        fulfillmentType: this.selectedType(),
+        paymentMethod: this.selectedPayment(),
+        items: this.items(),
+        summary: {
+          ...this.cartService.summary(),
+          deliveryFee: this.selectedType() === 'delivery' ? this.deliveryFee() : 0,
+          total: this.currentTotalWithFulfillment()
+        },
         tableDetails: tableServiceDetails,
         carDetails: carServiceDetails,
         takeawayDetails: takeawayDetails,
-        deliveryDetails: deliveryDetails
+        deliveryDetails: deliveryDetails,
+        notes: this.orderNotes.trim() || undefined
+      };
+
+      const result = await this.orderSubmissionService.submitOrder(payload);
+
+      // Attempt to open WhatsApp in new window
+      if (result.redirectUrl) {
+        try {
+          window.open(result.redirectUrl, '_blank', 'noopener,noreferrer');
+        } catch (e) {
+          console.warn('Popup blocker intercepted WhatsApp open', e);
+        }
       }
-    );
 
-    // Clear cart
-    this.cartService.clearCart();
+      this.toastService.show(`تم تجهيز طلبك (${result.orderNumber})، جاري تحويلك لمتابعة التأكيد!`, 'success', 5000);
 
-    this.toastService.show(`تم تأكيد الطلب التجريبي بنجاح! رقم الطلب: ${order.orderNumber}`, 'success', 5000);
-    this.router.navigate(['/order-confirmation', order.orderId]);
+      // Navigate to order confirmation
+      this.router.navigate(['/order-confirmation', result.orderId]);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'حدث خطأ أثناء معالجة الطلب، يرجى المحاولة مرة أخرى';
+      this.toastService.show(message, 'error');
+    } finally {
+      this.isSubmitting.set(false);
+    }
+  }
+
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    if (target.dataset['fallbackApplied']) return;
+    target.dataset['fallbackApplied'] = 'true';
+    target.src = '/images/brand/fruitella-logo.jpg';
+    target.classList.add('fruitella-logo-fallback');
   }
 }

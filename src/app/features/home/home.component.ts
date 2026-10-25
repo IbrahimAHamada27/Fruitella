@@ -61,7 +61,7 @@ import { Product } from '../../core/models/product.model';
               <i class="fa-solid fa-award perk-icon"></i>
               <div>
                 <strong>جودة استثنائية</strong>
-                <p>إدارة فؤاد السمنودي</p>
+                <p>أعلى معايير الإتقان والنظافة</p>
               </div>
             </div>
           </div>

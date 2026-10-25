@@ -22,7 +22,7 @@ export interface BusinessInfo {
   secondaryTaglineAr: string;
   addressAr: string;
   addressEn: string;
-  management: string;
+  management?: string;
   contacts: BusinessContact;
   hours: BusinessHours;
   currencyAr: string;

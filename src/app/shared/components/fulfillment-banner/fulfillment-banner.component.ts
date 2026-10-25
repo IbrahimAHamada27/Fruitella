@@ -74,7 +74,7 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
                 <i class="fa-solid fa-chair status-indicator-icon"></i>
                 @if (fulfillmentService.tableDetails(); as t) {
                   <span class="status-text">
-                    طلب صالة: <strong>ترابيزة #{{ t.tableNumber }}</strong> ({{ t.areaNameAr }})
+                    طلب صالة: <strong>ترابيزة #{{ t.tableNumber }}</strong>
                   </span>
                 } @else {
                   <span class="status-text">
@@ -104,7 +104,7 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
               </div>
               <div class="status-actions-wrap">
                 <span class="time-est-badge">
-                  <i class="fa-regular fa-clock"></i> جاهز خلال 10-12 دقيقة
+                  <i class="fa-regular fa-clock"></i> جاهز خلال 4 - 8 دقائق
                 </span>
               </div>
             }
@@ -118,7 +118,7 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
               </div>
               <div class="status-actions-wrap">
                 <span class="time-est-badge">
-                  <i class="fa-regular fa-clock"></i> جاهز خلال 12-15 دقيقة
+                  <i class="fa-regular fa-clock"></i> جاهز خلال 4 - 8 دقائق
                 </span>
               </div>
             }
@@ -127,12 +127,12 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
               <div class="status-info-wrap">
                 <i class="fa-solid fa-motorcycle status-indicator-icon"></i>
                 <span class="status-text">
-                  توصيل مثلج ومغلف لكافة <strong>أحياء مدينة العبور</strong> (مجاناً للطلبات فوق 250 ج.م)
+                  توصيل مثلج ومغلف لكافة <strong>أحياء مدينة العبور</strong>
                 </span>
               </div>
               <div class="status-actions-wrap">
                 <span class="time-est-badge delivery-tag">
-                  <i class="fa-solid fa-shield-halved"></i> توصيل سريع وآمن
+                  <i class="fa-regular fa-clock"></i> التوصيل خلال 4 - 8 دقائق
                 </span>
               </div>
             }

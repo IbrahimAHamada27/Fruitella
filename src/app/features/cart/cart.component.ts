@@ -39,7 +39,7 @@ import { EditCartItemModalComponent } from '../../shared/components/edit-cart-it
               @for (item of items(); track item.cartItemId) {
                 <div class="cart-item-row">
                   <!-- Thumbnail -->
-                  <img [src]="item.image" [alt]="item.nameAr" class="item-thumb" />
+                  <img [src]="item.image" [alt]="item.nameAr" class="item-thumb" (error)="onImageError($event)" />
 
                   <!-- Details -->
                   <div class="item-details">
@@ -139,7 +139,7 @@ import { EditCartItemModalComponent } from '../../shared/components/edit-cart-it
                     @case ('table') {
                       <i class="fa-solid fa-chair"></i>
                       @if (fulfillmentService.tableDetails(); as t) {
-                        <span>طلب من ترابيزة <strong>#{{ t.tableNumber }}</strong> ({{ t.areaNameAr }})</span>
+                        <span>طلب من ترابيزة <strong>#{{ t.tableNumber }}</strong></span>
                       } @else {
                         <span>طلب ترابيزة داخل الفرع</span>
                       }
@@ -182,7 +182,7 @@ import { EditCartItemModalComponent } from '../../shared/components/edit-cart-it
                   <span>رسوم التوصيل:</span>
                   @if (fulfillmentService.activeType() === 'delivery') {
                     @if (deliveryFee() === 0) {
-                      <span class="free-delivery-badge">مجاناً (عرض طلب أكبر من 250 ج.م)</span>
+                      <span class="free-delivery-badge">مجاناً</span>
                     } @else {
                       <span class="calc-val">{{ deliveryFee() }} ج.م</span>
                     }
@@ -714,5 +714,13 @@ export class CartComponent {
 
   onClearCartConfirmed(): void {
     this.cartService.clearCart();
+  }
+
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    if (target.dataset['fallbackApplied']) return;
+    target.dataset['fallbackApplied'] = 'true';
+    target.src = '/images/brand/fruitella-logo.jpg';
+    target.classList.add('fruitella-logo-fallback');
   }
 }

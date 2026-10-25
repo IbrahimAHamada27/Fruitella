@@ -5,20 +5,21 @@ export type DiningArea = 'indoor' | 'outdoor';
 export interface RestaurantTable {
   id: string;
   tableNumber: number;
-  area: DiningArea;
-  capacity: number;
-  areaNameAr: string;
-  areaNameEn: string;
+  capacity?: number;
   descriptionAr: string;
   isAvailable: boolean;
+  qrCodeUrl?: string;
+  area?: DiningArea;
+  areaNameAr?: string;
+  areaNameEn?: string;
 }
 
 export interface TableServiceDetails {
-  area: DiningArea;
   tableNumber: number;
   tableNameAr: string;
-  areaNameAr: string;
   detectedFromQr: boolean;
+  area?: DiningArea;
+  areaNameAr?: string;
 }
 
 export interface CarServiceDetails {

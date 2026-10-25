@@ -486,3 +486,11 @@ input, textarea, select {
     -webkit-backdrop-filter: none !important;
   }
 }
+
+/* Universal Fruitella Logo Fallback Presentation */
+img.fruitella-logo-fallback {
+  object-fit: contain !important;
+  background-color: #f7faf8 !important;
+  padding: 0.75rem !important;
+  box-sizing: border-box !important;
+}

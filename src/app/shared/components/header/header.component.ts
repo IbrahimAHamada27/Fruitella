@@ -46,7 +46,7 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
 
         <!-- Brand Motto & Quality Assurance -->
         <div class="announcement-motto">
-          <i class="fa-solid fa-sparkles motto-icon"></i>
+          <i class="fa-solid fa-wand-magic-sparkles motto-icon"></i>
           <span>{{ currentAnnouncement }}</span>
         </div>
 

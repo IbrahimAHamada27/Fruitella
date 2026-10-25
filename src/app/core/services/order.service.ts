@@ -35,11 +35,7 @@ export class OrderService {
     const orderNumber = `FRU-${randomSuffix}`;
     const orderId = `order_${timestamp}_${randomSuffix}`;
 
-    let estimatedMinutes = 20;
-    if (fulfillmentType === 'table') estimatedMinutes = 10;
-    else if (fulfillmentType === 'car') estimatedMinutes = 12;
-    else if (fulfillmentType === 'takeaway') estimatedMinutes = 15;
-    else if (fulfillmentType === 'delivery') estimatedMinutes = 35;
+    const estimatedMinutes = 6; // وقت الانتظار دائماً من 4 إلى 8 دقائق
 
     const newOrder: Order = {
       orderId,
