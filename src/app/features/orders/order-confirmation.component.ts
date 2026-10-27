@@ -240,6 +240,24 @@ import { WHATSAPP_ORDER_CONFIG, normalizeWhatsAppNumber } from '../../core/confi
                 </a>
               </div>
             </div>
+
+            <!-- Tasteful Google Reviews Card -->
+            <div class="review-prompt-card">
+              <div class="stars-gold-cluster">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="review-prompt-text">
+                <h4>عجبك عصير وخدمة فروتيلا؟</h4>
+                <p>رأيك يهمنا ويصنع يومنا! يسعدنا جداً تقييمك لفرع فروتيلا على خرائط Google.</p>
+              </div>
+              <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-cta">
+                <i class="fa-solid fa-star"></i> قيّمنا 5 نجوم على Google
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -550,6 +568,52 @@ import { WHATSAPP_ORDER_CONFIG, normalizeWhatsAppNumber } from '../../core/confi
     .support-link:hover {
       color: var(--fruitella-lime);
       transform: translateY(-1px);
+    }
+    .review-prompt-card {
+      margin-top: 1.25rem;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.12);
+    }
+    .stars-gold-cluster {
+      display: flex;
+      gap: 0.3rem;
+      color: #f59e0b;
+      font-size: 1.15rem;
+    }
+    .review-prompt-text h4 {
+      font-size: 1.05rem;
+      color: #92400e;
+      margin-bottom: 0.2rem;
+    }
+    .review-prompt-text p {
+      font-size: 0.85rem;
+      color: #b45309;
+      line-height: 1.5;
+    }
+    .btn-review-cta {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      transition: all var(--transition-fast) ease;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+    }
+    .btn-review-cta:hover {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 992px) {

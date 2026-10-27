@@ -124,9 +124,14 @@ import { ConfigService } from '../../core/services/config.service';
             <h3>جاهز لتجربة الطعم الحقيقي للعصير؟</h3>
             <p>تفضل بزيارتنا في مول حياة تاون أو اطلب أونلاين الآن لنصلك أينما كنت في العبور.</p>
           </div>
-          <a routerLink="/menu" class="btn btn-primary btn-lg">
-            <i class="fa-solid fa-basket-shopping"></i> تصفح المنيو واطلب
-          </a>
+          <div class="cta-banner-actions">
+            <a routerLink="/menu" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-basket-shopping"></i> تصفح المنيو واطلب
+            </a>
+            <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg btn-review-about">
+              <i class="fa-solid fa-star"></i> تقييمات Google ⭐
+            </a>
+          </div>
         </div>
       </section>
     </div>
@@ -357,6 +362,22 @@ import { ConfigService } from '../../core/services/config.service';
       color: rgba(255, 255, 255, 0.8);
       font-size: 0.95rem;
       text-wrap: pretty;
+    }
+    .cta-banner-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-review-about {
+      border-color: rgba(251, 191, 36, 0.6);
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.1);
+    }
+    .btn-review-about:hover {
+      background: #fbbf24;
+      color: #1f2937;
+      border-color: #fbbf24;
     }
 
     @media (max-width: 992px) {

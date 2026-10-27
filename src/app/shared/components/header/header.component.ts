@@ -42,6 +42,15 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
             title="صفحة فيسبوك الرسمية">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
+          <a 
+            [href]="business().contacts.googleReviewsUrl" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="top-social-item reviews" 
+            title="تقييمات فروتيلا على خرائط جوجل">
+            <i class="fa-solid fa-star"></i>
+            <span class="social-txt">قيّمنا ⭐</span>
+          </a>
         </div>
 
         <!-- Brand Motto & Quality Assurance -->
@@ -369,6 +378,12 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     }
     .top-social-item.fb i {
       color: #60a5fa;
+    }
+    .top-social-item.reviews i {
+      color: #fbbf24;
+    }
+    .top-social-item.reviews:hover {
+      color: #fbbf24;
     }
     .social-txt {
       font-size: 0.76rem;

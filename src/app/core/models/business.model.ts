@@ -3,6 +3,8 @@ export interface BusinessContact {
   phone2: string;
   whatsapp: string;
   googleMapsUrl: string;
+  googleReviewsUrl: string;
+  googleEmbedMapUrl: string;
   facebookUrl: string;
 }
 

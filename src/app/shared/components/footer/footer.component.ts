@@ -29,8 +29,11 @@ import { ConfigService } from '../../../core/services/config.service';
             <a [href]="'https://wa.me/' + business().contacts.whatsapp" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="مراسلة واتساب">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="social-btn map" aria-label="موقعنا على جوجل مابس">
+            <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="social-btn map" aria-label="موقعنا على جوجل مابس" title="فرع مول حياة تاون العبور">
               <i class="fa-solid fa-location-dot"></i>
+            </a>
+            <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="social-btn review" aria-label="تقييمات فروتيلا على Google" title="تقييمنا على خرائط Google ⭐">
+              <i class="fa-solid fa-star"></i>
             </a>
           </div>
         </div>
@@ -75,9 +78,16 @@ import { ConfigService } from '../../../core/services/config.service';
             <p class="address-text">
               <i class="fa-solid fa-map-pin"></i> {{ business().addressAr }}
             </p>
-            <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="maps-btn">
-              <i class="fa-solid fa-map-location-dot"></i> فتح الموقع على خرائط Google
-            </a>
+            <div class="location-actions">
+              <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="maps-btn">
+                <i class="fa-solid fa-map-location-dot"></i> فتح الموقع على خرائط Google
+              </a>
+              <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="google-review-badge">
+                <span class="stars-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                <span class="review-label">قيّمنا على Google</span>
+                <i class="fa-solid fa-arrow-up-right-from-square open-icon"></i>
+              </a>
+            </div>
           </div>
 
           <div class="contacts-box">
@@ -311,6 +321,51 @@ import { ConfigService } from '../../../core/services/config.service';
     }
     .maps-btn:active {
       transform: scale(0.96);
+    }
+    .location-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .google-review-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(255, 255, 255, 0.06) 100%);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all var(--transition-fast) cubic-bezier(0.16, 1, 0.3, 1);
+      width: fit-content;
+      text-decoration: none;
+    }
+    .google-review-badge:hover {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.28) 0%, rgba(255, 255, 255, 0.12) 100%);
+      border-color: #fbbf24;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+    }
+    .google-review-badge .stars-gold {
+      color: #fbbf24;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+    }
+    .google-review-badge .open-icon {
+      font-size: 0.7rem;
+      opacity: 0.75;
+      margin-inline-start: 0.2rem;
+    }
+    .social-btn.review {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+    .social-btn.review:hover {
+      background: #fbbf24;
+      color: #1f2937;
     }
     .contacts-box {
       margin-top: 0.5rem;

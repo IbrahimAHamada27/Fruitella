@@ -32,7 +32,10 @@ import { ToastService } from '../../core/services/toast.service';
                 <p>{{ business().addressAr }}</p>
                 <div class="map-links">
                   <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                    <i class="fa-solid fa-location-arrow"></i> فتح الموقع في خرائط Google
+                    <i class="fa-solid fa-location-arrow"></i> فتح في Google Maps
+                  </a>
+                  <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-sm btn-sm">
+                    <i class="fa-solid fa-star"></i> قيّمنا على Google ⭐
                   </a>
                 </div>
               </div>
@@ -141,6 +144,57 @@ import { ToastService } from '../../core/services/toast.service';
             </div>
           </div>
         </div>
+
+        <!-- Interactive Google Maps & Reviews Card -->
+        <div class="map-embed-container">
+          <div class="map-card-header">
+            <div>
+              <span class="badge badge-brand"><i class="fa-solid fa-map-pin"></i> الموقع التفاعلي</span>
+              <h2 class="map-title">موقع فرع فروتيلا في مول حياة تاون (مدينة العبور)</h2>
+              <p class="map-desc">الحي السادس، مدخل 2، مول حياة تاون — متاح أماكن انتظار وخدمة تسليم للسيارة (Car Service).</p>
+            </div>
+            <div class="map-quick-actions">
+              <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-diamond-turn-right"></i> الاتجاهات
+              </a>
+              <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-primary btn-sm">
+                <i class="fa-solid fa-star"></i> قيّمنا 5 نجوم على Google
+              </a>
+            </div>
+          </div>
+
+          <!-- Exact Google Maps Embed Iframe -->
+          <div class="map-iframe-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14123050.285309974!2d49.9156581!3d30.2082528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581b0071997395%3A0xfe3bf1186790e9a9!2sFruitela!5e0!3m2!1sar!2seg!4v1793128351162!5m2!1sar!2seg" 
+              width="100%" 
+              height="420" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="موقع فروتيلا على خرائط جوجل">
+            </iframe>
+          </div>
+
+          <!-- Subtle Google Reviews Feedback Banner -->
+          <div class="reviews-feedback-banner">
+            <div class="stars-badge">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="feedback-text">
+              <h4>يسعدنا رأيك وتقييمك على Google Maps</h4>
+              <p>رأيك وتجربتك تهمنا وتساعدنا دائماً في تقديم أفضل وألذ عصائر طبيعية في مدينة العبور.</p>
+            </div>
+            <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-cta">
+              <i class="fa-solid fa-pen-to-square"></i> كتابة تقييم في Google
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   `,
@@ -238,6 +292,119 @@ import { ToastService } from '../../core/services/toast.service';
       font-size: 0.82rem;
       margin-top: 0.4rem;
       width: fit-content;
+    }
+    .map-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .btn-review-sm {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      color: #b45309;
+      font-weight: 600;
+    }
+    .btn-review-sm:hover {
+      background: #fbbf24;
+      color: #1f2937;
+    }
+    .map-embed-container {
+      margin-top: 2.75rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), var(--shadow-antigravity-md);
+    }
+    .map-card-header {
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .map-title {
+      font-size: 1.35rem;
+      color: var(--fruitella-green-900);
+      margin-block: 0.35rem 0.2rem;
+    }
+    .map-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .map-quick-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .btn-review-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+    }
+    .btn-review-primary:hover {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .map-iframe-wrapper {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      line-height: 0;
+    }
+    .map-iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .reviews-feedback-banner {
+      padding: 1.25rem 1.75rem;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border-top: 1px solid #fde68a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .stars-badge {
+      display: flex;
+      gap: 0.25rem;
+      color: #f59e0b;
+      font-size: 1.1rem;
+    }
+    .feedback-text h4 {
+      font-size: 1.05rem;
+      color: #92400e;
+      margin-bottom: 0.2rem;
+    }
+    .feedback-text p {
+      font-size: 0.86rem;
+      color: #b45309;
+    }
+    .btn-review-cta {
+      background: #d97706;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.88rem;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast) ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-review-cta:hover {
+      background: #b45309;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
     }
     .phones-list {
       display: flex;

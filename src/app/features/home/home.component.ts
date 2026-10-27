@@ -344,6 +344,9 @@ import { Product } from '../../core/models/product.model';
             <a [href]="business().contacts.googleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
               <i class="fa-solid fa-location-arrow"></i> اتجاهات Google Maps
             </a>
+            <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-gold">
+              <i class="fa-solid fa-star"></i> قيّمنا على Google
+            </a>
             <a [href]="'tel:' + business().contacts.phone1" class="btn btn-primary">
               <i class="fa-solid fa-phone"></i> اتصل بالفرع مباشرة
             </a>
@@ -974,7 +977,25 @@ import { Product } from '../../core/models/product.model';
     }
     .store-links {
       display: flex;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn-review-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+      transition: all var(--transition-fast) ease;
+    }
+    .btn-review-gold:hover {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35);
     }
 
     /* Responsive */

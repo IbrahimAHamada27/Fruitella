@@ -140,6 +140,24 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
               <i class="fa-solid fa-book-open"></i> استعراض المنيو
             </a>
           </div>
+
+          <!-- Subtle Google Reviews Feedback Prompt -->
+          <div class="track-review-prompt">
+            <div class="stars-gold-row">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="track-review-content">
+              <strong>رأيك يصنع الفرق معنا في فروتيلا!</strong>
+              <p>تقييمك لتجربتك وسرعة الخدمة على خرائط Google يسعدنا ويدعمنا دائماً.</p>
+            </div>
+            <a [href]="business().contacts.googleReviewsUrl" target="_blank" rel="noopener noreferrer" class="btn btn-review-badge">
+              <i class="fa-solid fa-star"></i> قيّمنا على Google
+            </a>
+          </div>
         </div>
       </div>
     } @else {
@@ -417,6 +435,54 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+    }
+    .track-review-prompt {
+      margin-top: 1.75rem;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .stars-gold-row {
+      display: flex;
+      gap: 0.25rem;
+      color: #f59e0b;
+      font-size: 1.15rem;
+    }
+    .track-review-content strong {
+      display: block;
+      color: #92400e;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .track-review-content p {
+      font-size: 0.85rem;
+      color: #b45309;
+      margin: 0;
+    }
+    .btn-review-badge {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      border: none;
+      font-weight: 700;
+      padding: 0.55rem 1.25rem;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      transition: all var(--transition-fast) ease;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+    }
+    .btn-review-badge:hover {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 768px) {
