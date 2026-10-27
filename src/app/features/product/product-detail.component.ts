@@ -2036,7 +2036,7 @@ export class ProductDetailComponent {
   }
 
   shareProduct(prod: Product): void {
-    const url = typeof window !== 'undefined' ? `${window.location.origin}/product/${prod.slug}` : `https://fruitella-seven.vercel.app/product/${prod.slug}`;
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/product/${prod.slug}` : `https://fruitellajuice.com/product/${prod.slug}`;
     if (typeof navigator !== 'undefined' && navigator.share) {
       navigator.share({
         title: `${prod.nameAr} | فروتيلا Fruitella`,

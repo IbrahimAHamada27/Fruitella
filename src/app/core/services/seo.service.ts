@@ -12,8 +12,8 @@ export class SeoService {
   private readonly siteName = 'فروتيلا | Fruitella';
   private readonly defaultTitle = 'فروتيلا | Fruitella — غيرنا مفهوم العصير | العبور';
   private readonly defaultDesc = 'فروتيلا (Fruitella) - متجر العصائر الطبيعية الطازجة، السموذي، خلطات الأفوكادو بالمكسرات، والحلويات الفاخرة في مدينة العبور، مول حياة تاون.';
-  private readonly defaultLogo = 'https://fruitella-seven.vercel.app/images/brand/fruitella-logo.jpg';
-  private readonly baseUrl = 'https://fruitella-seven.vercel.app';
+  private readonly defaultLogo = 'https://fruitellajuice.com/images/brand/fruitella-logo.jpg';
+  private readonly baseUrl = 'https://fruitellajuice.com';
 
   setDefaultSeo(): void {
     this.updateMeta({

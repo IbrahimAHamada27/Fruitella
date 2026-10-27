@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://fruitella-seven.vercel.app';
+const BASE_URL = 'https://fruitellajuice.com';
 const SITE_NAME = 'فروتيلا | Fruitella';
 const DEFAULT_LOGO = `${BASE_URL}/images/brand/fruitella-logo.jpg`;
 
@@ -57,7 +57,7 @@ function escapeHtml(str) {
 }
 
 function generateHtml(options) {
-  const { title, description, image, url } = options;
+  const { title, description, image, url, jsonLd } = options;
   const escapedTitle = escapeHtml(title);
   const escapedDesc = escapeHtml(description);
   const fullImg = image.startsWith('http') ? image : `${BASE_URL}${image}`;
@@ -86,10 +86,24 @@ function generateHtml(options) {
   // Canonical
   html = html.replace(/<link\s+rel=["']canonical["']\s+href=["'][^"']*["']\s*\/?>/i, `<link rel="canonical" href="${fullUrl}">`);
 
+  // Optional Page-Specific Structured Data
+  if (jsonLd) {
+    const jsonLdTag = `\n    <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n    </script>\n  </head>`;
+    html = html.replace(/<\/head>/i, jsonLdTag);
+  }
+
   return html;
 }
 
 let generatedCount = 0;
+const sitemapUrls = [];
+const today = new Date().toISOString().split('T')[0];
+
+// Main Static Pages
+sitemapUrls.push({ loc: `${BASE_URL}/`, changefreq: 'daily', priority: '1.0' });
+sitemapUrls.push({ loc: `${BASE_URL}/menu`, changefreq: 'daily', priority: '0.9' });
+sitemapUrls.push({ loc: `${BASE_URL}/about`, changefreq: 'monthly', priority: '0.7' });
+sitemapUrls.push({ loc: `${BASE_URL}/contact`, changefreq: 'monthly', priority: '0.8' });
 
 // 1. Generate pages for products
 for (const prod of products) {
@@ -102,14 +116,46 @@ for (const prod of products) {
     ? `${prod.descriptionAr} - اطلبه الآن طازجاً من فروتيلا مول حياة تاون بالعبور.`
     : `${prod.nameAr} - عصير طبيعي طازج من فروتيلا مول حياة تاون العبور.`;
 
+  const minPrice = prod.sizes && prod.sizes.length > 0 ? Math.min(...prod.sizes.map(s => s.price)) : 30;
+
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: prod.nameAr,
+    alternateName: prod.nameEn,
+    description: prodDesc,
+    image: prod.image ? (prod.image.startsWith('http') ? prod.image : `${BASE_URL}${prod.image}`) : DEFAULT_LOGO,
+    brand: {
+      '@type': 'Brand',
+      name: 'فروتيلا | Fruitella'
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'EGP',
+      price: minPrice,
+      availability: 'https://schema.org/InStock',
+      url: `${BASE_URL}/product/${prod.slug}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Fruitella Juice Bar'
+      }
+    }
+  };
+
   const prodHtml = generateHtml({
     title: prodTitle,
     description: prodDesc,
     image: prod.image || DEFAULT_LOGO,
-    url: `/product/${prod.slug}`
+    url: `/product/${prod.slug}`,
+    jsonLd: productJsonLd
   });
 
   fs.writeFileSync(path.join(prodDir, 'index.html'), prodHtml, 'utf8');
+  sitemapUrls.push({
+    loc: `${BASE_URL}/product/${prod.slug}`,
+    changefreq: 'weekly',
+    priority: '0.8'
+  });
   generatedCount++;
 }
 
@@ -132,6 +178,11 @@ for (const cat of categories) {
   });
 
   fs.writeFileSync(path.join(catDir, 'index.html'), catHtml, 'utf8');
+  sitemapUrls.push({
+    loc: `${BASE_URL}/menu/${cat.slug}`,
+    changefreq: 'weekly',
+    priority: '0.8'
+  });
   generatedCount++;
 }
 
@@ -155,4 +206,17 @@ for (const sp of staticPages) {
   generatedCount++;
 }
 
-console.log(`[SEO Gen] Successfully generated ${generatedCount} SEO-optimized static Open Graph pages for WhatsApp/Facebook/Twitter previews!`);
+// 4. Generate sitemap.xml
+let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+for (const entry of sitemapUrls) {
+  sitemapXml += `  <url>\n    <loc>${entry.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${entry.changefreq}</changefreq>\n    <priority>${entry.priority}</priority>\n  </url>\n`;
+}
+sitemapXml += `</urlset>\n`;
+
+// Write sitemap to dist and public
+fs.writeFileSync(path.join(distBrowserDir, 'sitemap.xml'), sitemapXml, 'utf8');
+const publicDir = path.join(__dirname, '..', 'public');
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf8');
+
+console.log(`[SEO Gen] Successfully generated ${generatedCount} SEO-optimized static Open Graph pages!`);
+console.log(`[SEO Gen] Successfully generated sitemap.xml with ${sitemapUrls.length} indexed URLs!`);
