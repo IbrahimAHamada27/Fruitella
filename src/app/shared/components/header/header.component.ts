@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, inject, signal } from '@angular/core';
+import { Component, NgZone, OnInit, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ConfigService } from '../../../core/services/config.service';
@@ -49,6 +49,14 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
             class="top-social-item insta" 
             title="حساب إنستغرام الرسمي">
             <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a 
+            [href]="business().contacts.tiktokUrl" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="top-social-item tiktok" 
+            title="حساب تيك توك الرسمي">
+            <i class="fa-brands fa-tiktok"></i>
           </a>
           <a 
             [href]="business().contacts.googleReviewsUrl" 
@@ -389,6 +397,9 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     }
     .top-social-item.insta i {
       color: #f43f5e;
+    }
+    .top-social-item.tiktok:hover i {
+      color: #00f2fe;
     }
     .top-social-item.reviews i {
       color: #fbbf24;
@@ -1127,16 +1138,29 @@ export class HeaderComponent implements OnInit {
   readonly currentAnnouncement = 'فواكه طبيعية طازجة 100% يومياً • عصير على أصوله • فرع مول حياة تاون العبور';
   searchQuery = '';
 
+  private ngZone = inject(NgZone);
+
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
       this.isScrolled.set(window.scrollY > 20);
-    }
-  }
 
-  @HostListener('window:scroll')
-  onWindowScroll(): void {
-    if (typeof window !== 'undefined') {
-      this.isScrolled.set(window.scrollY > 20);
+      this.ngZone.runOutsideAngular(() => {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              const scrolled = window.scrollY > 20;
+              if (this.isScrolled() !== scrolled) {
+                this.ngZone.run(() => {
+                  this.isScrolled.set(scrolled);
+                });
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      });
     }
   }
 

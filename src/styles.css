@@ -98,18 +98,12 @@
 
 html {
   font-size: 16px;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media (prefers-reduced-motion: no-preference) and (pointer: fine) {
-  html {
-    scroll-behavior: smooth;
-  }
+  overflow-x: clip;
 }
 
 :focus-visible {
@@ -147,8 +141,8 @@ body {
   direction: rtl;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
-  position: relative;
+  overflow-x: clip;
+  overscroll-behavior-y: none;
   -webkit-overflow-scrolling: touch;
 }
 

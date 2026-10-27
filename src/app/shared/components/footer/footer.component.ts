@@ -29,6 +29,9 @@ import { ConfigService } from '../../../core/services/config.service';
             <a [href]="business().contacts.instagramUrl" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="حساب إنستغرام" title="إنستغرام فروتيلا">
               <i class="fa-brands fa-instagram"></i>
             </a>
+            <a [href]="business().contacts.tiktokUrl" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="حساب تيك توك الرسمي" title="تيك توك فروتيلا">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
             <a [href]="'https://wa.me/' + business().contacts.whatsapp" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="مراسلة واتساب">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
@@ -199,6 +202,11 @@ import { ConfigService } from '../../../core/services/config.service';
     .social-btn.instagram:hover {
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       color: #ffffff;
+    }
+    .social-btn.tiktok:hover {
+      background: #000000;
+      color: #00f2fe;
+      box-shadow: -2px -2px 0px #fe0979, 2px 2px 0px #00f2fe;
     }
     .social-btn:active {
       transform: scale(0.92);
