@@ -23,8 +23,11 @@ import { ConfigService } from '../../../core/services/config.service';
             نقدم لكم تجربة العصائر الطبيعية الطازجة، السموذي الاستوائي، خلطات الأفوكادو الملكية بالمكسرات، والحلويات الفاخرة بأعلى معايير الجودة والنظافة في مدينة العبور.
           </p>
           <div class="social-links">
-            <a [href]="business().contacts.facebookUrl" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="صفحة فيسبوك">
+            <a [href]="business().contacts.facebookUrl" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="صفحة فيسبوك" title="صفحة فيسبوك">
               <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a [href]="business().contacts.instagramUrl" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="حساب إنستغرام" title="إنستغرام فروتيلا">
+              <i class="fa-brands fa-instagram"></i>
             </a>
             <a [href]="'https://wa.me/' + business().contacts.whatsapp" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="مراسلة واتساب">
               <i class="fa-brands fa-whatsapp"></i>
@@ -192,6 +195,10 @@ import { ConfigService } from '../../../core/services/config.service';
       background: var(--fruitella-lime);
       color: #ffffff;
       transform: translateY(-3px);
+    }
+    .social-btn.instagram:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #ffffff;
     }
     .social-btn:active {
       transform: scale(0.92);

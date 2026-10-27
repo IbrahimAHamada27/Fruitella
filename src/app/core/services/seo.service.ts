@@ -10,8 +10,8 @@ export class SeoService {
   private meta = inject(Meta);
 
   private readonly siteName = 'فروتيلا | Fruitella';
-  private readonly defaultTitle = 'فروتيلا | Fruitella — غيرنا مفهوم العصير | العبور';
-  private readonly defaultDesc = 'فروتيلا (Fruitella) - متجر العصائر الطبيعية الطازجة، السموذي، خلطات الأفوكادو بالمكسرات، والحلويات الفاخرة في مدينة العبور، مول حياة تاون.';
+  private readonly defaultTitle = 'فروتيلا | Fruitella — أحسن عصير في العبور | قصب، سموذي، وافل';
+  private readonly defaultDesc = 'تبحث عن أحسن عصير في العبور، عصير قصب فريش، أو بديل فرغلي؟ فروتيلا (Fruitella) بمول حياة تاون يقدم عصائر طبيعية 100%، خلطات أفوكادو ملكية بالمكسرات، سموذي، وافل ودليفري فوري.';
   private readonly defaultLogo = 'https://fruitellajuice.com/images/brand/fruitella-logo.jpg';
   private readonly baseUrl = 'https://fruitellajuice.com';
 
@@ -21,6 +21,10 @@ export class SeoService {
       description: this.defaultDesc,
       image: this.defaultLogo,
       url: this.baseUrl
+    });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: 'فروتيلا, Fruitella, احسن عصير في العبور, افضل محل عصير في العبور, قصب في العبور, عصير قصب العبور, فرغلي في العبور, بديل فرغلي العبور, عصائر طبيعية العبور, سموذي العبور, محل عصير العبور, مول حياة تاون العبور, منيو فروتيلا'
     });
   }
 

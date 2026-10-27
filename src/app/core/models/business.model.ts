@@ -6,6 +6,7 @@ export interface BusinessContact {
   googleReviewsUrl: string;
   googleEmbedMapUrl: string;
   facebookUrl: string;
+  instagramUrl: string;
 }
 
 export interface BusinessHours {

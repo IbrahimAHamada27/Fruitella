@@ -43,6 +43,14 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
             <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a 
+            [href]="business().contacts.instagramUrl" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="top-social-item insta" 
+            title="حساب إنستغرام الرسمي">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a 
             [href]="business().contacts.googleReviewsUrl" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -378,6 +386,9 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     }
     .top-social-item.fb i {
       color: #60a5fa;
+    }
+    .top-social-item.insta i {
+      color: #f43f5e;
     }
     .top-social-item.reviews i {
       color: #fbbf24;
