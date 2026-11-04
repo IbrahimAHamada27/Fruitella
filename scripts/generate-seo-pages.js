@@ -57,7 +57,7 @@ function escapeHtml(str) {
 }
 
 function generateHtml(options) {
-  const { title, description, image, url, jsonLd } = options;
+  const { title, description, image, url, jsonLd, extraHead, appRootContent } = options;
   const escapedTitle = escapeHtml(title);
   const escapedDesc = escapeHtml(description);
   const fullImg = image.startsWith('http') ? image : `${BASE_URL}${image}`;
@@ -90,6 +90,16 @@ function generateHtml(options) {
   if (jsonLd) {
     const jsonLdTag = `\n    <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n    </script>\n  </head>`;
     html = html.replace(/<\/head>/i, jsonLdTag);
+  }
+
+  // Extra head elements (e.g. pre-activating table state in localStorage)
+  if (extraHead) {
+    html = html.replace(/<\/head>/i, `\n    ${extraHead}\n  </head>`);
+  }
+
+  // App-root initial content (e.g. fast branded loader before Angular hydratation)
+  if (appRootContent) {
+    html = html.replace(/<app-root><\/app-root>/i, `<app-root>${appRootContent}</app-root>`);
   }
 
   return html;
@@ -206,7 +216,52 @@ for (const sp of staticPages) {
   generatedCount++;
 }
 
-// 4. Generate sitemap.xml
+// 4. Generate static standalone QR pages for all 30 restaurant tables (/table/:id and /t/:id)
+console.log('[SEO Gen] Pre-generating static stand QR routes for all tables (1 to 30)...');
+for (let tNum = 1; tNum <= 30; tNum++) {
+  const tableTitle = `طاولة رقم ${tNum} | منيو ${SITE_NAME}`;
+  const tableDesc = `طلب صالة مباشر من طاولة رقم ${tNum} بفرع فروتيلا مول حياة تاون العبور. استمتع بأشهى العصائر الطبيعية الطازجة، السموذي، والوافل مع التوصيل لطاولتك.`;
+  
+  const extraHead = `<script>
+    try {
+      var raw = localStorage.getItem('fruitella_fulfillment_state_v2');
+      var state = raw ? JSON.parse(raw) : {};
+      state.type = 'table';
+      state.tableDetails = {
+        tableNumber: ${tNum},
+        tableNameAr: 'طاولة #${tNum}',
+        detectedFromQr: true
+      };
+      localStorage.setItem('fruitella_fulfillment_state_v2', JSON.stringify(state));
+    } catch (e) {}
+  </script>`;
+
+  const appRootContent = `<div style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: Alexandria, Cairo, system-ui, sans-serif; text-align: center; padding: 2rem; color: #1d4d29;">
+    <div style="width: 72px; height: 72px; border-radius: 50%; background: #e8f5e9; color: #1d4d29; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1.25rem; box-shadow: 0 4px 12px rgba(29,77,41,0.12);">🍹</div>
+    <h1 style="font-size: 1.45rem; font-weight: 800; margin: 0 0 0.5rem 0; color: #14361d;">جاري ربط الطلب بطاولة رقم ${tNum}...</h1>
+    <p style="font-size: 0.95rem; color: #4b6354; margin: 0; max-width: 420px; line-height: 1.6;">نربط طلبك بـ ترابيزة #${tNum} بمول حياة تاون لتجهيز تجربة سريعة ونقلك للمنيو مباشرة.</p>
+  </div>`;
+
+  // Both /table/:id and /t/:id routes
+  for (const prefix of ['table', 't']) {
+    const tableDir = path.join(distBrowserDir, prefix, String(tNum));
+    fs.mkdirSync(tableDir, { recursive: true });
+
+    const tableHtml = generateHtml({
+      title: tableTitle,
+      description: tableDesc,
+      image: DEFAULT_LOGO,
+      url: `/${prefix}/${tNum}`,
+      extraHead: extraHead,
+      appRootContent: appRootContent
+    });
+
+    fs.writeFileSync(path.join(tableDir, 'index.html'), tableHtml, 'utf8');
+    generatedCount++;
+  }
+}
+
+// 5. Generate sitemap.xml
 let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 for (const entry of sitemapUrls) {
   sitemapXml += `  <url>\n    <loc>${entry.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${entry.changefreq}</changefreq>\n    <priority>${entry.priority}</priority>\n  </url>\n`;
