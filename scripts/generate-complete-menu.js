@@ -413,8 +413,8 @@ const freshItems = [
   { slug: 'guava-juice', nameAr: 'عصير جوافة بيور', nameEn: 'Pure Guava Juice', desc: 'جوافة طبيعية 100% غنية ومخفوقة عند الطلب', pL: 45, pLiter: 85, p4L: 310 },
   { slug: 'guava-milk', nameAr: 'جوافة باللبن الطبيعي', nameEn: 'Guava with Fresh Milk', desc: 'جوافة طازجة مخفوقة بالحليب الطبيعي كامل الدسم', pL: 55, pLiter: 100 },
   { slug: 'lemon-juice', nameAr: 'عصير ليمون فريش', nameEn: 'Fresh Lemon Juice', desc: 'عصير ليمون بلدي منعش ومحلى بنعومة', pL: 45, pLiter: 80 },
-  { slug: 'lemon-mint-juice', nameAr: 'ليمون نعناع مثلج', nameEn: 'Lemon Mint Juice', desc: 'ليمون ونعناع أخضر فريش مخفوق مع الثلج المجروش', pL: 60, pLiter: 110, isBestSeller: true },
-  { slug: 'lemon-milk', nameAr: 'ليمون باللبن', nameEn: 'Lemon with Milk', desc: 'مزيج كريمي منعش يجمع حموضة الليمون مع نعومة الحليب', pL: 50, pLiter: 90 },
+  { slug: 'lemon-mint-juice', nameAr: 'ليمون نعناع مثلج', nameEn: 'Lemon Mint Juice', desc: 'ليمون ونعناع أخضر فريش مخفوق مع الثلج المجروش', pL: 50, pLiter: 90, isBestSeller: true },
+  { slug: 'lemon-milk', nameAr: 'ليمون باللبن', nameEn: 'Lemon with Milk', desc: 'مزيج كريمي منعش يجمع حموضة الليمون مع نعومة الحليب', pL: 60, pLiter: 110 },
   { slug: 'watermelon-juice', nameAr: 'عصير بطيخ أحمر', nameEn: 'Fresh Watermelon Juice', desc: 'بطيخ أحمر سكري معصور ومثلج بدون ماء مضاف', pL: 50, pLiter: 90 },
   { slug: 'watermelon-mint', nameAr: 'بطيخ بالنعناع', nameEn: 'Watermelon with Mint', desc: 'بطيخ طازج ممزوج بأوراق النعناع الفريش المنعشة', pL: 55, pLiter: 100 },
   { slug: 'watermelon-strawberry-mint', nameAr: 'بطيخ فراولة نعناع', nameEn: 'Watermelon Strawberry Mint', desc: 'توليفة ثلاثية منعشة من البطيخ والفراولة والنعناع', pL: 60, pLiter: 110 },
@@ -423,13 +423,13 @@ const freshItems = [
   { slug: 'strawberry-milk', nameAr: 'فراولة باللبن', nameEn: 'Strawberry with Milk', desc: 'فراولة طازجة مخفوقة بالحليب بنكهة كريمية مخملية', pL: 60, pLiter: 110 },
   { slug: 'cantaloupe-juice', nameAr: 'عصير كانتالوب', nameEn: 'Fresh Cantaloupe Juice', desc: 'كانتالوب طبيعي طازج وبارد بقوام خفيف ومنعش', pL: 45, pLiter: 85 },
   { slug: 'pomegranate-juice', nameAr: 'عصير رمان فريش', nameEn: 'Fresh Pomegranate Juice', desc: 'حب رمان طازج معصور بلونه الياقوتي الغني بمضادات الأكسدة', pL: 60, pLiter: 110 },
+  { slug: 'grapes-juice', nameAr: 'عصير عنب موسمي', nameEn: 'Seasonal Grapes Juice', desc: 'عصير عنب طبيعي متوفر في موسم حصاده الصيفي', status: 'seasonal' },
+  { slug: 'peach-juice', nameAr: 'عصير خوخ فريش', nameEn: 'Fresh Peach Juice', desc: 'خوخ طبيعي بيور متوفر في موسم الصيف', status: 'seasonal' },
+  { slug: 'plum-juice', nameAr: 'عصير برقوق', nameEn: 'Fresh Plum Juice', desc: 'برقوق طبيعي بنكهة حامضة حلوة منعشة', pL: 45, pLiter: 85 },
   { slug: 'kiwi-juice', nameAr: 'عصير كيوي طبيعي', nameEn: 'Fresh Kiwi Juice', desc: 'كيوي طبيعي معصور بقوام غني ومنعش', pLiter: 180 },
   { slug: 'apple-juice', nameAr: 'عصير تفاح فريش', nameEn: 'Fresh Apple Juice', desc: 'عصير تفاح طبيعي معصور طازج بدون سكر مضاف', pLiter: 130 },
   { slug: 'pineapple-juice', nameAr: 'عصير أناناس طبيعي', nameEn: 'Fresh Pineapple Juice', desc: 'أناناس طبيعي معصور بنكهة استوائية مركزة', pLiter: 210 },
-  { slug: 'grapes-juice', nameAr: 'عصير عنب موسمي', nameEn: 'Seasonal Grapes Juice', desc: 'عصير عنب طبيعي متوفر في موسم حصاده الصيفي', pLiter: 120, status: 'needs_review' },
-  { slug: 'peach-juice', nameAr: 'عصير خوخ فريش', nameEn: 'Fresh Peach Juice', desc: 'خوخ طبيعي بيور متوفر في موسم الصيف', pLiter: 130, status: 'needs_review' },
-  { slug: 'plum-juice', nameAr: 'عصير برقوق', nameEn: 'Fresh Plum Juice', desc: 'برقوق طبيعي بنكهة حامضة حلوة متوفر في موسمه', pLiter: 130, status: 'needs_review' },
-  { slug: 'prickly-pear-juice', nameAr: 'عصير تين شوكي', nameEn: 'Prickly Pear Juice', desc: 'تين شوكي بلدي مثلج متوفر في موسم الصيف', pLiter: 110, status: 'needs_review' }
+  { slug: 'prickly-pear-juice', nameAr: 'عصير تين شوكي', nameEn: 'Prickly Pear Juice', desc: 'تين شوكي بلدي مثلج متوفر في موسم الصيف', status: 'seasonal' }
 ];
 
 freshItems.forEach((item, idx) => {
@@ -437,6 +437,9 @@ freshItems.forEach((item, idx) => {
   if (item.pL) sizes.push({ id: 'l', nameAr: 'حجم L', nameEn: 'Size L', price: item.pL, volumeLabel: 'L', isDefault: true, availability: 'available', extractionStatus: 'verified' });
   if (item.pLiter) sizes.push({ id: 'liter', nameAr: 'حجم لتر', nameEn: '1 Liter', price: item.pLiter, volumeLabel: '1L', isDefault: sizes.length === 0, availability: 'available', extractionStatus: 'verified' });
   if (item.p4L) sizes.push({ id: '4liter', nameAr: 'حجم 4 لتر', nameEn: '4 Liters', price: item.p4L, volumeLabel: '4L', availability: 'available', extractionStatus: 'verified' });
+  if (sizes.length === 0) {
+    sizes.push({ id: 'seasonal', nameAr: 'حسب الموسم', nameEn: 'Seasonal', price: 0, volumeLabel: 'موسمي', isDefault: true, availability: 'unavailable', extractionStatus: 'needs_review' });
+  }
 
   products.push({
     id: `fj-${idx + 1}`,
@@ -456,8 +459,8 @@ freshItems.forEach((item, idx) => {
     ingredientsAr: [item.nameAr.replace('عصير ', '')],
     dietary: { isNatural: true, isSugarFreeAvailable: true, containsNuts: false, containsDairy: item.nameAr.includes('لبن') },
     verifiedFromAsset: 'raw_assets/843458063_122230952276500364_261235849293952816_n.jpg',
-    extractionStatus: item.status || 'verified',
-    availability: 'available'
+    extractionStatus: item.status === 'seasonal' ? 'needs_review' : (item.status || 'verified'),
+    availability: item.status === 'seasonal' ? 'unavailable' : 'available'
   });
 });
 
@@ -563,8 +566,8 @@ const mangoItems = [
   { slug: 'mango-chunks-cup', nameAr: 'كوب مانجو قطع فريش', nameEn: 'Fresh Mango Chunks Cup', desc: 'قطع مانجو طازجة مكعبات مع صوص مانجو نقي بالملعقة', pL: 65, pLiter: 120, isFeatured: true },
   { slug: 'mango-rocket', nameAr: 'مانجو جرجير', nameEn: 'Mango Arugula Twist', desc: 'خلطة مانجو مع أوراق الجرجير البلدي الغنية بالمعادن', pL: 70, pLiter: 130 },
   { slug: 'mango-milk', nameAr: 'مانجو باللبن', nameEn: 'Mango with Milk', desc: 'مانجو بيور مخفوقة بالحليب الطبيعي البارد لقوام مخملي', pL: 70, pLiter: 130 },
-  { slug: 'mango-pomegranate', nameAr: 'مانجو حب رمان', nameEn: 'Mango with Pomegranate', desc: 'عصير مانجو مغطى بحبات الرمان الياقوتية المقرمشة', pL: 80, pLiter: 150, status: 'needs_review' },
-  { slug: 'mango-yogurt-nuts', nameAr: 'مانجو زبادي مكسرات', nameEn: 'Mango Yogurt Nuts', desc: 'مانجو مع زبادي طبيعي ومكسرات محمصة مقرمشة', pL: 90, pLiter: 170, status: 'needs_review' }
+  { slug: 'mango-pomegranate', nameAr: 'مانجو حب رمان', nameEn: 'Mango with Pomegranate', desc: 'عصير مانجو مغطى بحبات الرمان الياقوتية المقرمشة متوفر حسب الموسم', status: 'seasonal' },
+  { slug: 'mango-yogurt-nuts', nameAr: 'مانجو زبادي مكسرات', nameEn: 'Mango Yogurt Nuts', desc: 'مانجو مع زبادي طبيعي ومكسرات محمصة مقرمشة', pL: 130 }
 ];
 
 mangoItems.forEach((item, idx) => {
@@ -572,6 +575,9 @@ mangoItems.forEach((item, idx) => {
   if (item.pL) sizes.push({ id: 'l', nameAr: 'حجم L', nameEn: 'Size L', price: item.pL, volumeLabel: 'L', isDefault: true, availability: 'available', extractionStatus: 'verified' });
   if (item.pLiter) sizes.push({ id: 'liter', nameAr: 'حجم لتر', nameEn: '1 Liter', price: item.pLiter, volumeLabel: '1L', isDefault: sizes.length === 0, availability: 'available', extractionStatus: 'verified' });
   if (item.p4L) sizes.push({ id: '4liter', nameAr: 'حجم 4 لتر', nameEn: '4 Liters', price: item.p4L, volumeLabel: '4L', availability: 'available', extractionStatus: 'verified' });
+  if (sizes.length === 0) {
+    sizes.push({ id: 'seasonal', nameAr: 'حسب الموسم', nameEn: 'Seasonal', price: 0, volumeLabel: 'موسمي', isDefault: true, availability: 'unavailable', extractionStatus: 'needs_review' });
+  }
 
   products.push({
     id: `mg-${idx + 1}`,
@@ -591,8 +597,8 @@ mangoItems.forEach((item, idx) => {
     ingredientsAr: ['مانجو كيت طبيعي'],
     dietary: { isNatural: true, isSugarFreeAvailable: true, containsNuts: item.nameAr.includes('مكسرات'), containsDairy: item.nameAr.includes('لبن') || item.nameAr.includes('آيس') },
     verifiedFromAsset: 'raw_assets/843449293_122230951970500364_8911570488052115153_n.jpg',
-    extractionStatus: item.status || 'verified',
-    availability: 'available'
+    extractionStatus: item.status === 'seasonal' ? 'needs_review' : (item.status || 'verified'),
+    availability: item.status === 'seasonal' ? 'unavailable' : 'available'
   });
 });
 
@@ -641,8 +647,8 @@ const energyItems = [
   { slug: 'kiwi-pineapple', nameAr: 'كيوي بالأناناس', nameEn: 'Kiwi with Pineapple', desc: 'مزيج استوائي نشط من الكيوي والأناناس المنعش', pL: 110, pLiter: 210 },
   { slug: 'pineapple-orange', nameAr: 'أناناس بالبرتقال', nameEn: 'Pineapple with Orange', desc: 'أناناس طبيعي معصور مع البرتقال الطازج', pL: 110, pLiter: 210 },
   { slug: 'orange-ginger', nameAr: 'برتقال بالزنجبيل الفريش', nameEn: 'Orange with Fresh Ginger', desc: 'برتقال طبيعي مع الزنجبيل الحار لتعزيز النشاط والدفء', pL: 80, pLiter: 150 },
-  { slug: 'lemon-ginger', nameAr: 'ليمون بالزنجبيل', nameEn: 'Lemon with Fresh Ginger', desc: 'ليمون بلدي مع زنجبيل طازج لانتعاش وتنقية الجسم', pL: 80, pLiter: 150 },
-  { slug: 'super-vitamin-c', nameAr: 'سوبر فيتامين سي', nameEn: 'Super Vitamin C Cocktail', desc: 'خلطة حمضية جبارة من البرتقال والليمون والجوافة والكيوي والعسل', pL: 85, pLiter: 160, isFeatured: true }
+  { slug: 'lemon-ginger', nameAr: 'ليمون بالزنجبيل', nameEn: 'Lemon with Fresh Ginger', desc: 'ليمون بلدي مع زنجبيل طازج لانتعاش وتنقية الجسم', pL: 85, pLiter: 160 },
+  { slug: 'super-vitamin-c', nameAr: 'سوبر فيتامين سي', nameEn: 'Super Vitamin C Cocktail', desc: 'خلطة حمضية جبارة من البرتقال والليمون والجوافة والكيوي والعسل', pL: 80, pLiter: 160, isFeatured: true }
 ];
 
 energyItems.forEach((item, idx) => {
@@ -708,8 +714,8 @@ fruitSaladItems.forEach((item, idx) => {
     ingredientsAr: ['فواكه موسمية مشكلة', 'عصير طبيعي'],
     dietary: { isNatural: true, isSugarFreeAvailable: true, containsNuts: item.nameAr.includes('قنبلة') || item.nameAr.includes('مكسرات'), containsDairy: item.nameAr.includes('آيس') || item.nameAr.includes('قشطة') },
     verifiedFromAsset: 'raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg',
-    extractionStatus: item.status || 'verified',
-    availability: 'available'
+    extractionStatus: item.status === 'seasonal' ? 'needs_review' : (item.status || 'verified'),
+    availability: item.status === 'seasonal' ? 'unavailable' : 'available'
   });
 });
 
@@ -905,10 +911,10 @@ const powerItems = [
   { slug: 'super-viagra', nameAr: 'سوبر فياجرا فروتيلا', nameEn: 'Super Viagra Signature Blend', desc: 'المكونات: أفوكادو، جرجير، كيوي، حلاوة طحينية، آيس كريم، عسل', pL: 120, pLiter: 230, isBestSeller: true, ing: ['أفوكادو', 'جرجير', 'كيوي', 'حلاوة طحينية', 'آيس كريم', 'عسل'] },
   { slug: 'avocado-kiwi', nameAr: 'أفوكادو بالكيوي', nameEn: 'Avocado with Kiwi', desc: 'أفوكادو كريمي ممزوج بالكيوي الأخضر المنعش الغني بفيتامين سي', pL: 130, pLiter: 250 },
   { slug: 'avocado-mango', nameAr: 'أفوكادو بالمانجو', nameEn: 'Avocado with Mango', desc: 'مزيج الأفوكادو الدسم مع حلاوة المانجو الاستوائية', pL: 110, pLiter: 210 },
-  { slug: 'avocado-dates', nameAr: 'أفوكادو بالبلح والحليب', nameEn: 'Avocado with Dates & Milk', desc: 'أفوكادو مع التمر واللبن وعسل النحل لطاقة تدوم طويلاً', pL: 120, pLiter: 220 },
-  { slug: 'avocado-yogurt', nameAr: 'أفوكادو بالزبادي والعسل', nameEn: 'Avocado with Yogurt & Honey', desc: 'أفوكادو مع زبادي طبيعي وعسل نحل صافٍ لوجبة خفيفة وصحية', pL: 130, pLiter: 250 },
-  { slug: 'avocado-fruit-chunks', nameAr: 'أفوكادو فواكه قطع', nameEn: 'Avocado with Fresh Fruit Chunks', desc: 'عصير أفوكادو كريمي يعلوه مكعبات الفواكه الطازجة والمكسرات', pL: 65, pLiter: 130 },
-  { slug: 'dates-arugula-honey', nameAr: 'بلح جرجير عسل طاقة', nameEn: 'Dates, Arugula & Honey Energy', desc: 'خلطة تراثية مقوية من التمر وأوراق الجرجير وعسل النحل الصافي', pL: 150, pLiter: 290 },
+  { slug: 'avocado-dates', nameAr: 'أفوكادو بالبلح والحليب', nameEn: 'Avocado with Dates & Milk', desc: 'أفوكادو مع التمر واللبن وعسل النحل لطاقة تدوم طويلاً', pL: 110, pLiter: 210 },
+  { slug: 'avocado-yogurt', nameAr: 'أفوكادو بالزبادي والعسل', nameEn: 'Avocado with Yogurt & Honey', desc: 'أفوكادو مع زبادي طبيعي وعسل نحل صافٍ لوجبة خفيفة وصحية', pL: 120, pLiter: 220 },
+  { slug: 'avocado-fruit-chunks', nameAr: 'أفوكادو فواكه قطع', nameEn: 'Avocado with Fresh Fruit Chunks', desc: 'عصير أفوكادو كريمي يعلوه مكعبات الفواكه الطازجة والمكسرات', pL: 130, pLiter: 250 },
+  { slug: 'dates-arugula-honey', nameAr: 'بلح جرجير عسل طاقة', nameEn: 'Dates, Arugula & Honey Energy', desc: 'خلطة تراثية مقوية من التمر وأوراق الجرجير وعسل النحل الصافي', pL: 65, pLiter: 130 },
   { slug: 'power-fruitella-royal', nameAr: 'باور فروتيلا رويال الحصري', nameEn: 'Fruitella Royal Power', desc: 'المكونات: كاجو، بندق، لوز، آيس كريم، حلاوة طحينية، عسل جبلي حر', pL: 150, pLiter: 290, isFeatured: true, isBestSeller: true, ing: ['كاجو', 'بندق', 'لوز', 'آيس كريم', 'حلاوة طحينية', 'عسل نحل'] }
 ];
 
@@ -948,7 +954,7 @@ const forestItems = [
   { slug: 'elephant-feeding', nameAr: 'رضعة الفيل', nameEn: 'Elephant Feeding', desc: 'المكونات: سوبيا طبيعي، شوكولاتة ناعمة، فانيليا', price: 80, ing: ['سوبيا', 'شوكولاتة', 'فانيليا'] },
   { slug: 'tiger-feeding', nameAr: 'رضعة النمر', nameEn: 'Tiger Feeding', desc: 'المكونات: سوبيا طبيعي، فراولة فريش، فانيليا', price: 80, ing: ['سوبيا', 'فراولة', 'فانيليا'], isFeatured: true },
   { slug: 'whale-feeding', nameAr: 'رضعة الحوت', nameEn: 'Whale Feeding', desc: 'المكونات: سوبيا طبيعي، كانتالوب فريش، فانيليا', price: 80, ing: ['سوبيا', 'كانتالوب', 'فانيليا'] },
-  { slug: 'koala-feeding', nameAr: 'رضعة الكوالا', nameEn: 'Koala Feeding', desc: 'المكونات: سوبيا طبيعي، بلح طازج، لبن حليب', price: 80, ing: ['سوبيا', 'بلح', 'حليب'] },
+  { slug: 'koala-feeding', nameAr: 'رضعة الغزال', nameEn: 'Gazelle Feeding', desc: 'المكونات: سوبيا طبيعي، بلح طازج، لبن حليب', price: 80, ing: ['سوبيا', 'بلح', 'حليب'] },
   { slug: 'bird-milk-feeding', nameAr: 'رضعة لبن العصفور', nameEn: 'Bird Milk Feeding', desc: 'المكونات: سوبيا طبيعي، موز فريش، فانيليا مخفوقة', price: 80, ing: ['سوبيا', 'موز', 'فانيليا'] }
 ];
 
@@ -990,8 +996,8 @@ const fruitellaMixItems = [
   { slug: 'mix-pina-colada', nameAr: 'ميكس بينا كولادا', nameEn: 'Virgin Pina Colada', desc: 'المكونات: أناناس، برتقال، حليب جوز هند استوائي', pL: 85, pLiter: 160, ing: ['أناناس', 'برتقال', 'جوز هند'] },
   { slug: 'mix-google', nameAr: 'ميكس جوجل', nameEn: 'Google Power Mix', desc: 'المكونات: أناناس، مانجو، آيس كريم فانيليا', pL: 85, pLiter: 160, ing: ['أناناس', 'مانجو', 'آيس كريم'] },
   { slug: 'mix-vitamin-c', nameAr: 'ميكس فيتامين سي', nameEn: 'Citrus Vitamin C Mix', desc: 'المكونات: برتقال، جوافة، ليمون، عسل نحل طبيعي', pL: 70, pLiter: 130, ing: ['برتقال', 'جوافة', 'ليمون', 'عسل'] },
-  { slug: 'mix-nos-darba', nameAr: 'ميكس نص ضربة قطع', nameEn: 'Nos Darba Half-Blended Mix', desc: 'المكونات: ميكسات فواكه بيوريه ثقيل مع قطع فواكه ملموسة', pL: 75, pLiter: 140, ing: ['فواكه مشكلة بيوريه', 'قطع فواكه'] },
-  { slug: 'mix-shabah', nameAr: 'ميكس الشبح', nameEn: 'The Ghost Special Mix', desc: 'المكونات: تفاح، بلح، كيوي، لبن طبيعي', pL: 75, pLiter: 140, ing: ['تفاح', 'بلح', 'كيوي', 'حليب'] },
+  { slug: 'mix-nos-darba', nameAr: 'ميكس نص ضربة قطع', nameEn: 'Nos Darba Half-Blended Mix', desc: 'المكونات: ميكسات فواكه بيوريه ثقيل مع قطع فواكه ملموسة', pL: 70, pLiter: 130, ing: ['فواكه مشكلة بيوريه', 'قطع فواكه'] },
+  { slug: 'mix-shabah', nameAr: 'ميكس الشيخ', nameEn: 'The Sheikh Special Mix', desc: 'المكونات: تفاح، بلح، كيوي، لبن طبيعي', pL: 75, pLiter: 140, ing: ['تفاح', 'بلح', 'كيوي', 'حليب'] },
   { slug: 'mix-viva', nameAr: 'ميكس فيفا', nameEn: 'Viva Celebration Mix', desc: 'المكونات: بلح طازج، موز، لبن حليب، آيس كريم', pL: 75, pLiter: 140, ing: ['بلح', 'موز', 'حليب', 'آيس كريم'] }
 ];
 
@@ -1136,9 +1142,10 @@ const familyPackItems = [
   { slug: 'family-sugarcane-orange', nameAr: 'عبوة قصب بالبرتقال عائلية', nameEn: 'Family Sugarcane with Orange', p1L: 70, p4L: 270 },
   { slug: 'family-sugarcane-sobia', nameAr: 'عبوة قصب بالسوبيا عائلية', nameEn: 'Family Sugarcane with Sobya', p1L: 70, p4L: 270 },
   { slug: 'family-sugarcane-lemon', nameAr: 'عبوة قصب بالليمون عائلية', nameEn: 'Family Sugarcane with Lemon', p1L: 70, p4L: 270 },
-  { slug: 'family-sugarcane-icecream', nameAr: 'عبوة قصب بالآيس كريم عائلية', nameEn: 'Family Sugarcane with Ice Cream', p1L: 90 },
-  { slug: 'family-sobia', nameAr: 'عبوة سوبيا عائلية', nameEn: 'Family Sobya Pack', p1L: 85, p4L: 320, isBestSeller: true },
-  { slug: 'family-sobia-mango', nameAr: 'عبوة سوبيا بالمانجو عائلية', nameEn: 'Family Mango Sobya Pack', p1L: 120, p4L: 440 },
+  { slug: 'family-sugarcane-icecream', nameAr: 'عبوة قصب بالآيس كريم عائلية', nameEn: 'Family Sugarcane with Ice Cream', p1L: 70, p4L: 270 },
+  { slug: 'family-sobia', nameAr: 'عبوة سوبيا عائلية', nameEn: 'Family Sobya Pack', p1L: 90, isBestSeller: true },
+  { slug: 'family-sobia-mango', nameAr: 'عبوة سوبيا بالمانجو عائلية', nameEn: 'Family Mango Sobya Pack', p1L: 85, p4L: 320 },
+  { slug: 'family-sobia-banana', nameAr: 'عبوة سوبيا بالموز عائلية', nameEn: 'Family Banana Sobya Pack', p1L: 120, p4L: 440 },
   { slug: 'family-tamarind', nameAr: 'عبوة تمر هندي عائلية', nameEn: 'Family Tamarind Pack', p1L: 70, p4L: 270 },
   { slug: 'family-carob', nameAr: 'عبوة خروب عائلية', nameEn: 'Family Carob Pack', p1L: 75, p4L: 280 },
   { slug: 'family-ennab', nameAr: 'عبوة عناب عائلية', nameEn: 'Family Ennab Pack', p1L: 75, p4L: 280 },
@@ -1148,18 +1155,19 @@ const familyPackItems = [
   { slug: 'family-guava', nameAr: 'عبوة جوافة عائلية', nameEn: 'Family Guava Pack', p1L: 85, p4L: 310 },
   { slug: 'family-strawberry', nameAr: 'عبوة فراولة عائلية', nameEn: 'Family Strawberry Pack', p1L: 95, p4L: 350, isFeatured: true },
   { slug: 'family-orange', nameAr: 'عبوة برتقال عائلية', nameEn: 'Family Orange Pack', p1L: 90, p4L: 350 },
-  { slug: 'family-kiwi', nameAr: 'عبوة كيوي عائلية', nameEn: 'Family Kiwi Pack', p1L: 180 },
-  { slug: 'family-avocado', nameAr: 'عبوة أفوكادو عائلية', nameEn: 'Family Avocado Pack', p1L: 220, isFeatured: true },
-  { slug: 'family-pineapple', nameAr: 'عبوة أناناس عائلية', nameEn: 'Family Pineapple Pack', p1L: 210 },
-  { slug: 'family-dates-milk', nameAr: 'عبوة بلح باللبن عائلية', nameEn: 'Family Dates with Milk Pack', p1L: 100, p4L: 380 },
-  { slug: 'family-watermelon', nameAr: 'عبوة بطيخ عائلية', nameEn: 'Family Watermelon Pack', p1L: 90, p4L: 320 },
-  { slug: 'family-lemon', nameAr: 'عبوة ليمون عائلية', nameEn: 'Family Lemon Pack', p1L: 80, p4L: 300 },
-  { slug: 'family-lemon-mint', nameAr: 'عبوة ليمون نعناع عائلية', nameEn: 'Family Lemon Mint Pack', p1L: 90, p4L: 320, isBestSeller: true },
-  { slug: 'family-lemon-milk', nameAr: 'عبوة ليمون باللبن عائلية', nameEn: 'Family Lemon with Milk Pack', p1L: 110, p4L: 400 },
-  { slug: 'family-banana-milk', nameAr: 'عبوة موز باللبن عائلية', nameEn: 'Family Banana with Milk Pack', p1L: 95, p4L: 350 },
-  { slug: 'family-cantaloupe', nameAr: 'عبوة كانتالوب عائلية', nameEn: 'Family Cantaloupe Pack', p1L: 85, p4L: 320 },
-  { slug: 'family-vitamin-c', nameAr: 'عبوة فيتامين سي عائلية', nameEn: 'Family Vitamin C Pack', p1L: 130 },
-  { slug: 'family-tangerine', nameAr: 'عبوة يوسفي عائلية', nameEn: 'Family Tangerine Pack', p1L: 90 },
+  { slug: 'family-kiwi', nameAr: 'عبوة كيوي عائلية', nameEn: 'Family Kiwi Pack', p1L: 220 },
+  { slug: 'family-avocado', nameAr: 'عبوة أفوكادو عائلية', nameEn: 'Family Avocado Pack', p1L: 210, isFeatured: true },
+  { slug: 'family-pineapple', nameAr: 'عبوة أناناس عائلية', nameEn: 'Family Pineapple Pack', p1L: 100, p4L: 380 },
+  { slug: 'family-dates-milk', nameAr: 'عبوة بلح باللبن عائلية', nameEn: 'Family Dates with Milk Pack', p1L: 90, p4L: 320 },
+  { slug: 'family-watermelon', nameAr: 'عبوة بطيخ عائلية', nameEn: 'Family Watermelon Pack', p1L: 80, p4L: 300 },
+  { slug: 'family-lemon', nameAr: 'عبوة ليمون عائلية', nameEn: 'Family Lemon Pack', p1L: 90, p4L: 320 },
+  { slug: 'family-lemon-mint', nameAr: 'عبوة ليمون نعناع عائلية', nameEn: 'Family Lemon Mint Pack', p1L: 110, p4L: 400, isBestSeller: true },
+  { slug: 'family-banana-milk', nameAr: 'عبوة موز باللبن عائلية', nameEn: 'Family Banana with Milk Pack', p1L: 85, p4L: 320 },
+  { slug: 'family-pomegranate', nameAr: 'عبوة رمان عائلية', nameEn: 'Family Pomegranate Pack', p1L: 180 },
+  { slug: 'family-prickly-pear', nameAr: 'عبوة تين شوكي عائلية', nameEn: 'Family Prickly Pear Pack', p1L: 95, p4L: 350 },
+  { slug: 'family-plum', nameAr: 'عبوة برقوق عائلية', nameEn: 'Family Plum Pack', p1L: 130 },
+  { slug: 'family-grapes', nameAr: 'عبوة عنب عائلية', nameEn: 'Family Grapes Pack', p1L: 130 },
+  { slug: 'family-vitamin-c', nameAr: 'عبوة فيتامين سي عائلية', nameEn: 'Family Vitamin C Pack', p1L: 90 },
   { slug: 'family-blender-mix', nameAr: 'عبوة ميكس خلاط عائلية', nameEn: 'Family Blender Mix Pack', p1L: 130 },
   { slug: 'family-nos-darba', nameAr: 'عبوة نص ضربة عائلية', nameEn: 'Family Nos Darba Chunks Pack', p1L: 130 }
 ];
@@ -1408,7 +1416,7 @@ const sweetsItems = [
   ], isBestSeller: true },
   { slug: 'molten-cake', nameAr: 'مولتن كيك الشوكولاتة الذائبة', nameEn: 'Lava Molten Cake', desc: 'كيك الشوكولاتة الساخن بقلب الشوكولاتة الذائبة السائلة مع بولة آيس كريم', price: 85, isFeatured: true },
   { slug: 'despacito-cake', nameAr: 'كيك ديسباسيتو البرازيلي', nameEn: 'Despacito Chocolate Cake', desc: 'كيكة شوكولاتة غنية مشربة بموس الشوكولاتة والجاناش الفاخر', price: 85 },
-  { slug: 'crepe-nutella-lotus', nameAr: 'كريب نوتيلا أو لوتس', nameEn: 'Nutella or Lotus Crepe', desc: 'كريب فرنسي رقيق محشو ومغطى بالنوتيلا أو اللوتس', price: 50 },
+  { slug: 'crepe-nutella-lotus', nameAr: 'كب نوتيلا أو لوتس', nameEn: 'Nutella or Lotus Cup / Crepe', desc: 'كب / كريب فرنسي رقيق محشو ومغطى بالنوتيلا أو اللوتس', price: 50 },
   { slug: 'kashtouta-nutella', nameAr: 'قشطوطة نوتيلا فاخرة', nameEn: 'Nutella Kashtouta', desc: 'كيكة الحليب والقشطة الغنية المسقية بالكراميل والشوكولاتة نوتيلا', price: 75, isBestSeller: true },
   { slug: 'kashtouta-lotus', nameAr: 'قشطوطة لوتس', nameEn: 'Lotus Kashtouta', desc: 'قشطوطة كيك الحليب بصلصة وبسكويت اللوتس المقرمش', price: 80 },
   { slug: 'kashtouta-pistachio', nameAr: 'قشطوطة بيستاشيو ملكية', nameEn: 'Royal Pistachio Kashtouta', desc: 'قشطوطة غنية بكريمة الفستق الحلبي الأصلي وقطع الفستق المحمص', price: 110, isFeatured: true },

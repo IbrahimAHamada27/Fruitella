@@ -305,7 +305,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
       "السعر يتحدد حسب الصنف والحجم المتاح، وليس كل الأصناف لها خيار 4 لتر.",
       "تعبأ العبوات بإحكام فوري لضمان بقائها طازجة وباردة حتى وصولها إليك."
     ],
-    "itemCount": 30
+    "itemCount": 32
   },
   {
     "id": "hot-drinks",
@@ -1060,13 +1060,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "ليمون ونعناع أخضر فريش مخفوق مع الثلج المجروش",
     "categorySlug": "fresh-juices",
     "categoryNameAr": "عصائر فريش",
-    "basePrice": 60,
+    "basePrice": 50,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 60,
+        "price": 50,
         "volumeLabel": "L",
         "isDefault": true,
         "availability": "available",
@@ -1076,7 +1076,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 110,
+        "price": 90,
         "volumeLabel": "1L",
         "isDefault": false,
         "availability": "available",
@@ -1186,13 +1186,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "مزيج كريمي منعش يجمع حموضة الليمون مع نعومة الحليب",
     "categorySlug": "fresh-juices",
     "categoryNameAr": "عصائر فريش",
-    "basePrice": 50,
+    "basePrice": 60,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 50,
+        "price": 60,
         "volumeLabel": "L",
         "isDefault": true,
         "availability": "available",
@@ -1202,7 +1202,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 90,
+        "price": 110,
         "volumeLabel": "1L",
         "isDefault": false,
         "availability": "available",
@@ -2314,6 +2314,364 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   },
   {
     "id": "fj-16",
+    "slug": "grapes-juice",
+    "nameAr": "عصير عنب موسمي",
+    "nameEn": "Seasonal Grapes Juice",
+    "descriptionAr": "عصير عنب طبيعي متوفر في موسم حصاده الصيفي",
+    "categorySlug": "fresh-juices",
+    "categoryNameAr": "عصائر فريش",
+    "basePrice": 0,
+    "sizes": [
+      {
+        "id": "seasonal",
+        "nameAr": "حسب الموسم",
+        "nameEn": "Seasonal",
+        "price": 0,
+        "volumeLabel": "موسمي",
+        "isDefault": true,
+        "availability": "unavailable",
+        "extractionStatus": "needs_review"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/products/fruit-cocktail-cup.jpg",
+    "isFeatured": false,
+    "isBestSeller": false,
+    "tags": [
+      "طبيعي 100%",
+      "بدون مواد حافظة",
+      "فريش"
+    ],
+    "ingredientsAr": [
+      "عنب موسمي"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
+    "extractionStatus": "needs_review",
+    "availability": "unavailable"
+  },
+  {
+    "id": "fj-17",
+    "slug": "peach-juice",
+    "nameAr": "عصير خوخ فريش",
+    "nameEn": "Fresh Peach Juice",
+    "descriptionAr": "خوخ طبيعي بيور متوفر في موسم الصيف",
+    "categorySlug": "fresh-juices",
+    "categoryNameAr": "عصائر فريش",
+    "basePrice": 0,
+    "sizes": [
+      {
+        "id": "seasonal",
+        "nameAr": "حسب الموسم",
+        "nameEn": "Seasonal",
+        "price": 0,
+        "volumeLabel": "موسمي",
+        "isDefault": true,
+        "availability": "unavailable",
+        "extractionStatus": "needs_review"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/products/fruit-cocktail-cup.jpg",
+    "isFeatured": false,
+    "isBestSeller": false,
+    "tags": [
+      "طبيعي 100%",
+      "بدون مواد حافظة",
+      "فريش"
+    ],
+    "ingredientsAr": [
+      "خوخ فريش"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
+    "extractionStatus": "needs_review",
+    "availability": "unavailable"
+  },
+  {
+    "id": "fj-18",
+    "slug": "plum-juice",
+    "nameAr": "عصير برقوق",
+    "nameEn": "Fresh Plum Juice",
+    "descriptionAr": "برقوق طبيعي بنكهة حامضة حلوة منعشة",
+    "categorySlug": "fresh-juices",
+    "categoryNameAr": "عصائر فريش",
+    "basePrice": 45,
+    "sizes": [
+      {
+        "id": "l",
+        "nameAr": "حجم L",
+        "nameEn": "Size L",
+        "price": 45,
+        "volumeLabel": "L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 85,
+        "volumeLabel": "1L",
+        "isDefault": false,
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/products/fruit-cocktail-cup.jpg",
+    "isFeatured": false,
+    "isBestSeller": false,
+    "tags": [
+      "طبيعي 100%",
+      "بدون مواد حافظة",
+      "فريش"
+    ],
+    "ingredientsAr": [
+      "برقوق"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fj-19",
     "slug": "kiwi-juice",
     "nameAr": "عصير كيوي طبيعي",
     "nameEn": "Fresh Kiwi Juice",
@@ -2429,7 +2787,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fj-17",
+    "id": "fj-20",
     "slug": "apple-juice",
     "nameAr": "عصير تفاح فريش",
     "nameEn": "Fresh Apple Juice",
@@ -2545,7 +2903,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fj-18",
+    "id": "fj-21",
     "slug": "pineapple-juice",
     "nameAr": "عصير أناناس طبيعي",
     "nameEn": "Fresh Pineapple Juice",
@@ -2661,354 +3019,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fj-19",
-    "slug": "grapes-juice",
-    "nameAr": "عصير عنب موسمي",
-    "nameEn": "Seasonal Grapes Juice",
-    "descriptionAr": "عصير عنب طبيعي متوفر في موسم حصاده الصيفي",
-    "categorySlug": "fresh-juices",
-    "categoryNameAr": "عصائر فريش",
-    "basePrice": 120,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 120,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/fruit-cocktail-cup.jpg",
-    "isFeatured": false,
-    "isBestSeller": false,
-    "tags": [
-      "طبيعي 100%",
-      "بدون مواد حافظة",
-      "فريش"
-    ],
-    "ingredientsAr": [
-      "عنب موسمي"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
-    "extractionStatus": "needs_review",
-    "availability": "available"
-  },
-  {
-    "id": "fj-20",
-    "slug": "peach-juice",
-    "nameAr": "عصير خوخ فريش",
-    "nameEn": "Fresh Peach Juice",
-    "descriptionAr": "خوخ طبيعي بيور متوفر في موسم الصيف",
-    "categorySlug": "fresh-juices",
-    "categoryNameAr": "عصائر فريش",
-    "basePrice": 130,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 130,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/fruit-cocktail-cup.jpg",
-    "isFeatured": false,
-    "isBestSeller": false,
-    "tags": [
-      "طبيعي 100%",
-      "بدون مواد حافظة",
-      "فريش"
-    ],
-    "ingredientsAr": [
-      "خوخ فريش"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
-    "extractionStatus": "needs_review",
-    "availability": "available"
-  },
-  {
-    "id": "fj-21",
-    "slug": "plum-juice",
-    "nameAr": "عصير برقوق",
-    "nameEn": "Fresh Plum Juice",
-    "descriptionAr": "برقوق طبيعي بنكهة حامضة حلوة متوفر في موسمه",
-    "categorySlug": "fresh-juices",
-    "categoryNameAr": "عصائر فريش",
-    "basePrice": 130,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 130,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/fruit-cocktail-cup.jpg",
-    "isFeatured": false,
-    "isBestSeller": false,
-    "tags": [
-      "طبيعي 100%",
-      "بدون مواد حافظة",
-      "فريش"
-    ],
-    "ingredientsAr": [
-      "برقوق"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
-    "extractionStatus": "needs_review",
-    "availability": "available"
-  },
-  {
     "id": "fj-22",
     "slug": "prickly-pear-juice",
     "nameAr": "عصير تين شوكي",
@@ -3016,17 +3026,17 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "تين شوكي بلدي مثلج متوفر في موسم الصيف",
     "categorySlug": "fresh-juices",
     "categoryNameAr": "عصائر فريش",
-    "basePrice": 110,
+    "basePrice": 0,
     "sizes": [
       {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 110,
-        "volumeLabel": "1L",
+        "id": "seasonal",
+        "nameAr": "حسب الموسم",
+        "nameEn": "Seasonal",
+        "price": 0,
+        "volumeLabel": "موسمي",
         "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
+        "availability": "unavailable",
+        "extractionStatus": "needs_review"
       }
     ],
     "availableAddons": [
@@ -3122,7 +3132,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     },
     "verifiedFromAsset": "raw_assets/843458063_122230952276500364_261235849293952816_n.jpg",
     "extractionStatus": "needs_review",
-    "availability": "available"
+    "availability": "unavailable"
   },
   {
     "id": "oj-1",
@@ -7494,30 +7504,20 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "slug": "mango-pomegranate",
     "nameAr": "مانجو حب رمان",
     "nameEn": "Mango with Pomegranate",
-    "descriptionAr": "عصير مانجو مغطى بحبات الرمان الياقوتية المقرمشة",
+    "descriptionAr": "عصير مانجو مغطى بحبات الرمان الياقوتية المقرمشة متوفر حسب الموسم",
     "categorySlug": "mango-world",
     "categoryNameAr": "عالم المانجو",
-    "basePrice": 80,
+    "basePrice": 0,
     "sizes": [
       {
-        "id": "l",
-        "nameAr": "حجم L",
-        "nameEn": "Size L",
-        "price": 80,
-        "volumeLabel": "L",
+        "id": "seasonal",
+        "nameAr": "حسب الموسم",
+        "nameEn": "Seasonal",
+        "price": 0,
+        "volumeLabel": "موسمي",
         "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 150,
-        "volumeLabel": "1L",
-        "isDefault": false,
-        "availability": "available",
-        "extractionStatus": "verified"
+        "availability": "unavailable",
+        "extractionStatus": "needs_review"
       }
     ],
     "availableAddons": [
@@ -7612,7 +7612,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     },
     "verifiedFromAsset": "raw_assets/843449293_122230951970500364_8911570488052115153_n.jpg",
     "extractionStatus": "needs_review",
-    "availability": "available"
+    "availability": "unavailable"
   },
   {
     "id": "mg-13",
@@ -7622,25 +7622,15 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "مانجو مع زبادي طبيعي ومكسرات محمصة مقرمشة",
     "categorySlug": "mango-world",
     "categoryNameAr": "عالم المانجو",
-    "basePrice": 90,
+    "basePrice": 130,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 90,
+        "price": 130,
         "volumeLabel": "L",
         "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 170,
-        "volumeLabel": "1L",
-        "isDefault": false,
         "availability": "available",
         "extractionStatus": "verified"
       }
@@ -7736,7 +7726,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "containsDairy": false
     },
     "verifiedFromAsset": "raw_assets/843449293_122230951970500364_8911570488052115153_n.jpg",
-    "extractionStatus": "needs_review",
+    "extractionStatus": "verified",
     "availability": "available"
   },
   {
@@ -9547,13 +9537,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "ليمون بلدي مع زنجبيل طازج لانتعاش وتنقية الجسم",
     "categorySlug": "energy-world",
     "categoryNameAr": "عالم الطاقة",
-    "basePrice": 80,
+    "basePrice": 85,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 80,
+        "price": 85,
         "volumeLabel": "L",
         "isDefault": true,
         "availability": "available",
@@ -9563,7 +9553,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 150,
+        "price": 160,
         "volumeLabel": "1L",
         "isDefault": false,
         "availability": "available",
@@ -9671,13 +9661,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "خلطة حمضية جبارة من البرتقال والليمون والجوافة والكيوي والعسل",
     "categorySlug": "energy-world",
     "categoryNameAr": "عالم الطاقة",
-    "basePrice": 85,
+    "basePrice": 80,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 85,
+        "price": 80,
         "volumeLabel": "L",
         "isDefault": true,
         "availability": "available",
@@ -19016,6 +19006,132 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "أفوكادو مع التمر واللبن وعسل النحل لطاقة تدوم طويلاً",
     "categorySlug": "power-fruitella",
     "categoryNameAr": "باور فروتيلا",
+    "basePrice": 110,
+    "sizes": [
+      {
+        "id": "l",
+        "nameAr": "حجم L",
+        "nameEn": "Size L",
+        "price": 110,
+        "volumeLabel": "L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 210,
+        "volumeLabel": "1L",
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/products/avocado-nuts-mango-pair.jpg",
+    "tags": [
+      "باور",
+      "أفوكادو",
+      "مكسرات",
+      "عسل"
+    ],
+    "ingredientsAr": [
+      "أفوكادو طبيعي",
+      "عسل نحل",
+      "مكسرات"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": true,
+      "containsDairy": true
+    },
+    "verifiedFromAsset": "raw_assets/844340785_122230951760500364_8121428185696562876_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "pw-11",
+    "slug": "avocado-yogurt",
+    "nameAr": "أفوكادو بالزبادي والعسل",
+    "nameEn": "Avocado with Yogurt & Honey",
+    "descriptionAr": "أفوكادو مع زبادي طبيعي وعسل نحل صافٍ لوجبة خفيفة وصحية",
+    "categorySlug": "power-fruitella",
+    "categoryNameAr": "باور فروتيلا",
     "basePrice": 120,
     "sizes": [
       {
@@ -19135,11 +19251,11 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "pw-11",
-    "slug": "avocado-yogurt",
-    "nameAr": "أفوكادو بالزبادي والعسل",
-    "nameEn": "Avocado with Yogurt & Honey",
-    "descriptionAr": "أفوكادو مع زبادي طبيعي وعسل نحل صافٍ لوجبة خفيفة وصحية",
+    "id": "pw-12",
+    "slug": "avocado-fruit-chunks",
+    "nameAr": "أفوكادو فواكه قطع",
+    "nameEn": "Avocado with Fresh Fruit Chunks",
+    "descriptionAr": "عصير أفوكادو كريمي يعلوه مكعبات الفواكه الطازجة والمكسرات",
     "categorySlug": "power-fruitella",
     "categoryNameAr": "باور فروتيلا",
     "basePrice": 130,
@@ -19261,11 +19377,11 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "pw-12",
-    "slug": "avocado-fruit-chunks",
-    "nameAr": "أفوكادو فواكه قطع",
-    "nameEn": "Avocado with Fresh Fruit Chunks",
-    "descriptionAr": "عصير أفوكادو كريمي يعلوه مكعبات الفواكه الطازجة والمكسرات",
+    "id": "pw-13",
+    "slug": "dates-arugula-honey",
+    "nameAr": "بلح جرجير عسل طاقة",
+    "nameEn": "Dates, Arugula & Honey Energy",
+    "descriptionAr": "خلطة تراثية مقوية من التمر وأوراق الجرجير وعسل النحل الصافي",
     "categorySlug": "power-fruitella",
     "categoryNameAr": "باور فروتيلا",
     "basePrice": 65,
@@ -19285,132 +19401,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
         "price": 130,
-        "volumeLabel": "1L",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/avocado-nuts-mango-pair.jpg",
-    "tags": [
-      "باور",
-      "أفوكادو",
-      "مكسرات",
-      "عسل"
-    ],
-    "ingredientsAr": [
-      "أفوكادو طبيعي",
-      "عسل نحل",
-      "مكسرات"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": true,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/844340785_122230951760500364_8121428185696562876_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "pw-13",
-    "slug": "dates-arugula-honey",
-    "nameAr": "بلح جرجير عسل طاقة",
-    "nameEn": "Dates, Arugula & Honey Energy",
-    "descriptionAr": "خلطة تراثية مقوية من التمر وأوراق الجرجير وعسل النحل الصافي",
-    "categorySlug": "power-fruitella",
-    "categoryNameAr": "باور فروتيلا",
-    "basePrice": 150,
-    "sizes": [
-      {
-        "id": "l",
-        "nameAr": "حجم L",
-        "nameEn": "Size L",
-        "price": 150,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 290,
         "volumeLabel": "1L",
         "availability": "available",
         "extractionStatus": "verified"
@@ -20228,8 +20218,8 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   {
     "id": "ff-6",
     "slug": "koala-feeding",
-    "nameAr": "رضعة الكوالا",
-    "nameEn": "Koala Feeding",
+    "nameAr": "رضعة الغزال",
+    "nameEn": "Gazelle Feeding",
     "descriptionAr": "المكونات: سوبيا طبيعي، بلح طازج، لبن حليب",
     "categorySlug": "forest-feedings",
     "categoryNameAr": "رضعات الغابة",
@@ -21975,13 +21965,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "المكونات: ميكسات فواكه بيوريه ثقيل مع قطع فواكه ملموسة",
     "categorySlug": "fruitella-mixes",
     "categoryNameAr": "ميكسات فروتيلا",
-    "basePrice": 75,
+    "basePrice": 70,
     "sizes": [
       {
         "id": "l",
         "nameAr": "حجم L",
         "nameEn": "Size L",
-        "price": 75,
+        "price": 70,
         "volumeLabel": "L",
         "isDefault": true,
         "availability": "available",
@@ -21991,7 +21981,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 140,
+        "price": 130,
         "volumeLabel": "1L",
         "availability": "available",
         "extractionStatus": "verified"
@@ -22094,8 +22084,8 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   {
     "id": "fm-14",
     "slug": "mix-shabah",
-    "nameAr": "ميكس الشبح",
-    "nameEn": "The Ghost Special Mix",
+    "nameAr": "ميكس الشيخ",
+    "nameEn": "The Sheikh Special Mix",
     "descriptionAr": "المكونات: تفاح، بلح، كيوي، لبن طبيعي",
     "categorySlug": "fruitella-mixes",
     "categoryNameAr": "ميكسات فروتيلا",
@@ -25418,15 +25408,24 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من قصب بالآيس كريم للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
-    "basePrice": 90,
+    "basePrice": 70,
     "sizes": [
       {
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 90,
+        "price": 70,
         "volumeLabel": "1L",
         "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "4liter",
+        "nameAr": "حجم 4 لتر",
+        "nameEn": "4 Liters",
+        "price": 270,
+        "volumeLabel": "4L",
         "availability": "available",
         "extractionStatus": "verified"
       }
@@ -25533,24 +25532,15 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من سوبيا للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
-    "basePrice": 85,
+    "basePrice": 90,
     "sizes": [
       {
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 85,
+        "price": 90,
         "volumeLabel": "1L",
         "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "4liter",
-        "nameAr": "حجم 4 لتر",
-        "nameEn": "4 Liters",
-        "price": 320,
-        "volumeLabel": "4L",
         "availability": "available",
         "extractionStatus": "verified"
       }
@@ -25658,6 +25648,130 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من سوبيا بالمانجو للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
+    "basePrice": 85,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 85,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "4liter",
+        "nameAr": "حجم 4 لتر",
+        "nameEn": "4 Liters",
+        "price": 320,
+        "volumeLabel": "4L",
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة سوبيا بالمانجو عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-8",
+    "slug": "family-sobia-banana",
+    "nameAr": "عبوة سوبيا بالموز عائلية",
+    "nameEn": "Family Banana Sobya Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من سوبيا بالموز للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
     "basePrice": 120,
     "sizes": [
       {
@@ -25762,7 +25876,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "حجم كبير"
     ],
     "ingredientsAr": [
-      "عبوة سوبيا بالمانجو عائلية"
+      "عبوة سوبيا بالموز عائلية"
     ],
     "dietary": {
       "isNatural": true,
@@ -25775,7 +25889,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-8",
+    "id": "fp-9",
     "slug": "family-tamarind",
     "nameAr": "عبوة تمر هندي عائلية",
     "nameEn": "Family Tamarind Pack",
@@ -25899,7 +26013,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-9",
+    "id": "fp-10",
     "slug": "family-carob",
     "nameAr": "عبوة خروب عائلية",
     "nameEn": "Family Carob Pack",
@@ -26023,7 +26137,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-10",
+    "id": "fp-11",
     "slug": "family-ennab",
     "nameAr": "عبوة عناب عائلية",
     "nameEn": "Family Ennab Pack",
@@ -26147,7 +26261,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-11",
+    "id": "fp-12",
     "slug": "family-doum",
     "nameAr": "عبوة دوم عائلية",
     "nameEn": "Family Doum Pack",
@@ -26271,7 +26385,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-12",
+    "id": "fp-13",
     "slug": "family-doum-milk",
     "nameAr": "عبوة دوم باللبن عائلية",
     "nameEn": "Family Doum with Milk Pack",
@@ -26395,7 +26509,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-13",
+    "id": "fp-14",
     "slug": "family-mango",
     "nameAr": "عبوة مانجو عائلية",
     "nameEn": "Family Mango Pack",
@@ -26521,7 +26635,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-14",
+    "id": "fp-15",
     "slug": "family-guava",
     "nameAr": "عبوة جوافة عائلية",
     "nameEn": "Family Guava Pack",
@@ -26645,7 +26759,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-15",
+    "id": "fp-16",
     "slug": "family-strawberry",
     "nameAr": "عبوة فراولة عائلية",
     "nameEn": "Family Strawberry Pack",
@@ -26770,7 +26884,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-16",
+    "id": "fp-17",
     "slug": "family-orange",
     "nameAr": "عبوة برتقال عائلية",
     "nameEn": "Family Orange Pack",
@@ -26894,20 +27008,20 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-17",
+    "id": "fp-18",
     "slug": "family-kiwi",
     "nameAr": "عبوة كيوي عائلية",
     "nameEn": "Family Kiwi Pack",
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من كيوي للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
-    "basePrice": 180,
+    "basePrice": 220,
     "sizes": [
       {
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 180,
+        "price": 220,
         "volumeLabel": "1L",
         "isDefault": true,
         "availability": "available",
@@ -27009,20 +27123,20 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-18",
+    "id": "fp-19",
     "slug": "family-avocado",
     "nameAr": "عبوة أفوكادو عائلية",
     "nameEn": "Family Avocado Pack",
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من أفوكادو للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
-    "basePrice": 220,
+    "basePrice": 210,
     "sizes": [
       {
         "id": "liter",
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
-        "price": 220,
+        "price": 210,
         "volumeLabel": "1L",
         "isDefault": true,
         "availability": "available",
@@ -27125,126 +27239,11 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-19",
+    "id": "fp-20",
     "slug": "family-pineapple",
     "nameAr": "عبوة أناناس عائلية",
     "nameEn": "Family Pineapple Pack",
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من أناناس للمناسبات والجمعات",
-    "categorySlug": "family-packs",
-    "categoryNameAr": "العبوات العائلية",
-    "basePrice": 210,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 210,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "عائلي",
-      "لتر",
-      "توفير",
-      "حجم كبير"
-    ],
-    "ingredientsAr": [
-      "عبوة أناناس عائلية"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "fp-20",
-    "slug": "family-dates-milk",
-    "nameAr": "عبوة بلح باللبن عائلية",
-    "nameEn": "Family Dates with Milk Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من بلح باللبن للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 100,
@@ -27351,13 +27350,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "حجم كبير"
     ],
     "ingredientsAr": [
-      "عبوة بلح باللبن عائلية"
+      "عبوة أناناس عائلية"
     ],
     "dietary": {
       "isNatural": true,
       "isSugarFreeAvailable": true,
       "containsNuts": false,
-      "containsDairy": true
+      "containsDairy": false
     },
     "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
     "extractionStatus": "verified",
@@ -27365,10 +27364,10 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   },
   {
     "id": "fp-21",
-    "slug": "family-watermelon",
-    "nameAr": "عبوة بطيخ عائلية",
-    "nameEn": "Family Watermelon Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من بطيخ للمناسبات والجمعات",
+    "slug": "family-dates-milk",
+    "nameAr": "عبوة بلح باللبن عائلية",
+    "nameEn": "Family Dates with Milk Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من بلح باللبن للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 90,
@@ -27475,13 +27474,13 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "حجم كبير"
     ],
     "ingredientsAr": [
-      "عبوة بطيخ عائلية"
+      "عبوة بلح باللبن عائلية"
     ],
     "dietary": {
       "isNatural": true,
       "isSugarFreeAvailable": true,
       "containsNuts": false,
-      "containsDairy": false
+      "containsDairy": true
     },
     "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
     "extractionStatus": "verified",
@@ -27489,10 +27488,10 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   },
   {
     "id": "fp-22",
-    "slug": "family-lemon",
-    "nameAr": "عبوة ليمون عائلية",
-    "nameEn": "Family Lemon Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من ليمون للمناسبات والجمعات",
+    "slug": "family-watermelon",
+    "nameAr": "عبوة بطيخ عائلية",
+    "nameEn": "Family Watermelon Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من بطيخ للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 80,
@@ -27599,7 +27598,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "حجم كبير"
     ],
     "ingredientsAr": [
-      "عبوة ليمون عائلية"
+      "عبوة بطيخ عائلية"
     ],
     "dietary": {
       "isNatural": true,
@@ -27613,10 +27612,10 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   },
   {
     "id": "fp-23",
-    "slug": "family-lemon-mint",
-    "nameAr": "عبوة ليمون نعناع عائلية",
-    "nameEn": "Family Lemon Mint Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من ليمون نعناع للمناسبات والجمعات",
+    "slug": "family-lemon",
+    "nameAr": "عبوة ليمون عائلية",
+    "nameEn": "Family Lemon Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من ليمون للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 90,
@@ -27636,6 +27635,130 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "nameAr": "حجم 4 لتر",
         "nameEn": "4 Liters",
         "price": 320,
+        "volumeLabel": "4L",
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة ليمون عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-24",
+    "slug": "family-lemon-mint",
+    "nameAr": "عبوة ليمون نعناع عائلية",
+    "nameEn": "Family Lemon Mint Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من ليمون نعناع للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
+    "basePrice": 110,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 110,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "4liter",
+        "nameAr": "حجم 4 لتر",
+        "nameEn": "4 Liters",
+        "price": 400,
         "volumeLabel": "4L",
         "availability": "available",
         "extractionStatus": "verified"
@@ -27737,259 +27860,11 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-24",
-    "slug": "family-lemon-milk",
-    "nameAr": "عبوة ليمون باللبن عائلية",
-    "nameEn": "Family Lemon with Milk Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من ليمون باللبن للمناسبات والجمعات",
-    "categorySlug": "family-packs",
-    "categoryNameAr": "العبوات العائلية",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 110,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "4liter",
-        "nameAr": "حجم 4 لتر",
-        "nameEn": "4 Liters",
-        "price": 400,
-        "volumeLabel": "4L",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "عائلي",
-      "لتر",
-      "توفير",
-      "حجم كبير"
-    ],
-    "ingredientsAr": [
-      "عبوة ليمون باللبن عائلية"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
     "id": "fp-25",
     "slug": "family-banana-milk",
     "nameAr": "عبوة موز باللبن عائلية",
     "nameEn": "Family Banana with Milk Pack",
     "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من موز باللبن للمناسبات والجمعات",
-    "categorySlug": "family-packs",
-    "categoryNameAr": "العبوات العائلية",
-    "basePrice": 95,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 95,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "4liter",
-        "nameAr": "حجم 4 لتر",
-        "nameEn": "4 Liters",
-        "price": 350,
-        "volumeLabel": "4L",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "عائلي",
-      "لتر",
-      "توفير",
-      "حجم كبير"
-    ],
-    "ingredientsAr": [
-      "عبوة موز باللبن عائلية"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "fp-26",
-    "slug": "family-cantaloupe",
-    "nameAr": "عبوة كانتالوب عائلية",
-    "nameEn": "Family Cantaloupe Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من كانتالوب للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 85,
@@ -28096,7 +27971,122 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "حجم كبير"
     ],
     "ingredientsAr": [
-      "عبوة كانتالوب عائلية"
+      "عبوة موز باللبن عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": true
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-26",
+    "slug": "family-pomegranate",
+    "nameAr": "عبوة رمان عائلية",
+    "nameEn": "Family Pomegranate Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من رمان للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
+    "basePrice": 180,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 180,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة رمان عائلية"
     ],
     "dietary": {
       "isNatural": true,
@@ -28110,10 +28100,134 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   },
   {
     "id": "fp-27",
-    "slug": "family-vitamin-c",
-    "nameAr": "عبوة فيتامين سي عائلية",
-    "nameEn": "Family Vitamin C Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من فيتامين سي للمناسبات والجمعات",
+    "slug": "family-prickly-pear",
+    "nameAr": "عبوة تين شوكي عائلية",
+    "nameEn": "Family Prickly Pear Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من تين شوكي للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
+    "basePrice": 95,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 95,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      },
+      {
+        "id": "4liter",
+        "nameAr": "حجم 4 لتر",
+        "nameEn": "4 Liters",
+        "price": 350,
+        "volumeLabel": "4L",
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة تين شوكي عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-28",
+    "slug": "family-plum",
+    "nameAr": "عبوة برقوق عائلية",
+    "nameEn": "Family Plum Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من برقوق للمناسبات والجمعات",
     "categorySlug": "family-packs",
     "categoryNameAr": "العبوات العائلية",
     "basePrice": 130,
@@ -28123,6 +28237,236 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "nameAr": "حجم لتر",
         "nameEn": "1 Liter",
         "price": 130,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة برقوق عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-29",
+    "slug": "family-grapes",
+    "nameAr": "عبوة عنب عائلية",
+    "nameEn": "Family Grapes Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من عنب للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
+    "basePrice": 130,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 130,
+        "volumeLabel": "1L",
+        "isDefault": true,
+        "availability": "available",
+        "extractionStatus": "verified"
+      }
+    ],
+    "availableAddons": [
+      {
+        "id": "flavor-caramel",
+        "nameAr": "إضافة سيرب كراميل",
+        "nameEn": "Caramel Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-vanilla",
+        "nameAr": "إضافة سيرب فانيليا",
+        "nameEn": "Vanilla Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-hazelnut",
+        "nameAr": "إضافة سيرب بندق",
+        "nameEn": "Hazelnut Syrup",
+        "price": 25,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "flavor-white-cream",
+        "nameAr": "إضافة وايت كريم فاخر",
+        "nameEn": "Premium White Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nuts",
+        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
+        "nameEn": "Mixed Premium Nuts",
+        "price": 40,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "nutella",
+        "nameAr": "إضافة نوتيلا أصلية",
+        "nameEn": "Nutella Drizzle",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "cream",
+        "nameAr": "قشطة بلدي طبيعية",
+        "nameEn": "Fresh Clotted Cream",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "boba",
+        "nameAr": "حبيبات بوبا Boba Pearls",
+        "nameEn": "Boba Pearls",
+        "price": 30,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      },
+      {
+        "id": "honey",
+        "nameAr": "عسل نحل طبيعي",
+        "nameEn": "Pure Natural Honey",
+        "price": 10,
+        "categoryId": "add-flavor",
+        "availability": "available"
+      }
+    ],
+    "image": "/images/brand/fruitella-logo.jpg",
+    "tags": [
+      "عائلي",
+      "لتر",
+      "توفير",
+      "حجم كبير"
+    ],
+    "ingredientsAr": [
+      "عبوة عنب عائلية"
+    ],
+    "dietary": {
+      "isNatural": true,
+      "isSugarFreeAvailable": true,
+      "containsNuts": false,
+      "containsDairy": false
+    },
+    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
+    "extractionStatus": "verified",
+    "availability": "available"
+  },
+  {
+    "id": "fp-30",
+    "slug": "family-vitamin-c",
+    "nameAr": "عبوة فيتامين سي عائلية",
+    "nameEn": "Family Vitamin C Pack",
+    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من فيتامين سي للمناسبات والجمعات",
+    "categorySlug": "family-packs",
+    "categoryNameAr": "العبوات العائلية",
+    "basePrice": 90,
+    "sizes": [
+      {
+        "id": "liter",
+        "nameAr": "حجم لتر",
+        "nameEn": "1 Liter",
+        "price": 90,
         "volumeLabel": "1L",
         "isDefault": true,
         "availability": "available",
@@ -28224,122 +28568,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-28",
-    "slug": "family-tangerine",
-    "nameAr": "عبوة يوسفي عائلية",
-    "nameEn": "Family Tangerine Pack",
-    "descriptionAr": "عبوة عائلية اقتصادية بحجم لتر أو 4 لتر من يوسفي للمناسبات والجمعات",
-    "categorySlug": "family-packs",
-    "categoryNameAr": "العبوات العائلية",
-    "basePrice": 90,
-    "sizes": [
-      {
-        "id": "liter",
-        "nameAr": "حجم لتر",
-        "nameEn": "1 Liter",
-        "price": 90,
-        "volumeLabel": "1L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "عائلي",
-      "لتر",
-      "توفير",
-      "حجم كبير"
-    ],
-    "ingredientsAr": [
-      "عبوة يوسفي عائلية"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "fp-29",
+    "id": "fp-31",
     "slug": "family-blender-mix",
     "nameAr": "عبوة ميكس خلاط عائلية",
     "nameEn": "Family Blender Mix Pack",
@@ -28454,7 +28683,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     "availability": "available"
   },
   {
-    "id": "fp-30",
+    "id": "fp-32",
     "slug": "family-nos-darba",
     "nameAr": "عبوة نص ضربة عائلية",
     "nameEn": "Family Nos Darba Chunks Pack",
@@ -35110,9 +35339,9 @@ export const FRUITELLA_PRODUCTS: Product[] = [
   {
     "id": "sw-9",
     "slug": "crepe-nutella-lotus",
-    "nameAr": "كريب نوتيلا أو لوتس",
-    "nameEn": "Nutella or Lotus Crepe",
-    "descriptionAr": "كريب فرنسي رقيق محشو ومغطى بالنوتيلا أو اللوتس",
+    "nameAr": "كب نوتيلا أو لوتس",
+    "nameEn": "Nutella or Lotus Cup / Crepe",
+    "descriptionAr": "كب / كريب فرنسي رقيق محشو ومغطى بالنوتيلا أو اللوتس",
     "categorySlug": "sweets-desserts",
     "categoryNameAr": "الحلو من فروتيلا",
     "basePrice": 50,

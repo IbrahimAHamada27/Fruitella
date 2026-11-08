@@ -1,12 +1,12 @@
 # بيان أصول وصور منتجات فروتيلا (Fruitella Product Asset Manifest)
 
-تاريخ التدقيق والتحديث: 2026-10-25  
-إجمالي عدد الأصناف في القائمة: **301 صنف**
+تاريخ التدقيق والتحديث: 2026-11-08  
+إجمالي عدد الأصناف في القائمة: **303 صنف**
 
 ## 1. ملخص التغطية البصرية (Image Coverage Summary)
 - **صور موثقة مطابقة للمنتج (Verified Store Photos):** 69 صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
 - **صور توضيحية من عصائر ومشروبات الفرع (Approximate Illustrative Store Photos):** 164 صنف (عصائر فريش، سموذي، ميلك شيك، موخيتو، بوبا، ميكسات).
-- **بديل شعار فروتيلا الرسمي (Official Fruitella Logo Fallback):** 68 صنف (المشروبات الساخنة والقهوة، العصائر الشرقية، والعبوات العائلية — مقدمة بتنسيق `object-fit: contain` وخلفية محايدة لتفادي أي تشوه).
+- **بديل شعار فروتيلا الرسمي (Official Fruitella Logo Fallback):** 70 صنف (المشروبات الساخنة والقهوة، العصائر الشرقية، والعبوات العائلية — مقدمة بتنسيق `object-fit: contain` وخلفية محايدة لتفادي أي تشوه).
 - **صور تالفة أو روابط معطلة:** 0 (خالية تماماً بنسبة 100%).
 - **صور واجهات خارجية أو لوحات حائط معلقة كصور منتجات:** 0 (تمت إزالتها واستبدالها بالكامل).
 
@@ -43,12 +43,12 @@
 | `fj-13` | فراولة باللبن | Strawberry with Milk | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fj-14` | عصير كانتالوب | Fresh Cantaloupe Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fj-15` | عصير رمان فريش | Fresh Pomegranate Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-16` | عصير كيوي طبيعي | Fresh Kiwi Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-17` | عصير تفاح فريش | Fresh Apple Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-18` | عصير أناناس طبيعي | Fresh Pineapple Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-19` | عصير عنب موسمي | Seasonal Grapes Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-20` | عصير خوخ فريش | Fresh Peach Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fj-21` | عصير برقوق | Fresh Plum Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-16` | عصير عنب موسمي | Seasonal Grapes Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-17` | عصير خوخ فريش | Fresh Peach Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-18` | عصير برقوق | Fresh Plum Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-19` | عصير كيوي طبيعي | Fresh Kiwi Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-20` | عصير تفاح فريش | Fresh Apple Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fj-21` | عصير أناناس طبيعي | Fresh Pineapple Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fj-22` | عصير تين شوكي | Prickly Pear Juice | `fresh-juices` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `oj-1` | قصب طبيعي صافي | Pure Natural Sugarcane | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `oj-2` | قصب باللبن | Sugarcane with Milk | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
@@ -190,7 +190,7 @@
 | `ff-3` | رضعة الفيل | Elephant Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `ff-4` | رضعة النمر | Tiger Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `ff-5` | رضعة الحوت | Whale Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `ff-6` | رضعة الكوالا | Koala Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `ff-6` | رضعة الغزال | Gazelle Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `ff-7` | رضعة لبن العصفور | Bird Milk Feeding | `forest-feedings` | `/images/products/fruit-cocktail-cup.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fm-1` | ميكس بطوط | Batot Cartoon Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fm-2` | ميكس فرافيرو | Farafiro Signature Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
@@ -205,7 +205,7 @@
 | `fm-11` | ميكس جوجل | Google Power Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fm-12` | ميكس فيتامين سي | Citrus Vitamin C Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fm-13` | ميكس نص ضربة قطع | Nos Darba Half-Blended Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
-| `fm-14` | ميكس الشبح | The Ghost Special Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
+| `fm-14` | ميكس الشيخ | The Sheikh Special Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `fm-15` | ميكس فيفا | Viva Celebration Mix | `fruitella-mixes` | `/images/products/fruit-salad-icecream.jpg` | 🥤 توضيحية من مشروبات الفرع |
 | `ic-1` | بولة آيس كريم (أبولة) | 1 Scoop Ice Cream | `ice-cream` | `/images/products/fruit-salad-icecream.jpg` | ✅ موثقة مطابقة |
 | `ic-2` | 2 بولة آيس كريم (2 أبولة) | 2 Scoops Ice Cream | `ice-cream` | `/images/products/fruit-salad-icecream.jpg` | ✅ موثقة مطابقة |
@@ -236,29 +236,31 @@
 | `fp-5` | عبوة قصب بالآيس كريم عائلية | Family Sugarcane with Ice Cream | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fp-6` | عبوة سوبيا عائلية | Family Sobya Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fp-7` | عبوة سوبيا بالمانجو عائلية | Family Mango Sobya Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-8` | عبوة تمر هندي عائلية | Family Tamarind Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-9` | عبوة خروب عائلية | Family Carob Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-10` | عبوة عناب عائلية | Family Ennab Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-11` | عبوة دوم عائلية | Family Doum Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-12` | عبوة دوم باللبن عائلية | Family Doum with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-13` | عبوة مانجو عائلية | Family Mango Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-14` | عبوة جوافة عائلية | Family Guava Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-15` | عبوة فراولة عائلية | Family Strawberry Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-16` | عبوة برتقال عائلية | Family Orange Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-17` | عبوة كيوي عائلية | Family Kiwi Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-18` | عبوة أفوكادو عائلية | Family Avocado Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-19` | عبوة أناناس عائلية | Family Pineapple Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-20` | عبوة بلح باللبن عائلية | Family Dates with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-21` | عبوة بطيخ عائلية | Family Watermelon Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-22` | عبوة ليمون عائلية | Family Lemon Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-23` | عبوة ليمون نعناع عائلية | Family Lemon Mint Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-24` | عبوة ليمون باللبن عائلية | Family Lemon with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-8` | عبوة سوبيا بالموز عائلية | Family Banana Sobya Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-9` | عبوة تمر هندي عائلية | Family Tamarind Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-10` | عبوة خروب عائلية | Family Carob Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-11` | عبوة عناب عائلية | Family Ennab Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-12` | عبوة دوم عائلية | Family Doum Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-13` | عبوة دوم باللبن عائلية | Family Doum with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-14` | عبوة مانجو عائلية | Family Mango Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-15` | عبوة جوافة عائلية | Family Guava Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-16` | عبوة فراولة عائلية | Family Strawberry Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-17` | عبوة برتقال عائلية | Family Orange Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-18` | عبوة كيوي عائلية | Family Kiwi Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-19` | عبوة أفوكادو عائلية | Family Avocado Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-20` | عبوة أناناس عائلية | Family Pineapple Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-21` | عبوة بلح باللبن عائلية | Family Dates with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-22` | عبوة بطيخ عائلية | Family Watermelon Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-23` | عبوة ليمون عائلية | Family Lemon Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-24` | عبوة ليمون نعناع عائلية | Family Lemon Mint Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fp-25` | عبوة موز باللبن عائلية | Family Banana with Milk Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-26` | عبوة كانتالوب عائلية | Family Cantaloupe Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-27` | عبوة فيتامين سي عائلية | Family Vitamin C Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-28` | عبوة يوسفي عائلية | Family Tangerine Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-29` | عبوة ميكس خلاط عائلية | Family Blender Mix Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fp-30` | عبوة نص ضربة عائلية | Family Nos Darba Chunks Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-26` | عبوة رمان عائلية | Family Pomegranate Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-27` | عبوة تين شوكي عائلية | Family Prickly Pear Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-28` | عبوة برقوق عائلية | Family Plum Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-29` | عبوة عنب عائلية | Family Grapes Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-30` | عبوة فيتامين سي عائلية | Family Vitamin C Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-31` | عبوة ميكس خلاط عائلية | Family Blender Mix Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fp-32` | عبوة نص ضربة عائلية | Family Nos Darba Chunks Pack | `family-packs` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `hd-1` | إسبريسو سينجل / دبل | Espresso Single / Double | `hot-drinks` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `hd-2` | إسبريسو كوبا بالكريمة | Espresso Con Panna | `hot-drinks` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `hd-3` | ماكياتو سينجل / دبل | Macchiato Single / Double | `hot-drinks` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
@@ -314,7 +316,7 @@
 | `sw-6` | ميني بان كيك فروتيلا | Fruitella Mini Pancakes | `sweets-desserts` | `/images/products/waffle-weekend-promo.jpg` | ✅ موثقة مطابقة |
 | `sw-7` | مولتن كيك الشوكولاتة الذائبة | Lava Molten Cake | `sweets-desserts` | `/images/products/molten-cake.jpg` | ✅ موثقة مطابقة |
 | `sw-8` | كيك ديسباسيتو البرازيلي | Despacito Chocolate Cake | `sweets-desserts` | `/images/products/kashtouta.jpg` | ✅ موثقة مطابقة |
-| `sw-9` | كريب نوتيلا أو لوتس | Nutella or Lotus Crepe | `sweets-desserts` | `/images/products/fruitella-signature-waffle.jpg` | ✅ موثقة مطابقة |
+| `sw-9` | كب نوتيلا أو لوتس | Nutella or Lotus Cup / Crepe | `sweets-desserts` | `/images/products/fruitella-signature-waffle.jpg` | ✅ موثقة مطابقة |
 | `sw-10` | قشطوطة نوتيلا فاخرة | Nutella Kashtouta | `sweets-desserts` | `/images/products/kashtouta.jpg` | ✅ موثقة مطابقة |
 | `sw-11` | قشطوطة لوتس | Lotus Kashtouta | `sweets-desserts` | `/images/products/kashtouta.jpg` | ✅ موثقة مطابقة |
 | `sw-12` | قشطوطة بيستاشيو ملكية | Royal Pistachio Kashtouta | `sweets-desserts` | `/images/products/kashtouta.jpg` | ✅ موثقة مطابقة |
