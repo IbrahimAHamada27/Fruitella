@@ -4,8 +4,8 @@
 إجمالي عدد الأصناف في القائمة: **303 صنف**
 
 ## 1. ملخص التغطية البصرية (Image Coverage Summary)
-- **صور موثقة حقيقية مطابقة للمنتج (Verified Store Photos):** 32 صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
-- **شعار فروتيلا الرسمي المباشر (Official Fruitella Logo Direct):** 271 صنف (جميع الأصناف التي لا يتوفر لها تصوير حقيقي مخصص تظهر مباشرة بشعار فروتيلا المعتمد).
+- **صور موثقة حقيقية مطابقة للمنتج (Verified Store Photos):** 95 صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
+- **شعار فروتيلا الرسمي المباشر (Official Fruitella Logo Direct):** 208 صنف (جميع الأصناف التي لا يتوفر لها تصوير حقيقي مخصص تظهر مباشرة بشعار فروتيلا المعتمد).
 - **صور توضيحية تقريبية:** 0 (تم إلغاء الصور التقريبية لضمان أقصى درجات المصداقية).
 - **صور تالفة أو روابط معطلة:** 0 (خالية تماماً بنسبة 100%).
 - **صور واجهات خارجية أو لوحات حائط معلقة كصور منتجات:** 0 (تمت إزالتها واستبدالها بالكامل).
@@ -28,64 +28,64 @@
 
 | كود الصنف | اسم الصنف بالعربية | بالإنجليزية | القسم | مسار الصورة | تصنيف الصورة |
 |---|---|---|---|---|---|
-| `fj-1` | عصير برتقال فريش | Fresh Orange Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-2` | عصير فراولة طبيعي | Fresh Strawberry Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-3` | عصير جوافة بيور | Pure Guava Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-4` | جوافة باللبن الطبيعي | Guava with Fresh Milk | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-5` | عصير ليمون فريش | Fresh Lemon Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-6` | ليمون نعناع مثلج | Lemon Mint Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-7` | ليمون باللبن | Lemon with Milk | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-8` | عصير بطيخ أحمر | Fresh Watermelon Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-9` | بطيخ بالنعناع | Watermelon with Mint | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-10` | بطيخ فراولة نعناع | Watermelon Strawberry Mint | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-11` | بلح باللبن الطبيعي | Dates with Fresh Milk | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-12` | موز باللبن | Banana with Milk | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-13` | فراولة باللبن | Strawberry with Milk | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-14` | عصير كانتالوب | Fresh Cantaloupe Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-15` | عصير رمان فريش | Fresh Pomegranate Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fj-1` | عصير برتقال فريش | Fresh Orange Juice | `fresh-juices` | `/images/products/orange-juice.png` | ✅ موثقة مطابقة |
+| `fj-2` | عصير فراولة طبيعي | Fresh Strawberry Juice | `fresh-juices` | `/images/products/strawberry-juice.png` | ✅ موثقة مطابقة |
+| `fj-3` | عصير جوافة بيور | Pure Guava Juice | `fresh-juices` | `/images/products/guava-juice.png` | ✅ موثقة مطابقة |
+| `fj-4` | جوافة باللبن الطبيعي | Guava with Fresh Milk | `fresh-juices` | `/images/products/guava-milk.png` | ✅ موثقة مطابقة |
+| `fj-5` | عصير ليمون فريش | Fresh Lemon Juice | `fresh-juices` | `/images/products/lemon-juice.png` | ✅ موثقة مطابقة |
+| `fj-6` | ليمون نعناع مثلج | Lemon Mint Juice | `fresh-juices` | `/images/products/lemon-mint-juice.png` | ✅ موثقة مطابقة |
+| `fj-7` | ليمون باللبن | Lemon with Milk | `fresh-juices` | `/images/products/lemon-milk.png` | ✅ موثقة مطابقة |
+| `fj-8` | عصير بطيخ أحمر | Fresh Watermelon Juice | `fresh-juices` | `/images/products/watermelon-juice.png` | ✅ موثقة مطابقة |
+| `fj-9` | بطيخ بالنعناع | Watermelon with Mint | `fresh-juices` | `/images/products/watermelon-mint.png` | ✅ موثقة مطابقة |
+| `fj-10` | بطيخ فراولة نعناع | Watermelon Strawberry Mint | `fresh-juices` | `/images/products/watermelon-strawberry-mint.png` | ✅ موثقة مطابقة |
+| `fj-11` | بلح باللبن الطبيعي | Dates with Fresh Milk | `fresh-juices` | `/images/products/dates-milk.png` | ✅ موثقة مطابقة |
+| `fj-12` | موز باللبن | Banana with Milk | `fresh-juices` | `/images/products/banana-milk.png` | ✅ موثقة مطابقة |
+| `fj-13` | فراولة باللبن | Strawberry with Milk | `fresh-juices` | `/images/products/strawberry-milk.png` | ✅ موثقة مطابقة |
+| `fj-14` | عصير كانتالوب | Fresh Cantaloupe Juice | `fresh-juices` | `/images/products/cantaloupe-juice.png` | ✅ موثقة مطابقة |
+| `fj-15` | عصير رمان فريش | Fresh Pomegranate Juice | `fresh-juices` | `/images/products/pomegranate-juice.png` | ✅ موثقة مطابقة |
 | `fj-16` | عصير عنب موسمي | Seasonal Grapes Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fj-17` | عصير خوخ فريش | Fresh Peach Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fj-18` | عصير برقوق | Fresh Plum Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-19` | عصير كيوي طبيعي | Fresh Kiwi Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-20` | عصير تفاح فريش | Fresh Apple Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-21` | عصير أناناس طبيعي | Fresh Pineapple Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fj-22` | عصير تين شوكي | Prickly Pear Juice | `fresh-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-1` | قصب طبيعي صافي | Pure Natural Sugarcane | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-2` | قصب باللبن | Sugarcane with Milk | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-3` | قصب بالبرتقال | Sugarcane with Orange | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-4` | قصب بالزنجبيل | Sugarcane with Ginger | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-5` | قصب بالأناناس | Sugarcane with Pineapple | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-6` | قصب بالسوبيا | Sugarcane with Sobya | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-7` | قصب بالليمون | Sugarcane with Lemon | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-8` | قصب بالجزر | Sugarcane with Carrot | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-9` | تمر هندي طبيعي | Natural Tamarind | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-10` | عناب أسواني مبرد | Aswan Karkadeh Ennab | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-11` | خروب طبيعي مثلج | Natural Carob Kharroub | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-12` | عصير دوم طبيعي | Natural Doum Juice | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-13` | دوم باللبن | Doum with Milk | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `oj-14` | مشروب جوز الهند التراثي | Coconut Walnut Drink | `oriental-juices` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-1` | سوبيا طبيعي كلاسيك | Classic Natural Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-2` | سوبيا مانجو | Mango Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-3` | سوبيا بالموز | Banana Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-4` | سوبيا موكا | Mocha Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-5` | سوبيا فراولة | Strawberry Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-6` | سوبيا لوتس | Lotus Biscoff Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-7` | سوبيا بيستاشيو رويال | Royal Pistachio Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-8` | سوبيا نوتيلا | Nutella Sobya | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `sb-9` | سوبيا فواكه قطع | Sobya with Fruit Chunks | `sobya-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-1` | مانجو فروتيلا سبيشال | Fruitella Signature Mango | `mango-world` | `/images/products/mango-cocktail-bar.jpg` | ✅ موثقة مطابقة |
-| `mg-2` | مانجو آيس كريم | Mango with Ice Cream | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-3` | مانجو موز عصير أو قطع | Mango Banana Juice or Chunks | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-4` | مانجو فراولة طبقات | Layered Mango Strawberry | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-5` | مانجو تفاح | Mango Apple Blend | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-6` | مانجو أناناس | Mango Pineapple Tropical | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-7` | مانجو كيوي | Mango Kiwi Twist | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-8` | مانجو بطيخ | Mango Watermelon Cooler | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-9` | كوب مانجو قطع فريش | Fresh Mango Chunks Cup | `mango-world` | `/images/products/mango-chunks-bowl.jpg` | ✅ موثقة مطابقة |
-| `mg-10` | مانجو جرجير | Mango Arugula Twist | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-11` | مانجو باللبن | Mango with Milk | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-12` | مانجو حب رمان | Mango with Pomegranate | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `mg-13` | مانجو زبادي مكسرات | Mango Yogurt Nuts | `mango-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fj-19` | عصير كيوي طبيعي | Fresh Kiwi Juice | `fresh-juices` | `/images/products/kiwi-juice.png` | ✅ موثقة مطابقة |
+| `fj-20` | عصير تفاح فريش | Fresh Apple Juice | `fresh-juices` | `/images/products/apple-juice.png` | ✅ موثقة مطابقة |
+| `fj-21` | عصير أناناس طبيعي | Fresh Pineapple Juice | `fresh-juices` | `/images/products/pineapple-juice.png` | ✅ موثقة مطابقة |
+| `fj-22` | عصير تين شوكي | Prickly Pear Juice | `fresh-juices` | `/images/products/prickly-pear-juice.png` | ✅ موثقة مطابقة |
+| `oj-1` | قصب طبيعي صافي | Pure Natural Sugarcane | `oriental-juices` | `/images/products/sugarcane-pure.png` | ✅ موثقة مطابقة |
+| `oj-2` | قصب باللبن | Sugarcane with Milk | `oriental-juices` | `/images/products/sugarcane-milk.png` | ✅ موثقة مطابقة |
+| `oj-3` | قصب بالبرتقال | Sugarcane with Orange | `oriental-juices` | `/images/products/sugarcane-orange.png` | ✅ موثقة مطابقة |
+| `oj-4` | قصب بالزنجبيل | Sugarcane with Ginger | `oriental-juices` | `/images/products/sugarcane-ginger.png` | ✅ موثقة مطابقة |
+| `oj-5` | قصب بالأناناس | Sugarcane with Pineapple | `oriental-juices` | `/images/products/sugarcane-pineapple.png` | ✅ موثقة مطابقة |
+| `oj-6` | قصب بالسوبيا | Sugarcane with Sobya | `oriental-juices` | `/images/products/sugarcane-sobia.png` | ✅ موثقة مطابقة |
+| `oj-7` | قصب بالليمون | Sugarcane with Lemon | `oriental-juices` | `/images/products/sugarcane-lemon.png` | ✅ موثقة مطابقة |
+| `oj-8` | قصب بالجزر | Sugarcane with Carrot | `oriental-juices` | `/images/products/sugarcane-carrot.png` | ✅ موثقة مطابقة |
+| `oj-9` | تمر هندي طبيعي | Natural Tamarind | `oriental-juices` | `/images/products/tamarind-natural.png` | ✅ موثقة مطابقة |
+| `oj-10` | عناب أسواني مبرد | Aswan Karkadeh Ennab | `oriental-juices` | `/images/products/karkadeh-ennab.png` | ✅ موثقة مطابقة |
+| `oj-11` | خروب طبيعي مثلج | Natural Carob Kharroub | `oriental-juices` | `/images/products/carob-kharroub.png` | ✅ موثقة مطابقة |
+| `oj-12` | عصير دوم طبيعي | Natural Doum Juice | `oriental-juices` | `/images/products/doum-juice.png` | ✅ موثقة مطابقة |
+| `oj-13` | دوم باللبن | Doum with Milk | `oriental-juices` | `/images/products/doum-milk.png` | ✅ موثقة مطابقة |
+| `oj-14` | مشروب جوز الهند التراثي | Coconut Walnut Drink | `oriental-juices` | `/images/products/walnut-drink.png` | ✅ موثقة مطابقة |
+| `sb-1` | سوبيا طبيعي كلاسيك | Classic Natural Sobya | `sobya-world` | `/images/products/sobya-natural.png` | ✅ موثقة مطابقة |
+| `sb-2` | سوبيا مانجو | Mango Sobya | `sobya-world` | `/images/products/sobya-mango.png` | ✅ موثقة مطابقة |
+| `sb-3` | سوبيا بالموز | Banana Sobya | `sobya-world` | `/images/products/sobya-banana.png` | ✅ موثقة مطابقة |
+| `sb-4` | سوبيا موكا | Mocha Sobya | `sobya-world` | `/images/products/sobya-mocha.png` | ✅ موثقة مطابقة |
+| `sb-5` | سوبيا فراولة | Strawberry Sobya | `sobya-world` | `/images/products/sobya-strawberry.png` | ✅ موثقة مطابقة |
+| `sb-6` | سوبيا لوتس | Lotus Biscoff Sobya | `sobya-world` | `/images/products/sobya-lotus.png` | ✅ موثقة مطابقة |
+| `sb-7` | سوبيا بيستاشيو رويال | Royal Pistachio Sobya | `sobya-world` | `/images/products/sobya-pistachio.png` | ✅ موثقة مطابقة |
+| `sb-8` | سوبيا نوتيلا | Nutella Sobya | `sobya-world` | `/images/products/sobya-nutella.png` | ✅ موثقة مطابقة |
+| `sb-9` | سوبيا فواكه قطع | Sobya with Fruit Chunks | `sobya-world` | `/images/products/sobya-fruit-chunks.png` | ✅ موثقة مطابقة |
+| `mg-1` | مانجو فروتيلا سبيشال | Fruitella Signature Mango | `mango-world` | `/images/products/mango-fruitella-signature.png` | ✅ موثقة مطابقة |
+| `mg-2` | مانجو آيس كريم | Mango with Ice Cream | `mango-world` | `/images/products/mango-icecream.png` | ✅ موثقة مطابقة |
+| `mg-3` | مانجو موز عصير أو قطع | Mango Banana Juice or Chunks | `mango-world` | `/images/products/mango-banana.png` | ✅ موثقة مطابقة |
+| `mg-4` | مانجو فراولة طبقات | Layered Mango Strawberry | `mango-world` | `/images/products/mango-strawberry.png` | ✅ موثقة مطابقة |
+| `mg-5` | مانجو تفاح | Mango Apple Blend | `mango-world` | `/images/products/mango-apple.png` | ✅ موثقة مطابقة |
+| `mg-6` | مانجو أناناس | Mango Pineapple Tropical | `mango-world` | `/images/products/mango-pineapple.png` | ✅ موثقة مطابقة |
+| `mg-7` | مانجو كيوي | Mango Kiwi Twist | `mango-world` | `/images/products/mango-kiwi.png` | ✅ موثقة مطابقة |
+| `mg-8` | مانجو بطيخ | Mango Watermelon Cooler | `mango-world` | `/images/products/mango-watermelon.png` | ✅ موثقة مطابقة |
+| `mg-9` | كوب مانجو قطع فريش | Fresh Mango Chunks Cup | `mango-world` | `/images/products/mango-chunks-cup.png` | ✅ موثقة مطابقة |
+| `mg-10` | مانجو جرجير | Mango Arugula Twist | `mango-world` | `/images/products/mango-rocket.png` | ✅ موثقة مطابقة |
+| `mg-11` | مانجو باللبن | Mango with Milk | `mango-world` | `/images/products/mango-milk.png` | ✅ موثقة مطابقة |
+| `mg-12` | مانجو حب رمان | Mango with Pomegranate | `mango-world` | `/images/products/mango-pomegranate.png` | ✅ موثقة مطابقة |
+| `mg-13` | مانجو زبادي مكسرات | Mango Yogurt Nuts | `mango-world` | `/images/products/mango-yogurt-nuts.png` | ✅ موثقة مطابقة |
 | `sm-1` | سموذي مانجو مثلج | Iced Mango Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `sm-2` | سموذي فراولة فريش | Strawberry Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `sm-3` | سموذي بطيخ مبرد | Watermelon Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
@@ -93,16 +93,16 @@
 | `sm-5` | سموذي توت أحمر | Raspberry Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `sm-6` | سموذي ليمون نعناع | Lemon Mint Slush Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `sm-7` | سموذي كيوي طبيعي | Fresh Kiwi Smoothie | `smoothie-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-1` | بنجر بالبرتقال | Beetroot with Orange | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-2` | بنجر بالرمان | Beetroot with Pomegranate | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-3` | بنجر بالفراولة | Beetroot with Strawberry | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-4` | جرجير باللبن والعسل | Arugula with Milk & Honey | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-5` | كيوي بالبرتقال | Kiwi with Orange Boost | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-6` | كيوي بالأناناس | Kiwi with Pineapple | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-7` | أناناس بالبرتقال | Pineapple with Orange | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-8` | برتقال بالزنجبيل الفريش | Orange with Fresh Ginger | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-9` | ليمون بالزنجبيل | Lemon with Fresh Ginger | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `en-10` | سوبر فيتامين سي | Super Vitamin C Cocktail | `energy-world` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `en-1` | بنجر بالبرتقال | Beetroot with Orange | `energy-world` | `/images/products/beetroot-orange.png` | ✅ موثقة مطابقة |
+| `en-2` | بنجر بالرمان | Beetroot with Pomegranate | `energy-world` | `/images/products/beetroot-pomegranate.png` | ✅ موثقة مطابقة |
+| `en-3` | بنجر بالفراولة | Beetroot with Strawberry | `energy-world` | `/images/products/beetroot-strawberry.png` | ✅ موثقة مطابقة |
+| `en-4` | جرجير باللبن والعسل | Arugula with Milk & Honey | `energy-world` | `/images/products/arugula-milk.png` | ✅ موثقة مطابقة |
+| `en-5` | كيوي بالبرتقال | Kiwi with Orange Boost | `energy-world` | `/images/products/kiwi-orange.png` | ✅ موثقة مطابقة |
+| `en-6` | كيوي بالأناناس | Kiwi with Pineapple | `energy-world` | `/images/products/kiwi-pineapple.png` | ✅ موثقة مطابقة |
+| `en-7` | أناناس بالبرتقال | Pineapple with Orange | `energy-world` | `/images/products/pineapple-orange.png` | ✅ موثقة مطابقة |
+| `en-8` | برتقال بالزنجبيل الفريش | Orange with Fresh Ginger | `energy-world` | `/images/products/orange-ginger.png` | ✅ موثقة مطابقة |
+| `en-9` | ليمون بالزنجبيل | Lemon with Fresh Ginger | `energy-world` | `/images/products/lemon-ginger.png` | ✅ موثقة مطابقة |
+| `en-10` | سوبر فيتامين سي | Super Vitamin C Cocktail | `energy-world` | `/images/products/super-vitamin-c.png` | ✅ موثقة مطابقة |
 | `fs-1` | كأس كوكتيل فواكه | Fruit Cocktail Cup | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |
 | `fs-2` | سوبر كوكتيل بالآيس كريم | Super Cocktail with Ice Cream | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `fs-3` | سلطة فواكه فروتيلا (فروت سالاد) | Fruitella Fruit Salad | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |

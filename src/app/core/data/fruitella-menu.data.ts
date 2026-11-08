@@ -9,7 +9,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "عصائر طبيعية 100% معصورة طازجة يومياً بدون أي إضافات أو ألوان صناعية",
     "icon": "fa-solid fa-glass-water",
     "themeColor": "#15803d",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/orange-juice.png",
     "displayOrder": 1,
     "informationAr": [
       "اختار الحجم المتاح للصنف قبل إضافته للسلة؛ مش كل العصائر متوفرة بكل الأحجام (L، لتر، 4 لتر).",
@@ -26,7 +26,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "قصب طبيعي، دوم، خروب، تمر هندي وعناب محضر بالطرق التراثية الأصيلة",
     "icon": "fa-solid fa-seedling",
     "themeColor": "#b45309",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-pure.png",
     "displayOrder": 2,
     "informationAr": [
       "قسم العصائر الشرقية بيضم خيارات مختلفة عن عصائر الفاكهة المعتادة، زي القصب والدوم والخروب والعناب.",
@@ -43,7 +43,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "سوبيا مثلجة وممزوجة بأشهى النكهات من المانجو واللوتس والنوتيلا والبيستاشيو",
     "icon": "fa-solid fa-droplet",
     "themeColor": "#0284c7",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-natural.png",
     "displayOrder": 3,
     "informationAr": [
       "السوبيا الطبيعي هو الاختيار الأساسي، وباقي الأصناف بتقدم نكهات متنوعة حسب القائمة.",
@@ -60,7 +60,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "عصائر مانجو طازجة ومثلجة وبول آيس كريم وقطع مانجو مانش استوائية",
     "icon": "fa-solid fa-sun",
     "themeColor": "#ea580c",
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-fruitella-signature.png",
     "displayOrder": 4,
     "informationAr": [
       "تقدر تقارن بين المانجو لوحدها والخلطات اللي فيها فواكه أخرى كالفراولة والأناناس والكيوي.",
@@ -94,7 +94,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "خلطات البنجر والجرجير والكيوي والفيتامينات الطبيعية المقوية للنشاط",
     "icon": "fa-solid fa-bolt",
     "themeColor": "#be123c",
-    "image": "/images/products/avocado-nuts-mango-pair.jpg",
+    "image": "/images/products/beetroot-orange.png",
     "displayOrder": 6,
     "informationAr": [
       "القسم بيضم خلطات فواكه ومكونات طبيعية متنوعة، مش مشروبات طاقة معلبة فقط.",
@@ -509,7 +509,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/orange-juice.png",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -644,7 +644,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/strawberry-juice.png",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -779,7 +779,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/guava-juice.png",
     "isFeatured": true,
     "isBestSeller": false,
     "tags": [
@@ -905,7 +905,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/guava-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1031,7 +1031,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/lemon-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1157,7 +1157,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/lemon-mint-juice.png",
     "isFeatured": false,
     "isBestSeller": true,
     "tags": [
@@ -1283,7 +1283,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/lemon-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1409,7 +1409,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/watermelon-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1535,7 +1535,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/watermelon-mint.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1661,7 +1661,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/watermelon-strawberry-mint.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1787,7 +1787,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/dates-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -1913,7 +1913,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/banana-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2039,7 +2039,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/strawberry-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2165,7 +2165,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/cantaloupe-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2291,7 +2291,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pomegranate-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2765,7 +2765,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/kiwi-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2881,7 +2881,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/apple-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -2997,7 +2997,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pineapple-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3113,7 +3113,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/prickly-pear-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3248,7 +3248,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-pure.png",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -3383,7 +3383,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-milk.png",
     "isFeatured": false,
     "isBestSeller": true,
     "tags": [
@@ -3518,7 +3518,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-orange.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3644,7 +3644,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-ginger.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3770,7 +3770,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-pineapple.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -3905,7 +3905,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-sobia.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4031,7 +4031,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-lemon.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4157,7 +4157,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sugarcane-carrot.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4292,7 +4292,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/tamarind-natural.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4427,7 +4427,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/karkadeh-ennab.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4562,7 +4562,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/carob-kharroub.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4688,7 +4688,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/doum-juice.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4814,7 +4814,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/doum-milk.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -4940,7 +4940,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/walnut-drink.png",
     "isFeatured": false,
     "isBestSeller": false,
     "tags": [
@@ -5075,7 +5075,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-natural.png",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -5203,7 +5203,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-mango.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -5330,7 +5330,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-banana.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -5457,7 +5457,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-mocha.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -5584,7 +5584,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-strawberry.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -5711,7 +5711,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-lotus.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -5838,7 +5838,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-pistachio.png",
     "isFeatured": true,
     "tags": [
       "سوبيا",
@@ -5965,7 +5965,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-nutella.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -6092,7 +6092,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/sobya-fruit-chunks.png",
     "isFeatured": false,
     "tags": [
       "سوبيا",
@@ -6228,7 +6228,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-cocktail-bar.jpg",
+    "image": "/images/products/mango-fruitella-signature.png",
     "isFeatured": true,
     "isBestSeller": true,
     "tags": [
@@ -6354,7 +6354,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-icecream.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6479,7 +6479,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-banana.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6604,7 +6604,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-strawberry.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6729,7 +6729,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-apple.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6854,7 +6854,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-pineapple.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -6979,7 +6979,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-kiwi.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7104,7 +7104,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-watermelon.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7229,7 +7229,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/mango-chunks-bowl.jpg",
+    "image": "/images/products/mango-chunks-cup.png",
     "isFeatured": true,
     "tags": [
       "مانجو",
@@ -7354,7 +7354,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-rocket.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7479,7 +7479,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-milk.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7594,7 +7594,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-pomegranate.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -7709,7 +7709,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-yogurt-nuts.png",
     "isFeatured": false,
     "tags": [
       "مانجو",
@@ -8641,7 +8641,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/beetroot-orange.png",
     "isBestSeller": true,
     "tags": [
       "طاقة",
@@ -8766,7 +8766,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/beetroot-pomegranate.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -8890,7 +8890,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/beetroot-strawberry.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9014,7 +9014,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/arugula-milk.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9138,7 +9138,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/kiwi-orange.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9262,7 +9262,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/kiwi-pineapple.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9386,7 +9386,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pineapple-orange.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9510,7 +9510,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/orange-ginger.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9634,7 +9634,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/lemon-ginger.png",
     "tags": [
       "طاقة",
       "صحي",
@@ -9758,7 +9758,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/super-vitamin-c.png",
     "isFeatured": true,
     "tags": [
       "طاقة",

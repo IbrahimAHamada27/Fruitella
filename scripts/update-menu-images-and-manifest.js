@@ -22,15 +22,15 @@ const addons = JSON.parse(addonMatch[1]);
 categories.forEach(cat => {
   if (cat.id === 'oriental-juices') {
     cat.icon = 'fa-solid fa-seedling';
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/sugarcane-pure.png';
   } else if (cat.id === 'sobya-world') {
     cat.icon = 'fa-solid fa-droplet';
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/sobya-natural.png';
   } else if (cat.id === 'smoothie-world') {
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'mango-world') {
     cat.icon = 'fa-solid fa-sun';
-    cat.image = '/images/products/mango-chunks-bowl.jpg';
+    cat.image = '/images/products/mango-fruitella-signature.png';
   } else if (cat.id === 'fruit-salad') {
     cat.image = '/images/products/fruitella-cocktail-bowl.jpg';
   } else if (cat.id === 'boba-fruitella') {
@@ -45,6 +45,8 @@ categories.forEach(cat => {
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'power-fruitella') {
     cat.image = '/images/products/avocado-nuts-mango-pair.jpg';
+  } else if (cat.id === 'energy-world') {
+    cat.image = '/images/products/beetroot-orange.png';
   } else if (cat.id === 'forest-feedings') {
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'fruitella-mixes') {
@@ -69,7 +71,7 @@ categories.forEach(cat => {
   } else if (cat.id === 'sweets-desserts') {
     cat.image = '/images/products/fruitella-signature-waffle.jpg';
   } else if (cat.id === 'fresh-juices') {
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/orange-juice.png';
   }
 });
 
@@ -81,7 +83,83 @@ const manifestRows = [];
 
 // Specific authentic photo matches
 const verifiedProductsMap = {
-  // 1. Sweets & Desserts (Real photos of Waffles, Pancakes, Molten Cake, Kashtouta, Om Ali, Rice Pudding)
+  // 1. عصائر شرقية (14 صنف)
+  'oj-1': '/images/products/sugarcane-pure.png',
+  'oj-2': '/images/products/sugarcane-milk.png',
+  'oj-3': '/images/products/sugarcane-orange.png',
+  'oj-4': '/images/products/sugarcane-ginger.png',
+  'oj-5': '/images/products/sugarcane-pineapple.png',
+  'oj-6': '/images/products/sugarcane-sobia.png',
+  'oj-7': '/images/products/sugarcane-lemon.png',
+  'oj-8': '/images/products/sugarcane-carrot.png',
+  'oj-9': '/images/products/tamarind-natural.png',
+  'oj-10': '/images/products/karkadeh-ennab.png',
+  'oj-11': '/images/products/carob-kharroub.png',
+  'oj-12': '/images/products/doum-juice.png',
+  'oj-13': '/images/products/doum-milk.png',
+  'oj-14': '/images/products/walnut-drink.png',
+
+  // 2. عصائر فريش (19 صنف)
+  'fj-1': '/images/products/orange-juice.png',
+  'fj-2': '/images/products/strawberry-juice.png',
+  'fj-3': '/images/products/guava-juice.png',
+  'fj-4': '/images/products/guava-milk.png',
+  'fj-5': '/images/products/lemon-juice.png',
+  'fj-6': '/images/products/lemon-mint-juice.png',
+  'fj-7': '/images/products/lemon-milk.png',
+  'fj-8': '/images/products/watermelon-juice.png',
+  'fj-9': '/images/products/watermelon-mint.png',
+  'fj-10': '/images/products/watermelon-strawberry-mint.png',
+  'fj-11': '/images/dates-milk.png',
+  'fj-11': '/images/products/dates-milk.png',
+  'fj-12': '/images/products/banana-milk.png',
+  'fj-13': '/images/products/strawberry-milk.png',
+  'fj-14': '/images/products/cantaloupe-juice.png',
+  'fj-15': '/images/products/pomegranate-juice.png',
+  'fj-19': '/images/products/kiwi-juice.png',
+  'fj-20': '/images/products/apple-juice.png',
+  'fj-21': '/images/products/pineapple-juice.png',
+  'fj-22': '/images/products/prickly-pear-juice.png',
+
+  // 3. عالم السوبيا (9 أصناف)
+  'sb-1': '/images/products/sobya-natural.png',
+  'sb-2': '/images/products/sobya-mango.png',
+  'sb-3': '/images/products/sobya-banana.png',
+  'sb-4': '/images/products/sobya-mocha.png',
+  'sb-5': '/images/products/sobya-strawberry.png',
+  'sb-6': '/images/products/sobya-lotus.png',
+  'sb-7': '/images/products/sobya-pistachio.png',
+  'sb-8': '/images/products/sobya-nutella.png',
+  'sb-9': '/images/products/sobya-fruit-chunks.png',
+
+  // 4. عالم المانجو (13 صنف)
+  'mg-1': '/images/products/mango-fruitella-signature.png',
+  'mg-2': '/images/products/mango-icecream.png',
+  'mg-3': '/images/products/mango-banana.png',
+  'mg-4': '/images/products/mango-strawberry.png',
+  'mg-5': '/images/products/mango-apple.png',
+  'mg-6': '/images/products/mango-pineapple.png',
+  'mg-7': '/images/products/mango-kiwi.png',
+  'mg-8': '/images/products/mango-watermelon.png',
+  'mg-9': '/images/products/mango-chunks-cup.png',
+  'mg-10': '/images/products/mango-rocket.png',
+  'mg-11': '/images/products/mango-milk.png',
+  'mg-12': '/images/products/mango-pomegranate.png',
+  'mg-13': '/images/products/mango-yogurt-nuts.png',
+
+  // 5. عالم الطاقة (10 أصناف)
+  'en-1': '/images/products/beetroot-orange.png',
+  'en-2': '/images/products/beetroot-pomegranate.png',
+  'en-3': '/images/products/beetroot-strawberry.png',
+  'en-4': '/images/products/arugula-milk.png',
+  'en-5': '/images/products/kiwi-orange.png',
+  'en-6': '/images/products/kiwi-pineapple.png',
+  'en-7': '/images/products/pineapple-orange.png',
+  'en-8': '/images/products/orange-ginger.png',
+  'en-9': '/images/products/lemon-ginger.png',
+  'en-10': '/images/products/super-vitamin-c.png',
+
+  // 6. Sweets & Desserts (Real photos of Waffles, Pancakes, Molten Cake, Kashtouta, Om Ali, Rice Pudding)
   'sw-1': '/images/products/fruitella-signature-waffle.jpg',
   'sw-2': '/images/products/fruitella-signature-waffle.jpg',
   'sw-3': '/images/products/fruitella-signature-waffle.jpg',
@@ -104,22 +182,18 @@ const verifiedProductsMap = {
   'sw-22': '/images/products/rice-pudding.jpg',
   'sw-23': '/images/products/rice-pudding.jpg',
 
-  // 2. Mango World (Authentic store drink & chunks)
-  'mg-1': '/images/products/mango-cocktail-bar.jpg',
-  'mg-9': '/images/products/mango-chunks-bowl.jpg',
-
-  // 3. Fruit Salad & Cups (Authentic store cocktail bowls & ice cream bowls)
+  // 7. Fruit Salad & Cups (Authentic store cocktail bowls & ice cream bowls)
   'fs-1': '/images/products/fruitella-cocktail-bowl.jpg',
   'fs-3': '/images/products/fruitella-cocktail-bowl.jpg',
   'fs-4': '/images/products/fruit-salad-icecream.jpg',
   'fs-5': '/images/products/fruitella-cocktail-bowl.jpg',
   'fs-6': '/images/products/fruitella-cocktail-bowl.jpg',
 
-  // 4. Power Fruitella (Authentic store royal avocado with nuts)
+  // 8. Power Fruitella (Authentic store royal avocado with nuts)
   'pw-3': '/images/products/avocado-nuts-mango-pair.jpg',
   'pw-12': '/images/products/avocado-nuts-mango-pair.jpg',
 
-  // 5. Ice Cream World (Authentic store ice cream dishes)
+  // 9. Ice Cream World (Authentic store ice cream dishes)
   'ic-4': '/images/products/fruit-salad-icecream.jpg',
   'ic-7': '/images/products/fruit-salad-icecream.jpg'
 };
