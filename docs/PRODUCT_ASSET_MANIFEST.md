@@ -4,8 +4,8 @@
 إجمالي عدد الأصناف في القائمة: **303 صنف**
 
 ## 1. ملخص التغطية البصرية (Image Coverage Summary)
-- **صور موثقة حقيقية مطابقة للمنتج (Verified Store Photos):** 95 صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
-- **شعار فروتيلا الرسمي المباشر (Official Fruitella Logo Direct):** 208 صنف (جميع الأصناف التي لا يتوفر لها تصوير حقيقي مخصص تظهر مباشرة بشعار فروتيلا المعتمد).
+- **صور موثقة حقيقية مطابقة للمنتج (Verified Store Photos):** 138 صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
+- **شعار فروتيلا الرسمي المباشر (Official Fruitella Logo Direct):** 165 صنف (جميع الأصناف التي لا يتوفر لها تصوير حقيقي مخصص تظهر مباشرة بشعار فروتيلا المعتمد).
 - **صور توضيحية تقريبية:** 0 (تم إلغاء الصور التقريبية لضمان أقصى درجات المصداقية).
 - **صور تالفة أو روابط معطلة:** 0 (خالية تماماً بنسبة 100%).
 - **صور واجهات خارجية أو لوحات حائط معلقة كصور منتجات:** 0 (تمت إزالتها واستبدالها بالكامل).
@@ -103,37 +103,37 @@
 | `en-8` | برتقال بالزنجبيل الفريش | Orange with Fresh Ginger | `energy-world` | `/images/products/orange-ginger.png` | ✅ موثقة مطابقة |
 | `en-9` | ليمون بالزنجبيل | Lemon with Fresh Ginger | `energy-world` | `/images/products/lemon-ginger.png` | ✅ موثقة مطابقة |
 | `en-10` | سوبر فيتامين سي | Super Vitamin C Cocktail | `energy-world` | `/images/products/super-vitamin-c.png` | ✅ موثقة مطابقة |
-| `fs-1` | كأس كوكتيل فواكه | Fruit Cocktail Cup | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |
-| `fs-2` | سوبر كوكتيل بالآيس كريم | Super Cocktail with Ice Cream | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-3` | سلطة فواكه فروتيلا (فروت سالاد) | Fruitella Fruit Salad | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |
-| `fs-4` | فروت سالاد بالآيس كريم | Fruit Salad with Ice Cream | `fruit-salad` | `/images/products/fruit-salad-icecream.jpg` | ✅ موثقة مطابقة |
-| `fs-5` | قنبلة فروتيلا الكلاسيكية | Fruitella Signature Bomb | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |
-| `fs-6` | سوبر قنبلة فروتيلا رويال | Super Fruitella Royal Bomb | `fruit-salad` | `/images/products/fruitella-cocktail-bowl.jpg` | ✅ موثقة مطابقة |
-| `fs-7` | كوب كيوي قطع | Kiwi Chunks Cup | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-8` | كوب بطيخ قطع مبرد | Watermelon Chunks Cup | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-9` | موز اسبيشال بالصوص والمكسرات | Special Banana Dessert Plate | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-10` | كوب فواكه مشكلة قطع | Mixed Fruit Chunks Cup | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-11` | كوب أناناس قطع طبيعي | Fresh Pineapple Chunks | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `fs-12` | كوب رمان حب فريش | Pomegranate Seeds Cup | `fruit-salad` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-1` | بوبا ميلك شيك بلو بيري | Boba Milkshake Blueberry | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-2` | بوبا ميلك شيك كوفي | Boba Milkshake Coffee | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-3` | بوبا ميلك شيك ميكس بيري | Boba Milkshake Mix Berry | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-4` | بوبا ميلك شيك مانجو | Boba Milkshake Mango | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-5` | بوبا ميلك شيك فراولة | Boba Milkshake Strawberry | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-6` | بوبا موخيتو جيلي كولا | Boba Mojito Jelly Cola | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-7` | بوبا موخيتو باشون فروت | Boba Mojito Passion Fruit | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-8` | بوبا موخيتو ليمون نعناع | Boba Mojito Lemon Mint | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-9` | بوبا موخيتو بلو بيري | Boba Mojito Blueberry | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `bb-10` | بوبا موخيتو تفاح أخضر | Boba Mojito Green Apple | `boba-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-1` | مشروب أوريو كلاسيك | Oreo Classic Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-2` | مشروب بوريو | Borio Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-3` | مشروب جلاكسي حريري | Smooth Galaxy Chocolate | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-4` | مشروب توينكز | Twinkies Cream Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-5` | مشروب هوهوز | Hohos Chocolate Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-6` | مشروب سنيكرز كراميل وفول | Snickers Caramel Peanut Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-7` | مشروب مارس بالكراميل | Mars Caramel Chocolate Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-8` | مشروب مالتيزرز المقرمش | Maltesers Crispy Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ch-9` | مشروب تويكس أصابع | Twix Biscuit & Caramel Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `fs-1` | كأس كوكتيل فواكه | Fruit Cocktail Cup | `fruit-salad` | `/images/products/cocktail-cup.png` | ✅ موثقة مطابقة |
+| `fs-2` | سوبر كوكتيل بالآيس كريم | Super Cocktail with Ice Cream | `fruit-salad` | `/images/products/super-cocktail-icecream.png` | ✅ موثقة مطابقة |
+| `fs-3` | سلطة فواكه فروتيلا (فروت سالاد) | Fruitella Fruit Salad | `fruit-salad` | `/images/products/fruit-salad-bowl.png` | ✅ موثقة مطابقة |
+| `fs-4` | فروت سالاد بالآيس كريم | Fruit Salad with Ice Cream | `fruit-salad` | `/images/products/fruit-salad-icecream.png` | ✅ موثقة مطابقة |
+| `fs-5` | قنبلة فروتيلا الكلاسيكية | Fruitella Signature Bomb | `fruit-salad` | `/images/products/fruitella-bomb.png` | ✅ موثقة مطابقة |
+| `fs-6` | سوبر قنبلة فروتيلا رويال | Super Fruitella Royal Bomb | `fruit-salad` | `/images/products/super-fruitella-bomb.png` | ✅ موثقة مطابقة |
+| `fs-7` | كوب كيوي قطع | Kiwi Chunks Cup | `fruit-salad` | `/images/products/kiwi-chunks-cup.png` | ✅ موثقة مطابقة |
+| `fs-8` | كوب بطيخ قطع مبرد | Watermelon Chunks Cup | `fruit-salad` | `/images/products/watermelon-chunks-cup.png` | ✅ موثقة مطابقة |
+| `fs-9` | موز اسبيشال بالصوص والمكسرات | Special Banana Dessert Plate | `fruit-salad` | `/images/products/special-banana-plate.png` | ✅ موثقة مطابقة |
+| `fs-10` | كوب فواكه مشكلة قطع | Mixed Fruit Chunks Cup | `fruit-salad` | `/images/products/mixed-fruits-chunks.png` | ✅ موثقة مطابقة |
+| `fs-11` | كوب أناناس قطع طبيعي | Fresh Pineapple Chunks | `fruit-salad` | `/images/products/pineapple-chunks-seasonal.png` | ✅ موثقة مطابقة |
+| `fs-12` | كوب رمان حب فريش | Pomegranate Seeds Cup | `fruit-salad` | `/images/products/pomegranate-seeds-cup.png` | ✅ موثقة مطابقة |
+| `bb-1` | بوبا ميلك شيك بلو بيري | Boba Milkshake Blueberry | `boba-fruitella` | `/images/products/boba-milkshake-blueberry.png` | ✅ موثقة مطابقة |
+| `bb-2` | بوبا ميلك شيك كوفي | Boba Milkshake Coffee | `boba-fruitella` | `/images/products/boba-milkshake-coffee.png` | ✅ موثقة مطابقة |
+| `bb-3` | بوبا ميلك شيك ميكس بيري | Boba Milkshake Mix Berry | `boba-fruitella` | `/images/products/boba-milkshake-mix-berry.png` | ✅ موثقة مطابقة |
+| `bb-4` | بوبا ميلك شيك مانجو | Boba Milkshake Mango | `boba-fruitella` | `/images/products/boba-milkshake-mango.png` | ✅ موثقة مطابقة |
+| `bb-5` | بوبا ميلك شيك فراولة | Boba Milkshake Strawberry | `boba-fruitella` | `/images/products/boba-milkshake-strawberry.png` | ✅ موثقة مطابقة |
+| `bb-6` | بوبا موخيتو جيلي كولا | Boba Mojito Jelly Cola | `boba-fruitella` | `/images/products/boba-mojito-jelly-cola.png` | ✅ موثقة مطابقة |
+| `bb-7` | بوبا موخيتو باشون فروت | Boba Mojito Passion Fruit | `boba-fruitella` | `/images/products/boba-mojito-passion-fruit.png` | ✅ موثقة مطابقة |
+| `bb-8` | بوبا موخيتو ليمون نعناع | Boba Mojito Lemon Mint | `boba-fruitella` | `/images/products/boba-mojito-lemon-mint.png` | ✅ موثقة مطابقة |
+| `bb-9` | بوبا موخيتو بلو بيري | Boba Mojito Blueberry | `boba-fruitella` | `/images/products/boba-mojito-blueberry.png` | ✅ موثقة مطابقة |
+| `bb-10` | بوبا موخيتو تفاح أخضر | Boba Mojito Green Apple | `boba-fruitella` | `/images/products/boba-mojito-green-apple.png` | ✅ موثقة مطابقة |
+| `ch-1` | مشروب أوريو كلاسيك | Oreo Classic Shake | `chocolate-lovers` | `/images/products/oreo-drink.png` | ✅ موثقة مطابقة |
+| `ch-2` | مشروب بوريو | Borio Shake | `chocolate-lovers` | `/images/products/borio-drink.png` | ✅ موثقة مطابقة |
+| `ch-3` | مشروب جلاكسي حريري | Smooth Galaxy Chocolate | `chocolate-lovers` | `/images/products/galaxy-drink.png` | ✅ موثقة مطابقة |
+| `ch-4` | مشروب توينكز | Twinkies Cream Shake | `chocolate-lovers` | `/images/products/twinkies-drink.png` | ✅ موثقة مطابقة |
+| `ch-5` | مشروب هوهوز | Hohos Chocolate Shake | `chocolate-lovers` | `/images/products/hohos-drink.png` | ✅ موثقة مطابقة |
+| `ch-6` | مشروب سنيكرز كراميل وفول | Snickers Caramel Peanut Shake | `chocolate-lovers` | `/images/products/snickers-drink.png` | ✅ موثقة مطابقة |
+| `ch-7` | مشروب مارس بالكراميل | Mars Caramel Chocolate Shake | `chocolate-lovers` | `/images/products/mars-drink.png` | ✅ موثقة مطابقة |
+| `ch-8` | مشروب مالتيزرز المقرمش | Maltesers Crispy Shake | `chocolate-lovers` | `/images/products/maltesers-drink.png` | ✅ موثقة مطابقة |
+| `ch-9` | مشروب تويكس أصابع | Twix Biscuit & Caramel Shake | `chocolate-lovers` | `/images/products/twix-drink.png` | ✅ موثقة مطابقة |
 | `ch-10` | مشروب كادبوري ديري ميلك | Cadbury Dairy Milk Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `ch-11` | مشروب كيت كات ويفر | KitKat Crisp Wafer Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `ch-12` | مشروب فيريرو روشيه الملكي | Ferrero Rocher Royal Shake | `chocolate-lovers` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
@@ -154,23 +154,23 @@
 | `ny-9` | زبادي توت أحمر وأزرق | Berry Yogurt Shake | `nuts-yogurt` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `ny-10` | زبادي بالكاجو الملكي | Royal Cashew Yogurt | `nuts-yogurt` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `ny-11` | زبادي فواكه بالعسل | Yogurt Fruits & Honey | `nuts-yogurt` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-1` | ميلك شيك فانيليا | Vanilla Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-2` | ميلك شيك شوكولاتة | Chocolate Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-3` | ميلك شيك مانجو | Mango Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-4` | ميلك شيك موكا | Mocha Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-5` | ميلك شيك كراميل | Caramel Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-6` | ميلك شيك أوريو | Oreo Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-7` | ميلك شيك بوريو | Borio Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-8` | ميلك شيك توت أزرق | Blueberry Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-9` | ميلك شيك لوتس | Lotus Biscoff Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-10` | ميلك شيك ميكس بيري | Mix Berry Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-11` | ميلك شيك توينكز | Twinkies Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-12` | ميلك شيك كيوي | Kiwi Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-13` | ميلك شيك توت أحمر | Raspberry Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-14` | ميلك شيك نوتيلا | Nutella Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-15` | ميلك شيك بيستاشيو | Pistachio Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-16` | ميلك شيك سيريلاك زمان | Cerelac Nostalgia Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
-| `ms-17` | ميلك شيك فراولة | Strawberry Milkshake | `milkshakes` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
+| `ms-1` | ميلك شيك فانيليا | Vanilla Milkshake | `milkshakes` | `/images/products/vanilla-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-2` | ميلك شيك شوكولاتة | Chocolate Milkshake | `milkshakes` | `/images/products/chocolate-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-3` | ميلك شيك مانجو | Mango Milkshake | `milkshakes` | `/images/products/mango-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-4` | ميلك شيك موكا | Mocha Milkshake | `milkshakes` | `/images/products/mocha-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-5` | ميلك شيك كراميل | Caramel Milkshake | `milkshakes` | `/images/products/caramel-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-6` | ميلك شيك أوريو | Oreo Milkshake | `milkshakes` | `/images/products/oreo-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-7` | ميلك شيك بوريو | Borio Milkshake | `milkshakes` | `/images/products/borio-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-8` | ميلك شيك توت أزرق | Blueberry Milkshake | `milkshakes` | `/images/products/blueberry-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-9` | ميلك شيك لوتس | Lotus Biscoff Milkshake | `milkshakes` | `/images/products/lotus-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-10` | ميلك شيك ميكس بيري | Mix Berry Milkshake | `milkshakes` | `/images/products/mix-berry-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-11` | ميلك شيك توينكز | Twinkies Milkshake | `milkshakes` | `/images/products/twinkies-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-12` | ميلك شيك كيوي | Kiwi Milkshake | `milkshakes` | `/images/products/kiwi-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-13` | ميلك شيك توت أحمر | Raspberry Milkshake | `milkshakes` | `/images/products/raspberry-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-14` | ميلك شيك نوتيلا | Nutella Milkshake | `milkshakes` | `/images/products/nutella-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-15` | ميلك شيك بيستاشيو | Pistachio Milkshake | `milkshakes` | `/images/products/pistachio-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-16` | ميلك شيك سيريلاك زمان | Cerelac Nostalgia Milkshake | `milkshakes` | `/images/products/cerelac-milkshake.png` | ✅ موثقة مطابقة |
+| `ms-17` | ميلك شيك فراولة | Strawberry Milkshake | `milkshakes` | `/images/products/strawberry-milkshake.png` | ✅ موثقة مطابقة |
 | `pw-1` | عصير أفوكادو بيور | Pure Avocado Juice | `power-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `pw-2` | أفوكادو كاجو أو بندق أو لوز | Avocado with Cashew, Hazelnut or Almond | `power-fruitella` | `/images/brand/fruitella-logo.jpg` | 🛡️ شعار فروتيلا (Fallback) |
 | `pw-3` | أفوكادو مكسرات مشكلة | Avocado Mixed Nuts Royal | `power-fruitella` | `/images/products/avocado-nuts-mango-pair.jpg` | ✅ موثقة مطابقة |

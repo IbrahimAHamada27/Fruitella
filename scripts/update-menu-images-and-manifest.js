@@ -32,17 +32,17 @@ categories.forEach(cat => {
     cat.icon = 'fa-solid fa-sun';
     cat.image = '/images/products/mango-fruitella-signature.png';
   } else if (cat.id === 'fruit-salad') {
-    cat.image = '/images/products/fruitella-cocktail-bowl.jpg';
+    cat.image = '/images/products/fruit-salad-bowl.png';
   } else if (cat.id === 'boba-fruitella') {
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/boba-milkshake-blueberry.png';
   } else if (cat.id === 'chocolate-lovers') {
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/oreo-drink.png';
   } else if (cat.id === 'nuts-yogurt') {
     cat.icon = 'fa-solid fa-spoon';
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'milkshakes') {
     cat.icon = 'fa-solid fa-martini-glass';
-    cat.image = '/images/brand/fruitella-logo.jpg';
+    cat.image = '/images/products/strawberry-milkshake.png';
   } else if (cat.id === 'power-fruitella') {
     cat.image = '/images/products/avocado-nuts-mango-pair.jpg';
   } else if (cat.id === 'energy-world') {
@@ -182,12 +182,61 @@ const verifiedProductsMap = {
   'sw-22': '/images/products/rice-pudding.jpg',
   'sw-23': '/images/products/rice-pudding.jpg',
 
-  // 7. Fruit Salad & Cups (Authentic store cocktail bowls & ice cream bowls)
-  'fs-1': '/images/products/fruitella-cocktail-bowl.jpg',
-  'fs-3': '/images/products/fruitella-cocktail-bowl.jpg',
-  'fs-4': '/images/products/fruit-salad-icecream.jpg',
-  'fs-5': '/images/products/fruitella-cocktail-bowl.jpg',
-  'fs-6': '/images/products/fruitella-cocktail-bowl.jpg',
+  // 7. Fruit Salad & Cups (Authentic store cups & cocktail bowls)
+  'fs-1': '/images/products/cocktail-cup.png',
+  'fs-2': '/images/products/super-cocktail-icecream.png',
+  'fs-3': '/images/products/fruit-salad-bowl.png',
+  'fs-4': '/images/products/fruit-salad-icecream.png',
+  'fs-5': '/images/products/fruitella-bomb.png',
+  'fs-6': '/images/products/super-fruitella-bomb.png',
+  'fs-7': '/images/products/kiwi-chunks-cup.png',
+  'fs-8': '/images/products/watermelon-chunks-cup.png',
+  'fs-9': '/images/products/special-banana-plate.png',
+  'fs-10': '/images/products/mixed-fruits-chunks.png',
+  'fs-11': '/images/products/pineapple-chunks-seasonal.png',
+  'fs-12': '/images/products/pomegranate-seeds-cup.png',
+
+  // 8. Boba Fruitella (Authentic store boba shakes & mojitos)
+  'bb-1': '/images/products/boba-milkshake-blueberry.png',
+  'bb-2': '/images/products/boba-milkshake-coffee.png',
+  'bb-3': '/images/products/boba-milkshake-mix-berry.png',
+  'bb-4': '/images/products/boba-milkshake-mango.png',
+  'bb-5': '/images/products/boba-milkshake-strawberry.png',
+  'bb-6': '/images/products/boba-mojito-jelly-cola.png',
+  'bb-7': '/images/products/boba-mojito-passion-fruit.png',
+  'bb-8': '/images/products/boba-mojito-lemon-mint.png',
+  'bb-9': '/images/products/boba-mojito-blueberry.png',
+  'bb-10': '/images/products/boba-mojito-green-apple.png',
+
+  // 9. Chocolate Lovers Drinks
+  'ch-1': '/images/products/oreo-drink.png',
+  'ch-2': '/images/products/borio-drink.png',
+  'ch-3': '/images/products/galaxy-drink.png',
+  'ch-4': '/images/products/twinkies-drink.png',
+  'ch-5': '/images/products/hohos-drink.png',
+  'ch-6': '/images/products/snickers-drink.png',
+  'ch-7': '/images/products/mars-drink.png',
+  'ch-8': '/images/products/maltesers-drink.png',
+  'ch-9': '/images/products/twix-drink.png',
+
+  // 10. Milkshakes
+  'ms-1': '/images/products/vanilla-milkshake.png',
+  'ms-2': '/images/products/chocolate-milkshake.png',
+  'ms-3': '/images/products/mango-milkshake.png',
+  'ms-4': '/images/products/mocha-milkshake.png',
+  'ms-5': '/images/products/caramel-milkshake.png',
+  'ms-6': '/images/products/oreo-milkshake.png',
+  'ms-7': '/images/products/borio-milkshake.png',
+  'ms-8': '/images/products/blueberry-milkshake.png',
+  'ms-9': '/images/products/lotus-milkshake.png',
+  'ms-10': '/images/products/mix-berry-milkshake.png',
+  'ms-11': '/images/products/twinkies-milkshake.png',
+  'ms-12': '/images/products/kiwi-milkshake.png',
+  'ms-13': '/images/products/raspberry-milkshake.png',
+  'ms-14': '/images/products/nutella-milkshake.png',
+  'ms-15': '/images/products/pistachio-milkshake.png',
+  'ms-16': '/images/products/cerelac-milkshake.png',
+  'ms-17': '/images/products/strawberry-milkshake.png',
 
   // 8. Power Fruitella (Authentic store royal avocado with nuts)
   'pw-3': '/images/products/avocado-nuts-mango-pair.jpg',

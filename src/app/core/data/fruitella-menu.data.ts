@@ -111,7 +111,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "قطع فواكه طازجة، كوكتيلات، قنبلة فروتيلا وسلطات الفواكه بالآيس كريم",
     "icon": "fa-solid fa-bowl-food",
     "themeColor": "#059669",
-    "image": "/images/products/fruitella-cocktail-bowl.jpg",
+    "image": "/images/products/fruit-salad-bowl.png",
     "displayOrder": 7,
     "informationAr": [
       "بعض أصناف الفاكهة الطازجة بتكون موسمية؛ تأكد من توافر الصنف قبل الطلب.",
@@ -128,7 +128,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "مشروبات البوبا بحبيبات البوبا اللذيذة بنكهات الميلك شيك والموهيتو المنعش",
     "icon": "fa-solid fa-circle-dot",
     "themeColor": "#7c3aed",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-blueberry.png",
     "displayOrder": 8,
     "informationAr": [
       "اختار نكهة البوبا حسب ذوقك: ميلك شيك كريمي، قهوة، أو موخيتو فوار ومنعش.",
@@ -145,7 +145,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "مشروبات الأوريو، الجلاكسي، الكندر، والمارس وميكسات الشوكولاتة السوبر",
     "icon": "fa-solid fa-cookie-bite",
     "themeColor": "#451a03",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/oreo-drink.png",
     "displayOrder": 9,
     "informationAr": [
       "المنتجات بتختلف حسب نوع الشوكولاتة أو البسكويت المستخدم (أوريو، كيت كات، كيندر، مارس، جلاكسي).",
@@ -179,7 +179,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "descriptionAr": "ميلك شيك كريمي كثيف بالأوريو واللوتس والنوتيلا والبيستاشيو والسيريلاك",
     "icon": "fa-solid fa-martini-glass",
     "themeColor": "#be185d",
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/strawberry-milkshake.png",
     "displayOrder": 11,
     "informationAr": [
       "الأسعار بتختلف حسب النكهة والحجم (كاس L الفردي وعبوة Liter للمشاركة).",
@@ -9873,7 +9873,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/fruitella-cocktail-bowl.jpg",
+    "image": "/images/products/cocktail-cup.png",
     "isBestSeller": true,
     "tags": [
       "فروت سالاد",
@@ -9989,7 +9989,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/super-cocktail-icecream.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -10104,7 +10104,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/fruitella-cocktail-bowl.jpg",
+    "image": "/images/products/fruit-salad-bowl.png",
     "isFeatured": true,
     "tags": [
       "فروت سالاد",
@@ -10220,7 +10220,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/fruit-salad-icecream.jpg",
+    "image": "/images/products/fruit-salad-icecream.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -10335,7 +10335,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/fruitella-cocktail-bowl.jpg",
+    "image": "/images/products/fruitella-bomb.png",
     "isBestSeller": true,
     "tags": [
       "فروت سالاد",
@@ -10451,7 +10451,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/products/fruitella-cocktail-bowl.jpg",
+    "image": "/images/products/super-fruitella-bomb.png",
     "isFeatured": true,
     "tags": [
       "فروت سالاد",
@@ -10567,7 +10567,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/kiwi-chunks-cup.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -10682,7 +10682,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/watermelon-chunks-cup.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -10797,7 +10797,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/special-banana-plate.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -10912,7 +10912,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mixed-fruits-chunks.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -11027,7 +11027,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pineapple-chunks-seasonal.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -11142,7 +11142,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pomegranate-seeds-cup.png",
     "tags": [
       "فروت سالاد",
       "فواكه قطع",
@@ -11257,7 +11257,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-blueberry.png",
     "isBestSeller": true,
     "tags": [
       "بوبا",
@@ -11374,7 +11374,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-coffee.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -11490,7 +11490,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-mix-berry.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -11606,7 +11606,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-mango.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -11722,7 +11722,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-milkshake-strawberry.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -11838,7 +11838,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-mojito-jelly-cola.png",
     "isFeatured": true,
     "tags": [
       "بوبا",
@@ -11955,7 +11955,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-mojito-passion-fruit.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -12071,7 +12071,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-mojito-lemon-mint.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -12187,7 +12187,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-mojito-blueberry.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -12303,7 +12303,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/boba-mojito-green-apple.png",
     "tags": [
       "بوبا",
       "ميلك شيك",
@@ -12419,7 +12419,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/oreo-drink.png",
     "isBestSeller": true,
     "tags": [
       "شوكولاتة",
@@ -12536,7 +12536,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/borio-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -12652,7 +12652,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/galaxy-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -12768,7 +12768,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/twinkies-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -12884,7 +12884,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/hohos-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -13000,7 +13000,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/snickers-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -13116,7 +13116,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mars-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -13232,7 +13232,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/maltesers-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -13348,7 +13348,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/twix-drink.png",
     "tags": [
       "شوكولاتة",
       "حلوى",
@@ -15831,7 +15831,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/vanilla-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -15956,7 +15956,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/chocolate-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16081,7 +16081,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mango-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16206,7 +16206,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mocha-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16331,7 +16331,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/caramel-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16456,7 +16456,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/oreo-milkshake.png",
     "isBestSeller": true,
     "tags": [
       "ميلك شيك",
@@ -16582,7 +16582,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/borio-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16707,7 +16707,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/blueberry-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -16832,7 +16832,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/lotus-milkshake.png",
     "isFeatured": true,
     "tags": [
       "ميلك شيك",
@@ -16958,7 +16958,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/mix-berry-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -17083,7 +17083,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/twinkies-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -17208,7 +17208,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/kiwi-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -17333,7 +17333,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/raspberry-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -17458,7 +17458,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/nutella-milkshake.png",
     "isBestSeller": true,
     "tags": [
       "ميلك شيك",
@@ -17584,7 +17584,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/pistachio-milkshake.png",
     "isFeatured": true,
     "tags": [
       "ميلك شيك",
@@ -17710,7 +17710,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/cerelac-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
@@ -17835,7 +17835,7 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       }
     ],
-    "image": "/images/brand/fruitella-logo.jpg",
+    "image": "/images/products/strawberry-milkshake.png",
     "tags": [
       "ميلك شيك",
       "كريمي",
