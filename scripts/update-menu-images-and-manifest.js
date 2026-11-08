@@ -25,30 +25,63 @@ categories.forEach(cat => {
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'sobya-world') {
     cat.icon = 'fa-solid fa-droplet';
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'smoothie-world') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'mango-world') {
     cat.icon = 'fa-solid fa-sun';
+    cat.image = '/images/products/mango-chunks-bowl.jpg';
+  } else if (cat.id === 'fruit-salad') {
+    cat.image = '/images/products/fruitella-cocktail-bowl.jpg';
+  } else if (cat.id === 'boba-fruitella') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'chocolate-lovers') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'nuts-yogurt') {
     cat.icon = 'fa-solid fa-spoon';
+    cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'milkshakes') {
     cat.icon = 'fa-solid fa-martini-glass';
-  } else if (cat.id === 'cold-drinks') {
-    cat.icon = 'fa-solid fa-snowflake';
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'power-fruitella') {
+    cat.image = '/images/products/avocado-nuts-mango-pair.jpg';
+  } else if (cat.id === 'forest-feedings') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'fruitella-mixes') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'ice-cream') {
+    cat.image = '/images/products/fruit-salad-icecream.jpg';
+  } else if (cat.id === 'mojito-world') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'fruitella-diet') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'family-packs') {
     cat.image = '/images/brand/fruitella-logo.jpg';
   } else if (cat.id === 'hot-drinks') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'cold-drinks') {
+    cat.icon = 'fa-solid fa-snowflake';
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'soft-drinks') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'cold-frappe') {
+    cat.image = '/images/brand/fruitella-logo.jpg';
+  } else if (cat.id === 'sweets-desserts') {
+    cat.image = '/images/products/fruitella-signature-waffle.jpg';
+  } else if (cat.id === 'fresh-juices') {
     cat.image = '/images/brand/fruitella-logo.jpg';
   }
 });
 
 // Classify and update products
 let verifiedCount = 0;
-let illustrativeCount = 0;
 let logoFallbackCount = 0;
 
 const manifestRows = [];
 
-// Specific authentic photo matches in sweets-desserts
-const verifiedSweetsMap = {
+// Specific authentic photo matches
+const verifiedProductsMap = {
+  // 1. Sweets & Desserts (Real photos of Waffles, Pancakes, Molten Cake, Kashtouta, Om Ali, Rice Pudding)
   'sw-1': '/images/products/fruitella-signature-waffle.jpg',
   'sw-2': '/images/products/fruitella-signature-waffle.jpg',
   'sw-3': '/images/products/fruitella-signature-waffle.jpg',
@@ -56,8 +89,6 @@ const verifiedSweetsMap = {
   'sw-5': '/images/products/fruitella-signature-waffle.jpg',
   'sw-6': '/images/products/waffle-weekend-promo.jpg',
   'sw-7': '/images/products/molten-cake.jpg',
-  'sw-8': '/images/products/kashtouta.jpg',
-  'sw-9': '/images/products/fruitella-signature-waffle.jpg',
   'sw-10': '/images/products/kashtouta.jpg',
   'sw-11': '/images/products/kashtouta.jpg',
   'sw-12': '/images/products/kashtouta.jpg',
@@ -71,63 +102,42 @@ const verifiedSweetsMap = {
   'sw-20': '/images/products/rice-pudding.jpg',
   'sw-21': '/images/products/rice-pudding.jpg',
   'sw-22': '/images/products/rice-pudding.jpg',
-  'sw-23': '/images/products/rice-pudding.jpg'
+  'sw-23': '/images/products/rice-pudding.jpg',
+
+  // 2. Mango World (Authentic store drink & chunks)
+  'mg-1': '/images/products/mango-cocktail-bar.jpg',
+  'mg-9': '/images/products/mango-chunks-bowl.jpg',
+
+  // 3. Fruit Salad & Cups (Authentic store cocktail bowls & ice cream bowls)
+  'fs-1': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-3': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-4': '/images/products/fruit-salad-icecream.jpg',
+  'fs-5': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-6': '/images/products/fruitella-cocktail-bowl.jpg',
+
+  // 4. Power Fruitella (Authentic store royal avocado with nuts)
+  'pw-3': '/images/products/avocado-nuts-mango-pair.jpg',
+  'pw-12': '/images/products/avocado-nuts-mango-pair.jpg',
+
+  // 5. Ice Cream World (Authentic store ice cream dishes)
+  'ic-4': '/images/products/fruit-salad-icecream.jpg',
+  'ic-7': '/images/products/fruit-salad-icecream.jpg'
 };
 
 products.forEach(p => {
-  let imageType = 'illustrative';
-  let imageSource = 'صورة مشروب/صنف ملتقطة من فرع فروتيلا';
+  let imageType = 'logo_fallback';
+  let imageSource = 'شعار فروتيلا الرسمي (Fallback مباشر لعدم توفر صورة حقيقية مخصصة للصنف)';
 
-  // 1. Hot Drinks, Oriental Juices, and Family Packs without dedicated photos -> Logo Fallback
-  if (p.categorySlug === 'oriental-juices' || p.categorySlug === 'hot-drinks' || p.categorySlug === 'family-packs') {
-    p.image = '/images/brand/fruitella-logo.jpg';
-    imageType = 'logo_fallback';
-    imageSource = 'شعار فروتيلا الرسمي (Fallback معتمد لحين توفر تصوير مخصص)';
-    logoFallbackCount++;
-  }
-  // 2. Sweets & Desserts -> Verified direct matches
-  else if (p.categorySlug === 'sweets-desserts') {
-    p.image = verifiedSweetsMap[p.id] || '/images/products/fruitella-signature-waffle.jpg';
+  // If product has a verified authentic photo
+  if (verifiedProductsMap[p.id]) {
+    p.image = verifiedProductsMap[p.id];
     imageType = 'verified';
     imageSource = 'صورة حقيقية موثقة من منتجات فرع فروتيلا';
     verifiedCount++;
-  }
-  // 3. Mango World -> Verified direct matches
-  else if (p.categorySlug === 'mango-world') {
-    if (p.nameAr.includes('قطع') || p.nameAr.includes('مانش')) {
-      p.image = '/images/products/mango-chunks-bowl.jpg';
-    } else {
-      p.image = '/images/products/mango-cocktail-bar.jpg';
-    }
-    imageType = 'verified';
-    imageSource = 'صورة حقيقية موثقة من بار مانجو فروتيلا';
-    verifiedCount++;
-  }
-  // 4. Fruit Salad -> Verified store cocktail bowl
-  else if (p.categorySlug === 'fruit-salad') {
-    p.image = '/images/products/fruitella-cocktail-bowl.jpg';
-    imageType = 'verified';
-    imageSource = 'صورة حقيقية موثقة لسلطة فواكه وكوكتيل فروتيلا';
-    verifiedCount++;
-  }
-  // 5. Power Fruitella -> Verified store avocado & nuts pair
-  else if (p.categorySlug === 'power-fruitella') {
-    p.image = '/images/products/avocado-nuts-mango-pair.jpg';
-    imageType = 'verified';
-    imageSource = 'صورة حقيقية موثقة لخلطة الأفوكادو الملكية بالمكسرات والعسل';
-    verifiedCount++;
-  }
-  // 6. Ice Cream World -> Verified store fruit salad with ice cream
-  else if (p.categorySlug === 'ice-cream') {
-    p.image = '/images/products/fruit-salad-icecream.jpg';
-    imageType = 'verified';
-    imageSource = 'صورة حقيقية موثقة لآيس كريم فروتيلا الطبيعي';
-    verifiedCount++;
-  }
-  // 7. Other drink categories -> Illustrative authentic store drink photos
-  else {
-    imageType = 'illustrative';
-    illustrativeCount++;
+  } else {
+    // All other products without a direct authentic photo directly display the Fruitella logo
+    p.image = '/images/brand/fruitella-logo.jpg';
+    logoFallbackCount++;
   }
 
   manifestRows.push({
@@ -163,9 +173,9 @@ let md = `# بيان أصول وصور منتجات فروتيلا (Fruitella Pr
 إجمالي عدد الأصناف في القائمة: **${products.length} صنف**
 
 ## 1. ملخص التغطية البصرية (Image Coverage Summary)
-- **صور موثقة مطابقة للمنتج (Verified Store Photos):** ${verifiedCount} صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
-- **صور توضيحية من عصائر ومشروبات الفرع (Approximate Illustrative Store Photos):** ${illustrativeCount} صنف (عصائر فريش، سموذي، ميلك شيك، موخيتو، بوبا، ميكسات).
-- **بديل شعار فروتيلا الرسمي (Official Fruitella Logo Fallback):** ${logoFallbackCount} صنف (المشروبات الساخنة والقهوة، العصائر الشرقية، والعبوات العائلية — مقدمة بتنسيق \`object-fit: contain\` وخلفية محايدة لتفادي أي تشوه).
+- **صور موثقة حقيقية مطابقة للمنتج (Verified Store Photos):** ${verifiedCount} صنف (مانجو، فروت سالاد، باور أفوكادو، حلويات وافل، مولتن، قشطوطة، أم علي، وأرز باللبن).
+- **شعار فروتيلا الرسمي المباشر (Official Fruitella Logo Direct):** ${logoFallbackCount} صنف (جميع الأصناف التي لا يتوفر لها تصوير حقيقي مخصص تظهر مباشرة بشعار فروتيلا المعتمد).
+- **صور توضيحية تقريبية:** 0 (تم إلغاء الصور التقريبية لضمان أقصى درجات المصداقية).
 - **صور تالفة أو روابط معطلة:** 0 (خالية تماماً بنسبة 100%).
 - **صور واجهات خارجية أو لوحات حائط معلقة كصور منتجات:** 0 (تمت إزالتها واستبدالها بالكامل).
 
@@ -201,5 +211,4 @@ fs.writeFileSync(path.join(docsDir, 'PRODUCT_ASSET_MANIFEST.md'), md, 'utf8');
 console.log('✅ Menu data updated and PRODUCT_ASSET_MANIFEST.md generated successfully!');
 console.log(`- Total: ${products.length}`);
 console.log(`- Verified: ${verifiedCount}`);
-console.log(`- Illustrative: ${illustrativeCount}`);
-console.log(`- Logo Fallback: ${logoFallbackCount}`);
+console.log(`- Logo Direct: ${logoFallbackCount}`);

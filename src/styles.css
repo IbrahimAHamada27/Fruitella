@@ -482,9 +482,19 @@ input, textarea, select {
 }
 
 /* Universal Fruitella Logo Fallback Presentation */
-img.fruitella-logo-fallback {
+img.fruitella-logo-fallback,
+img[src*="fruitella-logo.jpg"] {
   object-fit: contain !important;
   background-color: #f7faf8 !important;
-  padding: 0.75rem !important;
+  padding: 0.85rem !important;
   box-sizing: border-box !important;
+}
+
+/* Exclude header, drawer and footer logo icons from background and padding */
+img.brand-logo,
+img.drawer-logo,
+img.footer-logo {
+  object-fit: contain !important;
+  background-color: transparent !important;
+  padding: 0 !important;
 }

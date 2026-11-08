@@ -1469,7 +1469,60 @@ sweetsItems.forEach((item, idx) => {
   });
 });
 
-// Update category item counts
+// Update category item counts and category banner images
+const verifiedProductsMap = {
+  // 1. Sweets & Desserts (Real photos of Waffles, Pancakes, Molten Cake, Kashtouta, Om Ali, Rice Pudding)
+  'sw-1': '/images/products/fruitella-signature-waffle.jpg',
+  'sw-2': '/images/products/fruitella-signature-waffle.jpg',
+  'sw-3': '/images/products/fruitella-signature-waffle.jpg',
+  'sw-4': '/images/products/fruitella-signature-waffle.jpg',
+  'sw-5': '/images/products/fruitella-signature-waffle.jpg',
+  'sw-6': '/images/products/waffle-weekend-promo.jpg',
+  'sw-7': '/images/products/molten-cake.jpg',
+  'sw-10': '/images/products/kashtouta.jpg',
+  'sw-11': '/images/products/kashtouta.jpg',
+  'sw-12': '/images/products/kashtouta.jpg',
+  'sw-13': '/images/products/kashtouta.jpg',
+  'sw-14': '/images/products/kashtouta.jpg',
+  'sw-15': '/images/products/kashtouta.jpg',
+  'sw-16': '/images/products/kashtouta.jpg',
+  'sw-17': '/images/products/rice-pudding.jpg',
+  'sw-18': '/images/products/rice-pudding.jpg',
+  'sw-19': '/images/products/om-ali.jpg',
+  'sw-20': '/images/products/rice-pudding.jpg',
+  'sw-21': '/images/products/rice-pudding.jpg',
+  'sw-22': '/images/products/rice-pudding.jpg',
+  'sw-23': '/images/products/rice-pudding.jpg',
+
+  // 2. Mango World (Authentic store drink & chunks)
+  'mg-1': '/images/products/mango-cocktail-bar.jpg',
+  'mg-9': '/images/products/mango-chunks-bowl.jpg',
+
+  // 3. Fruit Salad & Cups (Authentic store cocktail bowls & ice cream bowls)
+  'fs-1': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-3': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-4': '/images/products/fruit-salad-icecream.jpg',
+  'fs-5': '/images/products/fruitella-cocktail-bowl.jpg',
+  'fs-6': '/images/products/fruitella-cocktail-bowl.jpg',
+
+  // 4. Power Fruitella (Authentic store royal avocado with nuts)
+  'pw-3': '/images/products/avocado-nuts-mango-pair.jpg',
+  'pw-12': '/images/products/avocado-nuts-mango-pair.jpg',
+
+  // 5. Ice Cream World (Authentic store ice cream dishes)
+  'ic-4': '/images/products/fruit-salad-icecream.jpg',
+  'ic-7': '/images/products/fruit-salad-icecream.jpg'
+};
+
+// Any product without an authentic photo directly shows the Fruitella logo
+products.forEach(p => {
+  if (verifiedProductsMap[p.id]) {
+    p.image = verifiedProductsMap[p.id];
+  } else {
+    p.image = '/images/brand/fruitella-logo.jpg';
+  }
+});
+
 categories.forEach(cat => {
   cat.itemCount = products.filter(p => p.categorySlug === cat.slug).length;
 });
