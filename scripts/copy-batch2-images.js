@@ -76,3 +76,4 @@ for (const [file, slug] of Object.entries(mapping)) {
 }
 
 console.log(`\nSuccessfully copied and named ${copied} images!`);
+
