@@ -182,7 +182,15 @@ type CheckoutStep = 1 | 2 | 3;
                     @if (selectedType() === 'delivery') {
                       <div class="f-card-status active-status">
                         <i class="fa-solid fa-check-circle"></i>
-                        <span>رسوم التوصيل {{ deliveryFee() === 0 ? 'مجاناً' : deliveryFee() + ' ج.م' }}</span>
+                        <span>
+                          @if (!deliveryDistrict) {
+                            سعر التوصيل يحدد حسب المنطقة
+                          } @else if (deliveryDistrict.includes('أخرى')) {
+                            سعر التوصيل يحدد لاحقاً
+                          } @else {
+                            رسوم التوصيل {{ deliveryFee() }} ج.م
+                          }
+                        </span>
                       </div>
                     }
                   </div>
@@ -799,8 +807,10 @@ type CheckoutStep = 1 | 2 | 3;
                 <div class="calc-row">
                   <span>رسوم التوصيل:</span>
                   @if (selectedType() === 'delivery') {
-                    @if (deliveryFee() === 0) {
-                      <span class="free-badge">مجاناً</span>
+                    @if (!deliveryDistrict) {
+                      <span class="val text-muted" style="font-size: 0.8rem;">تحدد عند اختيار المنطقة</span>
+                    } @else if (deliveryDistrict.includes('أخرى')) {
+                      <span class="val text-muted" style="font-size: 0.8rem;">تحدد مع خدمة العملاء</span>
                     } @else {
                       <span class="val">{{ deliveryFee() }} ج.م</span>
                     }

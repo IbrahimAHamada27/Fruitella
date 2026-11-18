@@ -122,8 +122,8 @@ export function isCustomDeliveryArea(districtName: string): boolean {
   return districtName.includes('أخرى') || districtName === 'other-area';
 }
 
-export function getDeliveryFeeForDistrict(districtName: string): number {
-  if (!districtName) return DELIVERY_SERVICE_CONFIG.standardFee;
+export function getDeliveryFeeForDistrict(districtName?: string): number {
+  if (!districtName || !districtName.trim()) return 0;
   if (isCustomDeliveryArea(districtName)) return 0;
   const match = OFFICIAL_DELIVERY_AREAS.find(a => 
     a.nameAr === districtName || 

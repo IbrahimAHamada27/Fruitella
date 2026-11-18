@@ -46,13 +46,13 @@ export class FulfillmentService {
    */
   getDeliveryFee(districtName?: string): number {
     const district = districtName || this.deliveryDetails()?.district;
-    return district ? getDeliveryFeeForDistrict(district) : this.deliveryConfig.standardFee;
+    return district ? getDeliveryFeeForDistrict(district) : 0;
   }
 
   readonly currentDeliveryFee = computed(() => {
     if (this.activeType() !== 'delivery') return 0;
     const d = this.deliveryDetails();
-    return d ? getDeliveryFeeForDistrict(d.district) : this.deliveryConfig.standardFee;
+    return d && d.district ? getDeliveryFeeForDistrict(d.district) : 0;
   });
 
   readonly isTableSelected = computed(() => {
@@ -75,7 +75,9 @@ export class FulfillmentService {
       case 'delivery': {
         const d = this.deliveryDetails();
         const fee = this.currentDeliveryFee();
-        return d ? `توصيل إلى ${d.district} (رسوم ${fee} ج.م)` : `دليفري لمدينة العبور (رسوم ${fee} ج.م)`;
+        return d?.district 
+          ? `توصيل إلى ${d.district} (رسوم ${fee > 0 ? fee + ' ج.م' : 'تحدد لاحقاً'})` 
+          : `دليفري لمدينة العبور`;
       }
     }
   });
