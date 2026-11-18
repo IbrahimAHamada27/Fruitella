@@ -2180,6 +2180,9 @@ export class CheckoutComponent {
 
       this.toastService.show(`تم تجهيز طلبك (${result.orderNumber})، جاري تحويلك لمتابعة التأكيد!`, 'success', 5000);
 
+      // Clear the cart so the customer can start fresh
+      this.cartService.clearCart();
+
       // Navigate to order confirmation
       this.router.navigate(['/order-confirmation', result.orderId]);
     } catch (err: unknown) {
