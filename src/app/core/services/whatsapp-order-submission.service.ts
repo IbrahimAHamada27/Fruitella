@@ -198,7 +198,7 @@ export class WhatsAppOrderSubmissionService implements IOrderSubmissionService {
         lines.push(`رسوم التوصيل: لم يتم تحديد التوصيل`);
       } else {
         const deliveryFeeVal = payload.summary.deliveryFee ?? 0;
-        lines.push(`رسوم التوصيل: ${deliveryFeeVal === 0 ? 'مجاناً' : deliveryFeeVal + ' EGP'}`);
+        lines.push(`رسوم التوصيل: ${deliveryFeeVal} EGP`);
       }
     } else {
       lines.push(`رسوم التوصيل: 0 EGP`);

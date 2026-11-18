@@ -101,7 +101,7 @@ export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
   enabled: true,
   minimumOrderAmount: 50,
   standardFee: 25,
-  freeDeliveryThreshold: 250,
+  freeDeliveryThreshold: 0,
   estimatedMinutes: 6,
   cityAr: 'مدينة العبور',
   areas: OFFICIAL_DELIVERY_AREAS,

@@ -30,11 +30,6 @@ export class CartService {
     }
     const sub = this.subtotal();
     if (sub === 0) return 0;
-    const config = this.fulfillmentService.deliveryConfig;
-    // Check if free delivery applies when exceeding threshold
-    if (config.freeDeliveryThreshold && sub >= config.freeDeliveryThreshold) {
-      return 0;
-    }
     // Dynamic area-based fee resolved through FulfillmentService
     return this.fulfillmentService.currentDeliveryFee();
   });
