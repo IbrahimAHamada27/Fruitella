@@ -382,7 +382,9 @@ type CheckoutStep = 1 | 2 | 3;
                               id="delDistrict" 
                               [ngModel]="deliveryDistrict" 
                               (ngModelChange)="onDistrictChange($event)"
-                              class="form-input district-select">
+                              class="form-input district-select"
+                              [class.input-error]="fieldErrors['deliveryDistrict']">
+                              <option value="" disabled selected>-- اختر الحي / المنطقة --</option>
                               @for (area of deliveryAreas; track area.id) {
                                 <option [value]="area.nameAr">
                                   {{ area.nameAr }} — {{ area.fee > 0 ? (area.fee + ' ج.م') : 'سعر التوصيل يحدد لاحقاً' }}
@@ -391,6 +393,9 @@ type CheckoutStep = 1 | 2 | 3;
                             </select>
                             <i class="fa-solid fa-chevron-down select-chevron"></i>
                           </div>
+                          @if (fieldErrors['deliveryDistrict']) {
+                            <span class="field-error-msg">{{ fieldErrors['deliveryDistrict'] }}</span>
+                          }
                         </div>
 
                         <div class="field-group">
@@ -475,11 +480,17 @@ type CheckoutStep = 1 | 2 | 3;
                       <div class="delivery-perks-row">
                         <div class="perk-chip">
                           <i class="fa-solid fa-clock"></i>
-                          <span>التوصيل خلال: <strong>4 - 8 دقائق</strong></span>
+                          <span>التوصيل خلال: <strong>10 - 20 دقيقة</strong></span>
                         </div>
                         <div class="perk-chip">
                           <i class="fa-solid fa-coins"></i>
-                          <span>رسوم التوصيل: <strong>{{ deliveryFee() === 0 ? 'مجاناً' : deliveryFee() + ' ج.م' }}</strong></span>
+                          @if (!deliveryDistrict) {
+                            <span>رسوم التوصيل: <strong>اختر المنطقة لحساب السعر</strong></span>
+                          } @else if (deliveryDistrict.includes('أخرى')) {
+                            <span>رسوم التوصيل: <strong>يحدد لاحقاً</strong></span>
+                          } @else {
+                            <span>رسوم التوصيل: <strong>{{ deliveryFee() }} ج.م</strong></span>
+                          }
                         </div>
                       </div>
                     </div>
@@ -2002,7 +2013,7 @@ export class CheckoutComponent {
   // Delivery specific (El Obour city)
   readonly deliveryAreas = this.fulfillmentService.deliveryAreas;
   readonly districtsList = this.fulfillmentService.deliveryConfig.districtsAr;
-  deliveryDistrict = this.districtsList[0] || 'الحي الأول';
+  deliveryDistrict = '';
   deliveryStreet = '';
   deliveryBuilding = '';
   deliveryLandmark = '';
@@ -2122,6 +2133,10 @@ export class CheckoutComponent {
 
     // Delivery specific checks (El Obour city)
     if (this.selectedType() === 'delivery') {
+      if (!this.deliveryDistrict) {
+        this.fieldErrors['deliveryDistrict'] = 'يرجى اختيار الحي / المنطقة لحساب التوصيل';
+        isValid = false;
+      }
       if (!this.deliveryStreet.trim()) {
         this.fieldErrors['deliveryStreet'] = 'اسم الشارع ورقم العقار مطلوبان لتوصيل الطلب داخل العبور';
         isValid = false;

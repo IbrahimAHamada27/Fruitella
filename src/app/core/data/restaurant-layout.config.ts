@@ -105,7 +105,7 @@ export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
   minimumOrderAmount: 50,
   standardFee: 25,
   freeDeliveryThreshold: 0,
-  estimatedMinutes: 6,
+  estimatedMinutes: 15,
   cityAr: 'مدينة العبور',
   areas: OFFICIAL_DELIVERY_AREAS,
   districtsAr: OFFICIAL_DELIVERY_AREAS.map(a => a.nameAr)

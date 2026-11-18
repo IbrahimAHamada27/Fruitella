@@ -29,7 +29,7 @@ export const FRUITELLA_BUSINESS_INFO: BusinessInfo = {
   },
   currencyAr: 'ج.م',
   currencyEn: 'EGP',
-  deliveryEstimatedMinutes: 6
+  deliveryEstimatedMinutes: 15
 };
 
 export const FRUITELLA_ANNOUNCEMENTS = [

@@ -132,7 +132,7 @@ import { TableQrHelperModalComponent } from '../table-qr-helper-modal/table-qr-h
               </div>
               <div class="status-actions-wrap">
                 <span class="time-est-badge delivery-tag">
-                  <i class="fa-regular fa-clock"></i> التوصيل خلال 4 - 8 دقائق
+                  <i class="fa-regular fa-clock"></i> التوصيل خلال 10 - 20 دقيقة
                 </span>
               </div>
             }
