@@ -11,7 +11,9 @@ import {
 import { 
   CAR_SERVICE_CONFIG, 
   DELIVERY_SERVICE_CONFIG, 
+  OFFICIAL_DELIVERY_AREAS,
   findTable, 
+  getDeliveryFeeForDistrict,
   isValidTable, 
   RESTAURANT_TABLES, 
   TAKEAWAY_SERVICE_CONFIG 
@@ -36,7 +38,22 @@ export class FulfillmentService {
   readonly allTables = RESTAURANT_TABLES;
   readonly carConfig = CAR_SERVICE_CONFIG;
   readonly deliveryConfig = DELIVERY_SERVICE_CONFIG;
+  readonly deliveryAreas = OFFICIAL_DELIVERY_AREAS;
   readonly takeawayConfig = TAKEAWAY_SERVICE_CONFIG;
+
+  /**
+   * Resolves delivery fee for a specific district name
+   */
+  getDeliveryFee(districtName?: string): number {
+    const district = districtName || this.deliveryDetails()?.district;
+    return district ? getDeliveryFeeForDistrict(district) : this.deliveryConfig.standardFee;
+  }
+
+  readonly currentDeliveryFee = computed(() => {
+    if (this.activeType() !== 'delivery') return 0;
+    const d = this.deliveryDetails();
+    return d ? getDeliveryFeeForDistrict(d.district) : this.deliveryConfig.standardFee;
+  });
 
   readonly isTableSelected = computed(() => {
     return this.activeType() === 'table' && !!this.tableDetails();
@@ -57,7 +74,8 @@ export class FulfillmentService {
         return `استلام من المحل (تيك أواي - جاهز خلال 4 - 8 دقائق)`;
       case 'delivery': {
         const d = this.deliveryDetails();
-        return d ? `توصيل إلى ${d.district}` : `دليفري لمدينة العبور (رسوم ${this.deliveryConfig.standardFee} ج.م)`;
+        const fee = this.currentDeliveryFee();
+        return d ? `توصيل إلى ${d.district} (رسوم ${fee} ج.م)` : `دليفري لمدينة العبور (رسوم ${fee} ج.م)`;
       }
     }
   });
@@ -120,6 +138,26 @@ export class FulfillmentService {
   setTakeawayDetails(details: TakeawayDetails): void {
     this.activeType.set('takeaway');
     this.takeawayDetails.set(details);
+  }
+
+  setDeliveryDistrict(districtName: string): void {
+    const current = this.deliveryDetails();
+    const fee = getDeliveryFeeForDistrict(districtName);
+    this.deliveryDetails.set({
+      city: current?.city || this.deliveryConfig.cityAr,
+      district: districtName,
+      street: current?.street || '',
+      building: current?.building,
+      floor: current?.floor,
+      apartment: current?.apartment,
+      landmark: current?.landmark,
+      customerName: current?.customerName,
+      customerPhone: current?.customerPhone,
+      alternativePhone: current?.alternativePhone,
+      notes: current?.notes,
+      deliveryFee: fee,
+      estimatedMinutes: this.deliveryConfig.estimatedMinutes
+    });
   }
 
   setDeliveryDetails(details: DeliveryDetails): void {

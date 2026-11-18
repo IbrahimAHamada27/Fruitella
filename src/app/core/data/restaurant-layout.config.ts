@@ -7,6 +7,12 @@ export interface CarServiceConfig {
   instructionsAr: string;
 }
 
+export interface DeliveryAreaConfig {
+  id: string;
+  nameAr: string;
+  fee: number;
+}
+
 export interface DeliveryServiceConfig {
   enabled: boolean;
   minimumOrderAmount: number;
@@ -15,6 +21,7 @@ export interface DeliveryServiceConfig {
   estimatedMinutes: number;
   cityAr: string;
   districtsAr: string[];
+  areas: DeliveryAreaConfig[];
 }
 
 export interface TakeawayServiceConfig {
@@ -71,6 +78,25 @@ export const CAR_SERVICE_CONFIG: CarServiceConfig = {
   instructionsAr: 'قم بصف سيارتك أمام المحل أو بمواقف مدخل 2، واكتب رقم السيارة ولونها ليصلك الطلب في عربيتك طازجاً ومثلجاً دون الحاجة للنزول.'
 };
 
+export const OFFICIAL_DELIVERY_AREAS: DeliveryAreaConfig[] = [
+  { id: 'district-7', nameAr: 'الحي السابع', fee: 35 },
+  { id: 'district-6', nameAr: 'الحي السادس', fee: 25 },
+  { id: 'district-9', nameAr: 'الحي التاسع', fee: 35 },
+  { id: 'district-8', nameAr: 'الحي الثامن', fee: 50 },
+  { id: 'industrial-1', nameAr: 'المنطقة الصناعية الأولى', fee: 50 },
+  { id: 'district-5', nameAr: 'الحي الخامس', fee: 35 },
+  { id: 'district-4', nameAr: 'الحي الرابع', fee: 50 },
+  { id: 'district-1', nameAr: 'الحي الأول', fee: 50 },
+  { id: 'khalaf-city', nameAr: 'الخلف ستّي', fee: 50 },
+  { id: 'district-2', nameAr: 'الحي الثاني', fee: 60 },
+  { id: 'district-3', nameAr: 'الحي الثالث', fee: 50 },
+  { id: 'orabi-association', nameAr: 'جمعية عرابي', fee: 60 },
+  { id: 'university-street', nameAr: 'شارع الجامعة', fee: 25 },
+  { id: 'golf-compound', nameAr: 'كمبوند الجولف', fee: 60 },
+  { id: 'nakheel-resort', nameAr: 'منتجع النخيل', fee: 80 },
+  { id: 'other-area', nameAr: 'أخرى (منطقة أخرى لم تذكر)', fee: 0 }
+];
+
 export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
   enabled: true,
   minimumOrderAmount: 50,
@@ -78,28 +104,8 @@ export const DELIVERY_SERVICE_CONFIG: DeliveryServiceConfig = {
   freeDeliveryThreshold: 250,
   estimatedMinutes: 6,
   cityAr: 'مدينة العبور',
-  districtsAr: [
-    'الحي السادس (بجوار مول حياة تاون — التوصيل الأسرع)',
-    'الحي السابع',
-    'الحي الخامس',
-    'الحي الأول (المحليات 5، 6، 8، 12)',
-    'الحي الثاني',
-    'الحي الثالث',
-    'الحي الرابع',
-    'الحي الثامن',
-    'الحي التاسع',
-    'حي الشباب (إسكان 100م و 70م)',
-    'حي المستقبل',
-    'الإسكان العائلي (1، 2، 3، 4، 5)',
-    'كمبوند جنة العبور (Janna)',
-    'كمبوند دار مصر العبور',
-    'كمبوند سكن مصر العبور',
-    'كمبوند الجولف سيتي (Golf City)',
-    'حي الفيلات والقصور (الحي الترفيهي)',
-    'المنطقة الصناعية الأولى / ب & ج',
-    'خط 10 والامتداد الشمالي',
-    'أخرى داخل مدينة العبور'
-  ]
+  areas: OFFICIAL_DELIVERY_AREAS,
+  districtsAr: OFFICIAL_DELIVERY_AREAS.map(a => a.nameAr)
 };
 
 export const TAKEAWAY_SERVICE_CONFIG: TakeawayServiceConfig = {
@@ -107,6 +113,22 @@ export const TAKEAWAY_SERVICE_CONFIG: TakeawayServiceConfig = {
   estimatedMinutes: 6,
   pickupCounterAr: 'كاونتر الاستلام السريع بفرع مول حياة تاون (مدخل 2)'
 };
+
+export function isCustomDeliveryArea(districtName: string): boolean {
+  if (!districtName) return false;
+  return districtName.includes('أخرى') || districtName === 'other-area';
+}
+
+export function getDeliveryFeeForDistrict(districtName: string): number {
+  if (!districtName) return DELIVERY_SERVICE_CONFIG.standardFee;
+  if (isCustomDeliveryArea(districtName)) return 0;
+  const match = OFFICIAL_DELIVERY_AREAS.find(a => 
+    a.nameAr === districtName || 
+    districtName.includes(a.nameAr) || 
+    a.nameAr.includes(districtName)
+  );
+  return match ? match.fee : 0;
+}
 
 export function isValidTable(tableNumber: number, _area?: DiningArea): boolean {
   if (isNaN(tableNumber)) return false;

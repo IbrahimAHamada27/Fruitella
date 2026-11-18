@@ -70,81 +70,76 @@ export class WhatsAppOrderSubmissionService implements IOrderSubmissionService {
   }
 
   /**
-   * Builds the formatted WhatsApp order text in clear, courteous Arabic.
+   * Builds the formatted WhatsApp order text in clear, courteous Arabic according to Fruitella standards.
    */
   buildWhatsAppMessage(order: { orderNumber: string }, payload: OrderSubmissionPayload): string {
     const lines: string[] = [];
 
     // Header
-    lines.push(`🥑 *طلب جديد — فروتيلا (Fruitella)* 🥭`);
+    lines.push(`🛍️ *طلب جديد — فروتيلا (Fruitella)*`);
     lines.push(`📋 *رقم الطلب:* ${order.orderNumber}`);
     lines.push(`⏰ *التاريخ:* ${new Date().toLocaleDateString('ar-EG')} — ${new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })}`);
-    lines.push(`⏳ *وقت الانتظار المتوقع:* 4 - 8 دقائق`);
     lines.push(``);
 
-    // Fulfillment Details
-    lines.push(`📍 *طريقة الاستلام:*`);
-    switch (payload.fulfillmentType) {
-      case 'table': {
-        const tableNum = payload.tableDetails?.tableNumber ? `#${payload.tableDetails.tableNumber}` : 'غير محدد';
-        const detected = payload.tableDetails?.detectedFromQr ? ' (مسح رمز QR)' : '';
-        lines.push(`• صالة الفرع — *ترابيزة ${tableNum}*${detected}`);
-        break;
-      }
-      case 'car': {
-        lines.push(`• خدمة السيارة (أمام مدخل 2 بمول حياة تاون)`);
-        if (payload.carDetails?.vehiclePlate) {
-          lines.push(`  - رقم اللوحة: ${payload.carDetails.vehiclePlate}`);
-        }
-        if (payload.carDetails?.vehicleModel || payload.carDetails?.vehicleColor) {
-          lines.push(`  - مواصفات السيارة: ${[payload.carDetails.vehicleModel, payload.carDetails.vehicleColor].filter(Boolean).join(' - ')}`);
-        }
-        if (payload.carDetails?.parkingSpot) {
-          lines.push(`  - مكان الانتظار: ${payload.carDetails.parkingSpot}`);
-        }
-        break;
-      }
-      case 'takeaway': {
-        lines.push(`• استلام تيك أواي من كاونتر فرع حياة تاون`);
-        break;
-      }
-      case 'delivery': {
-        lines.push(`• دليفري لمدينة العبور:`);
-        lines.push(`  - الحي: ${payload.deliveryDetails?.district || ''}`);
-        lines.push(`  - الشارع والعقار: ${payload.deliveryDetails?.street || ''}`);
-        if (payload.deliveryDetails?.building) {
-          lines.push(`  - تفاصيل الشقة/الدور: ${payload.deliveryDetails.building}`);
-        }
-        if (payload.deliveryDetails?.landmark) {
-          lines.push(`  - علامة مميزة: ${payload.deliveryDetails.landmark}`);
-        }
-        if (payload.deliveryDetails?.alternativePhone) {
-          lines.push(`  - رقم بديل: ${payload.deliveryDetails.alternativePhone}`);
-        }
-        break;
-      }
-    }
-    lines.push(``);
-
-    // Customer Info
+    // Customer Info Section
     lines.push(`👤 *بيانات العميل:*`);
-    lines.push(`• الاسم: ${payload.customer.fullName || 'عميل فروتيلا'}`);
+    lines.push(`الاسم: ${payload.customer.fullName || 'عميل فروتيلا'}`);
     if (payload.customer.phone && payload.customer.phone !== 'طلب طاولة بدون هاتف') {
-      lines.push(`• الهاتف: ${payload.customer.phone}`);
+      lines.push(`رقم الهاتف: ${payload.customer.phone}`);
     }
-
-    // Payment Method
-    let payText = 'نقداً (كاش عند الاستلام)';
-    if (payload.paymentMethod === 'instapay') payText = 'إنستاباي (InstaPay عند الاستلام)';
-    else if (payload.paymentMethod === 'vodafone_cash') payText = 'فودافون كاش (عند الاستلام)';
-    lines.push(`• طريقة السداد: ${payText}`);
+    if (payload.deliveryDetails?.alternativePhone) {
+      lines.push(`رقم الهاتف البديل: ${payload.deliveryDetails.alternativePhone}`);
+    }
     lines.push(``);
 
-    // Items List
-    lines.push(`🛒 *تفاصيل الأصناف المطلوبة (${payload.items.length}):*`);
-    payload.items.forEach((item, idx) => {
-      lines.push(`${idx + 1}. *${item.nameAr}* (×${item.quantity}) — ${item.totalPrice} ج.م`);
-      lines.push(`   الحجم: ${item.selectedSize.nameAr}`);
+    // Fulfillment Details Section
+    const methodAr = payload.fulfillmentType === 'delivery' 
+      ? 'توصيل للمنزل (Delivery)' 
+      : payload.fulfillmentType === 'table'
+      ? 'طلب صالة (Dine-in Table)'
+      : payload.fulfillmentType === 'car'
+      ? 'خدمة السيارة (Car Service)'
+      : 'استلام من الفرع (Pickup / Takeaway)';
+
+    lines.push(`📍 *تفاصيل الاستلام والتوصيل:*`);
+    lines.push(`طريقة الاستلام: ${methodAr}`);
+
+    if (payload.fulfillmentType === 'delivery') {
+      const addressParts: string[] = [];
+      if (payload.deliveryDetails?.street) addressParts.push(payload.deliveryDetails.street);
+      if (payload.deliveryDetails?.building) addressParts.push(payload.deliveryDetails.building);
+      if (payload.deliveryDetails?.landmark) addressParts.push(`(علامة مميزة: ${payload.deliveryDetails.landmark})`);
+      
+      const district = payload.deliveryDetails?.district || 'مدينة العبور';
+      const isCustomArea = district.includes('أخرى');
+      lines.push(`المنطقة: ${district}`);
+      lines.push(`العنوان: ${addressParts.join(' - ') || 'مدينة العبور'}`);
+      
+      if (isCustomArea) {
+        lines.push(`رسوم التوصيل: لم يتم تحديد التوصيل (يحدد مع خدمة العملاء)`);
+      } else {
+        const deliveryFeeVal = payload.summary.deliveryFee ?? 0;
+        lines.push(`رسوم التوصيل: ${deliveryFeeVal === 0 ? 'مجاناً' : deliveryFeeVal + ' EGP'}`);
+      }
+    } else if (payload.fulfillmentType === 'table') {
+      const tableNum = payload.tableDetails?.tableNumber ? `#${payload.tableDetails.tableNumber}` : 'غير محدد';
+      const detected = payload.tableDetails?.detectedFromQr ? ' (مسح رمز QR)' : '';
+      lines.push(`طاولة رقم: ${tableNum}${detected}`);
+    } else if (payload.fulfillmentType === 'car') {
+      if (payload.carDetails?.vehiclePlate) lines.push(`رقم لوحة السيارة: ${payload.carDetails.vehiclePlate}`);
+      if (payload.carDetails?.vehicleModel || payload.carDetails?.vehicleColor) {
+        lines.push(`مواصفات السيارة: ${[payload.carDetails.vehicleModel, payload.carDetails.vehicleColor].filter(Boolean).join(' - ')}`);
+      }
+      if (payload.carDetails?.parkingSpot) lines.push(`مكان الانتظار: ${payload.carDetails.parkingSpot}`);
+    } else if (payload.fulfillmentType === 'takeaway') {
+      lines.push(`مكان الاستلام: كاونتر الاستلام السريع بفرع مول حياة تاون (مدخل 2)`);
+    }
+    lines.push(``);
+
+    // Items Details Section
+    lines.push(`🛒 *تفاصيل الطلب:*`);
+    payload.items.forEach((item) => {
+      lines.push(`- ${item.nameAr} (${item.selectedSize.nameAr}) × ${item.quantity} = ${item.totalPrice} EGP`);
 
       // Beverage Customization
       if (item.customization) {
@@ -166,59 +161,70 @@ export class WhatsAppOrderSubmissionService implements IOrderSubmissionService {
         else if (c.iceLevel === 'light') customParts.push('ثلج خفيف');
 
         if (customParts.length > 0) {
-          lines.push(`   التحضير: ${customParts.join(' • ')}`);
+          lines.push(`  ↳ التحضير: ${customParts.join(' • ')}`);
         }
       }
 
       // Ice cream customization
       if (item.iceCreamCustomization) {
         const ic = item.iceCreamCustomization;
-        if (ic.selectedFlavors?.length) {
-          lines.push(`   النكهات: ${ic.selectedFlavors.join(' + ')}`);
-        }
-        if (ic.servingType) {
-          lines.push(`   التقديم: ${ic.servingType}`);
-        }
-        if (ic.sauce) {
-          lines.push(`   الصوص: ${ic.sauce}`);
+        const icParts: string[] = [];
+        if (ic.selectedFlavors?.length) icParts.push(`النكهات: ${ic.selectedFlavors.join(' + ')}`);
+        if (ic.servingType) icParts.push(`التقديم: ${ic.servingType}`);
+        if (ic.sauce) icParts.push(`الصوص: ${ic.sauce}`);
+        if (icParts.length > 0) {
+          lines.push(`  ↳ ${icParts.join(' • ')}`);
         }
       }
 
       // Addons
       if (item.selectedAddons && item.selectedAddons.length > 0) {
         const addonsStr = item.selectedAddons.map(a => `${a.nameAr} (+${a.price} ج)`).join(', ');
-        lines.push(`   إضافات: ${addonsStr}`);
+        lines.push(`  ↳ إضافات: ${addonsStr}`);
       }
 
       // Special notes
       if (item.specialInstructions) {
-        lines.push(`   ملاحظة: ${item.specialInstructions}`);
+        lines.push(`  ↳ ملاحظة خاصة: ${item.specialInstructions}`);
       }
     });
-    lines.push(``);
 
-    // Summary & Total
-    lines.push(`💰 *الحساب الإجمالي:*`);
-    lines.push(`• إجمالي الأصناف: ${payload.summary.subtotal} ج.م`);
+    lines.push(``);
+    lines.push(`━━━━━━━━━━━━━━`);
+    lines.push(`إجمالي المنتجات: ${payload.summary.subtotal} EGP`);
     if (payload.fulfillmentType === 'delivery') {
-      const fee = payload.summary.deliveryFee ?? (payload.summary.subtotal >= 250 ? 0 : 25);
-      lines.push(`• رسوم التوصيل: ${fee === 0 ? 'مجاناً' : fee + ' ج.م'}`);
-      lines.push(`• *المبلغ الإجمالي المستحق: ${payload.summary.total} ج.م*`);
+      const isCustomArea = (payload.deliveryDetails?.district || '').includes('أخرى');
+      if (isCustomArea) {
+        lines.push(`رسوم التوصيل: لم يتم تحديد التوصيل`);
+      } else {
+        const deliveryFeeVal = payload.summary.deliveryFee ?? 0;
+        lines.push(`رسوم التوصيل: ${deliveryFeeVal === 0 ? 'مجاناً' : deliveryFeeVal + ' EGP'}`);
+      }
     } else {
-      lines.push(`• *المبلغ الإجمالي المستحق: ${payload.summary.total} ج.م*`);
+      lines.push(`رسوم التوصيل: 0 EGP`);
+    }
+    lines.push(`الخصم: 0 EGP`);
+    lines.push(``);
+    if (payload.fulfillmentType === 'delivery' && (payload.deliveryDetails?.district || '').includes('أخرى')) {
+      lines.push(`💰 *الإجمالي النهائي: ${payload.summary.subtotal} EGP + مصاريف التوصيل عند التأكيد*`);
+    } else {
+      lines.push(`💰 *الإجمالي النهائي: ${payload.summary.total} EGP*`);
     }
 
-    // Overall Customer Notes
+    // Payment Method & Notes
+    let payText = 'نقداً (كاش عند الاستلام)';
+    if (payload.paymentMethod === 'instapay') payText = 'إنستاباي (InstaPay)';
+    else if (payload.paymentMethod === 'vodafone_cash') payText = 'فودافون كاش';
+    lines.push(`طريقة السداد: ${payText}`);
+
     if (payload.notes?.trim() || payload.customer.notes?.trim()) {
       const note = (payload.notes || payload.customer.notes || '').trim();
-      lines.push(``);
-      lines.push(`📝 *ملاحظات عامة على الطلب:*`);
-      lines.push(note);
+      lines.push(`ملاحظات إضافية: ${note}`);
     }
 
     // Courteous closing
     lines.push(``);
-    lines.push(`يرجى مراجعة الطلب وتأكيد الاستلام والتجهيز. شكراً لكم! ✨`);
+    lines.push(`شكرًا لطلبكم من فروتيلا ❤️`);
 
     return lines.join('\n');
   }
