@@ -375,13 +375,22 @@ type CheckoutStep = 1 | 2 | 3;
                         <div class="field-group">
                           <label for="delDistrict">
                             الحي / المنطقة داخل مدينة العبور *
-                            <span class="label-hint">(اختر منطقتك بالعبور)</span>
+                            <span class="label-hint">(اختر منطقتك لمعرفة سعر التوصيل)</span>
                           </label>
-                          <select id="delDistrict" [(ngModel)]="deliveryDistrict" class="form-input">
-                            @for (d of districtsList; track d) {
-                              <option [value]="d">{{ d }}</option>
-                            }
-                          </select>
+                          <div class="select-wrapper">
+                            <select 
+                              id="delDistrict" 
+                              [ngModel]="deliveryDistrict" 
+                              (ngModelChange)="onDistrictChange($event)"
+                              class="form-input district-select">
+                              @for (area of deliveryAreas; track area.id) {
+                                <option [value]="area.nameAr">
+                                  {{ area.nameAr }} — {{ area.fee > 0 ? (area.fee + ' ج.م') : 'سعر التوصيل يحدد لاحقاً' }}
+                                </option>
+                              }
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-chevron"></i>
+                          </div>
                         </div>
 
                         <div class="field-group">
@@ -1263,6 +1272,43 @@ type CheckoutStep = 1 | 2 | 3;
       border-color: var(--fruitella-green-700);
       box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.12);
     }
+    .select-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    .district-select {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+      cursor: pointer;
+      padding-inline-start: 1rem;
+      padding-inline-end: 2.5rem;
+      font-weight: 600;
+      color: var(--fruitella-green-900);
+      border: 1.5px solid #fbcfe8;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+    .district-select:focus {
+      border-color: #db2777;
+      box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.15);
+    }
+    .district-select option {
+      font-weight: 500;
+      padding: 0.5rem;
+      color: #1f2937;
+    }
+    .select-chevron {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #db2777;
+      font-size: 0.85rem;
+      transition: transform var(--transition-fast) ease;
+    }
     .input-error {
       border-color: #ef4444 !important;
       background: #fef2f2 !important;
@@ -1954,8 +2000,9 @@ export class CheckoutComponent {
   carSpot = '';
 
   // Delivery specific (El Obour city)
+  readonly deliveryAreas = this.fulfillmentService.deliveryAreas;
   readonly districtsList = this.fulfillmentService.deliveryConfig.districtsAr;
-  deliveryDistrict = this.districtsList[0] || 'الحي السادس (بجوار مول حياة تاون — التوصيل الأسرع)';
+  deliveryDistrict = this.districtsList[0] || 'الحي الأول';
   deliveryStreet = '';
   deliveryBuilding = '';
   deliveryLandmark = '';
@@ -1997,12 +2044,23 @@ export class CheckoutComponent {
   goToStep(step: CheckoutStep): void {
     if (step === 2 && !this.validateStep1()) return;
     if (step === 3 && (!this.validateStep1() || !this.validateStep2())) return;
+    if (this.selectedType() === 'delivery') {
+      this.fulfillmentService.setDeliveryDistrict(this.deliveryDistrict);
+    }
     this.currentStep.set(step);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  onDistrictChange(newDistrict: string): void {
+    this.deliveryDistrict = newDistrict;
+    this.fulfillmentService.setDeliveryDistrict(newDistrict);
+  }
+
   proceedToStep2(): void {
     if (this.validateStep1()) {
+      if (this.selectedType() === 'delivery') {
+        this.fulfillmentService.setDeliveryDistrict(this.deliveryDistrict);
+      }
       this.currentStep.set(2);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

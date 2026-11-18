@@ -79,21 +79,24 @@ export const CAR_SERVICE_CONFIG: CarServiceConfig = {
 };
 
 export const OFFICIAL_DELIVERY_AREAS: DeliveryAreaConfig[] = [
-  { id: 'district-7', nameAr: 'الحي السابع', fee: 35 },
-  { id: 'district-6', nameAr: 'الحي السادس', fee: 25 },
-  { id: 'district-9', nameAr: 'الحي التاسع', fee: 35 },
-  { id: 'district-8', nameAr: 'الحي الثامن', fee: 50 },
-  { id: 'industrial-1', nameAr: 'المنطقة الصناعية الأولى', fee: 50 },
-  { id: 'district-5', nameAr: 'الحي الخامس', fee: 35 },
-  { id: 'district-4', nameAr: 'الحي الرابع', fee: 50 },
+  // الأحياء مرتبة رقمياً
   { id: 'district-1', nameAr: 'الحي الأول', fee: 50 },
-  { id: 'khalaf-city', nameAr: 'الخلف ستّي', fee: 50 },
   { id: 'district-2', nameAr: 'الحي الثاني', fee: 60 },
   { id: 'district-3', nameAr: 'الحي الثالث', fee: 50 },
-  { id: 'orabi-association', nameAr: 'جمعية عرابي', fee: 60 },
+  { id: 'district-4', nameAr: 'الحي الرابع', fee: 50 },
+  { id: 'district-5', nameAr: 'الحي الخامس', fee: 35 },
+  { id: 'district-6', nameAr: 'الحي السادس', fee: 25 },
+  { id: 'district-7', nameAr: 'الحي السابع', fee: 35 },
+  { id: 'district-8', nameAr: 'الحي الثامن', fee: 50 },
+  { id: 'district-9', nameAr: 'الحي التاسع', fee: 35 },
+  // الشوارع والمناطق الصناعية والمشاريع السكنية
   { id: 'university-street', nameAr: 'شارع الجامعة', fee: 25 },
+  { id: 'industrial-1', nameAr: 'المنطقة الصناعية الأولى', fee: 50 },
+  { id: 'khalaf-city', nameAr: 'الخلف ستّي', fee: 50 },
   { id: 'golf-compound', nameAr: 'كمبوند الجولف', fee: 60 },
+  { id: 'orabi-association', nameAr: 'جمعية عرابي', fee: 60 },
   { id: 'nakheel-resort', nameAr: 'منتجع النخيل', fee: 80 },
+  // أخرى
   { id: 'other-area', nameAr: 'أخرى (منطقة أخرى لم تذكر)', fee: 0 }
 ];
 
