@@ -121,23 +121,6 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "itemCount": 12
   },
   {
-    "id": "boba-fruitella",
-    "slug": "boba-fruitella",
-    "nameAr": "بوبا فروتيلا",
-    "nameEn": "Boba Fruitella",
-    "descriptionAr": "مشروبات البوبا بحبيبات البوبا اللذيذة بنكهات الميلك شيك والموهيتو المنعش",
-    "icon": "fa-solid fa-circle-dot",
-    "themeColor": "#7c3aed",
-    "image": "/images/products/boba-milkshake-blueberry.png",
-    "displayOrder": 8,
-    "informationAr": [
-      "اختار نكهة البوبا حسب ذوقك: ميلك شيك كريمي، قهوة، أو موخيتو فوار ومنعش.",
-      "أسعار هذه المجموعة ظاهرة بحجم موحد معتمد في المنيو.",
-      "حبيبات البوبا اللذيذة تمنحك إحساساً ممتعاً بالمضغ مع كل رشفة."
-    ],
-    "itemCount": 10
-  },
-  {
     "id": "chocolate-lovers",
     "slug": "chocolate-lovers",
     "nameAr": "عشاق الشوكولاتة",
@@ -146,7 +129,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-cookie-bite",
     "themeColor": "#451a03",
     "image": "/images/products/oreo-drink.png",
-    "displayOrder": 9,
+    "displayOrder": 8,
     "informationAr": [
       "المنتجات بتختلف حسب نوع الشوكولاتة أو البسكويت المستخدم (أوريو، كيت كات، كيندر، مارس، جلاكسي).",
       "الأصناف اللي اسمها «سوبر» أو «تريبل» لها سعر ومقدار مضاعف من المكونات اللذيذة.",
@@ -163,7 +146,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-spoon",
     "themeColor": "#92400e",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 10,
+    "displayOrder": 9,
     "informationAr": [
       "قسم المكسرات مناسب للي بيفضل نكهات البندق واللوز والكاجو وجوز الهند مع الحليب.",
       "مشروبات الزبادي تجمع بين الزبادي الطبيعي والفواكه الطازجة أو عسل النحل الصافي.",
@@ -180,7 +163,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-martini-glass",
     "themeColor": "#be185d",
     "image": "/images/products/strawberry-milkshake.png",
-    "displayOrder": 11,
+    "displayOrder": 10,
     "informationAr": [
       "الأسعار بتختلف حسب النكهة والحجم (كاس L الفردي وعبوة Liter للمشاركة).",
       "بعض النكهات مرتبطة بالشوكولاتة أو المكسرات أو البسكويت؛ راجع المكونات قبل الطلب.",
@@ -197,7 +180,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-crown",
     "themeColor": "#166534",
     "image": "/images/products/avocado-nuts-mango-pair.jpg",
-    "displayOrder": 12,
+    "displayOrder": 11,
     "informationAr": [
       "اختار بين الأفوكادو الأساسي والخلطات اللي فيها مكسرات أو فواكه أو زبادي أو عسل.",
       "المكونات المذكورة تحت كل اسم توضح تركيبة الخلطة (عسل، حلاوة طحينية، بلح، مكسرات).",
@@ -214,7 +197,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-paw",
     "themeColor": "#854d0e",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 13,
+    "displayOrder": 12,
     "informationAr": [
       "أسماء الرضعات مرتبطة بخلطات مختلفة بقاعدة السوبيا، فاختار بناءً على المكونات وليس الاسم فقط.",
       "سعر جميع أصناف الرضعات موحد (80 ج.م) للحجم المطبوع في المنيو.",
@@ -231,7 +214,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-wand-magic-sparkles",
     "themeColor": "#d97706",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 14,
+    "displayOrder": 13,
     "informationAr": [
       "الميكسات بتختلف في تركيبة الفواكه والإضافات، لذلك راجع وصف ومكونات كل صنف.",
       "الأسعار مقسمة إلى كاس L وعبوة Liter في المنيو؛ اختار الحجم المناسب لرغبتك.",
@@ -248,7 +231,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-ice-cream",
     "themeColor": "#e11d48",
     "image": "/images/products/fruit-salad-icecream.jpg",
-    "displayOrder": 15,
+    "displayOrder": 14,
     "informationAr": [
       "حدد عدد البولات (أبولة، 2 أبولة، 3 أبولة) حسب الحصة المطلوبة.",
       "أطباق «فتة آيس كريم» و«الديناصور» هي أطباق حلويات مركبة غنية بالصلصات والفواكه.",
@@ -265,7 +248,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-martini-glass-citrus",
     "themeColor": "#0d9488",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 16,
+    "displayOrder": 15,
     "informationAr": [
       "القسم بيقدم نكهات مختلفة من الموخيتو بالليمون والنعناع الفريش مع الصودا المنعشة.",
       "الأسعار الظاهرة تخص الحجم المنعش الواحد المذكور في المنيو.",
@@ -282,7 +265,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-heart-pulse",
     "themeColor": "#15803d",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 17,
+    "displayOrder": 16,
     "informationAr": [
       "أسماء المنتجات في هذا القسم كما تظهر في المنيو (الرشاقة، فتنس، راني، جرين، فرساوي).",
       "لو بتتبع نظامًا غذائيًا محددًا، يمكنك طلب العصير بدون سكر أو بسكر دايت ستيفيا مجاناً.",
@@ -299,30 +282,13 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-boxes-stacked",
     "themeColor": "#047857",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 18,
+    "displayOrder": 17,
     "informationAr": [
       "العبوات العائلية مخصصة للأحجام الكبيرة (لتر أو 4 لتر) لتوفير اقتصادي ومثالي للمجموعات.",
       "السعر يتحدد حسب الصنف والحجم المتاح، وليس كل الأصناف لها خيار 4 لتر.",
       "تعبأ العبوات بإحكام فوري لضمان بقائها طازجة وباردة حتى وصولها إليك."
     ],
     "itemCount": 32
-  },
-  {
-    "id": "hot-drinks",
-    "slug": "hot-drinks",
-    "nameAr": "المشروبات الساخنة",
-    "nameEn": "Hot Drinks & Coffee",
-    "descriptionAr": "إسبريسو، كابتشينو، فلات وايت، لاتيه، هوت شوكليت، قهوة تركي وفرنساوي وشاي",
-    "icon": "fa-solid fa-mug-hot",
-    "themeColor": "#78350f",
-    "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 19,
-    "informationAr": [
-      "اختار حجم المشروب حسب الرموز المطبوعة في المنيو (S للحجم الصغير، D للدبل، M للمتوسط).",
-      "اللاتيه والكابتشينو والمشروبات بالشوكولاتة تحضر بالحليب الطبيعي الطازج.",
-      "الإضافات والنكهات الإضافية (كراميل، فانيليا، بندق) متوفرة في قسم إضافة فليفر."
-    ],
-    "itemCount": 24
   },
   {
     "id": "cold-drinks",
@@ -333,7 +299,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-snowflake",
     "themeColor": "#0369a1",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 20,
+    "displayOrder": 18,
     "informationAr": [
       "القسم مخصص للقهوة المثلجة المنعشة المحضرة بالإسبريسو والثلج والحليب البارد.",
       "تتنوع النكهات من الكلاسيك كالأمريكانو واللاتيه إلى نكهات البيستاشيو واللوتس والسولتد كراميل.",
@@ -350,7 +316,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-bottle-water",
     "themeColor": "#1e3a8a",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 21,
+    "displayOrder": 19,
     "informationAr": [
       "يضم القسم مشروبات طاقة ريدبول الأصلية والشوجر فري وموخيتو الريدبول بنكهات الفواكه.",
       "موخيتو الريدبول يجمع بين عبوة الطاقة وقطع الليمون والنعناع وسيرب الفاكهة الطبيعي.",
@@ -367,7 +333,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-cloud",
     "themeColor": "#9a3412",
     "image": "/images/brand/fruitella-logo.jpg",
-    "displayOrder": 22,
+    "displayOrder": 20,
     "informationAr": [
       "القسم يجمع مشروبات الفريبيه المثلجة والمخفوقة بالقهوة والشوكولاتة والكراميل.",
       "تتميز الفريبيه بالقوام السميك والمثلج المزين بصلصات الشوكولاتة والكراميل الفاخرة.",
@@ -384,7 +350,7 @@ export const FRUITELLA_CATEGORIES: ProductCategory[] = [
     "icon": "fa-solid fa-cake-candles",
     "themeColor": "#c026d3",
     "image": "/images/products/fruitella-signature-waffle.jpg",
-    "displayOrder": 23,
+    "displayOrder": 21,
     "informationAr": [
       "راجع عدد القطع في الميني بان كيك قبل الطلب (12 قطعة أو 24 قطعة) لأن الحجم يحدد السعر.",
       "الأصناف اللي فيها نوتيلا أو لوتس أو بيستاشيو أو فواكه تختلف في السعر عن النسخ الأساسية.",
@@ -488,14 +454,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -628,14 +586,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -763,14 +713,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -884,14 +826,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -1015,14 +949,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -1136,14 +1062,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -1267,14 +1185,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -1388,14 +1298,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -1519,14 +1421,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -1640,14 +1534,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -1771,14 +1657,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -1892,14 +1770,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -2023,14 +1893,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -2144,14 +2006,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -2275,14 +2129,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -2391,14 +2237,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -2502,14 +2340,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -2633,14 +2463,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -2744,14 +2566,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -2865,14 +2679,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -2981,14 +2787,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -3092,14 +2890,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -3232,14 +3022,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -3362,14 +3144,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -3502,14 +3276,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -3628,14 +3394,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -3749,14 +3507,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -3889,14 +3639,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -4015,14 +3757,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -4136,14 +3870,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -4276,14 +4002,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -4406,14 +4124,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -4546,14 +4256,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -4667,14 +4369,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -4798,14 +4492,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -4919,14 +4605,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -5059,14 +4737,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -5182,14 +4852,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -5314,14 +4976,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -5436,14 +5090,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -5568,14 +5214,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -5690,14 +5328,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -5822,14 +5452,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -5949,14 +5571,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -6071,14 +5685,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -6212,14 +5818,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -6333,14 +5931,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -6463,14 +6053,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -6583,14 +6165,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -6713,14 +6287,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -6833,14 +6399,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -6963,14 +6521,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -7083,14 +6633,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -7213,14 +6755,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -7333,14 +6867,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -7463,14 +6989,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -7573,14 +7091,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -7693,14 +7203,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -7803,14 +7305,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -7924,14 +7418,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8039,14 +7525,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8149,14 +7627,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -8270,14 +7740,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8385,14 +7847,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8495,14 +7949,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -8625,14 +8071,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8745,14 +8183,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -8874,14 +8304,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -8993,14 +8415,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -9122,14 +8536,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -9241,14 +8647,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -9370,14 +8768,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -9489,14 +8879,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -9618,14 +9000,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -9742,14 +9116,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -9852,14 +9218,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -9973,14 +9331,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -10083,14 +9433,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -10204,14 +9546,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -10314,14 +9648,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -10435,14 +9761,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -10546,14 +9864,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -10666,14 +9976,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -10776,14 +10078,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -10896,14 +10190,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -11006,14 +10292,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -11126,14 +10404,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -11160,1168 +10430,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
     },
     "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
     "extractionStatus": "needs_review",
-    "availability": "available"
-  },
-  {
-    "id": "bb-1",
-    "slug": "boba-milkshake-blueberry",
-    "nameAr": "بوبا ميلك شيك بلو بيري",
-    "nameEn": "Boba Milkshake Blueberry",
-    "descriptionAr": "ميلك شيك كريمي بالتوت الأزرق مع حبيبات البوبا المضغية اللذيذة",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 110,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-milkshake-blueberry.png",
-    "isBestSeller": true,
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-2",
-    "slug": "boba-milkshake-coffee",
-    "nameAr": "بوبا ميلك شيك كوفي",
-    "nameEn": "Boba Milkshake Coffee",
-    "descriptionAr": "ميلك شيك القهوة المثلجة ممزوج بحبيبات البوبا التايوانية",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 110,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-milkshake-coffee.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-3",
-    "slug": "boba-milkshake-mix-berry",
-    "nameAr": "بوبا ميلك شيك ميكس بيري",
-    "nameEn": "Boba Milkshake Mix Berry",
-    "descriptionAr": "ميلك شيك التوت المشكل الغني مع كرات البوبا الطرية",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 110,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-milkshake-mix-berry.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-4",
-    "slug": "boba-milkshake-mango",
-    "nameAr": "بوبا ميلك شيك مانجو",
-    "nameEn": "Boba Milkshake Mango",
-    "descriptionAr": "ميلك شيك المانجو الاستوائية الكثيفة مع حبيبات البوبا",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 110,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-milkshake-mango.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-5",
-    "slug": "boba-milkshake-strawberry",
-    "nameAr": "بوبا ميلك شيك فراولة",
-    "nameEn": "Boba Milkshake Strawberry",
-    "descriptionAr": "ميلك شيك الفراولة اللذيذ بحبيبات البوبا اللطيفة",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 110,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 110,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-milkshake-strawberry.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-6",
-    "slug": "boba-mojito-jelly-cola",
-    "nameAr": "بوبا موخيتو جيلي كولا",
-    "nameEn": "Boba Mojito Jelly Cola",
-    "descriptionAr": "موخيتو الصودا بنكهة الجيلي كولا وحبيبات البوبا المنعشة",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 100,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 100,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-mojito-jelly-cola.png",
-    "isFeatured": true,
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-7",
-    "slug": "boba-mojito-passion-fruit",
-    "nameAr": "بوبا موخيتو باشون فروت",
-    "nameEn": "Boba Mojito Passion Fruit",
-    "descriptionAr": "موخيتو الباشون فروت الاستوائي الفوار مع البوبا",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 100,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 100,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-mojito-passion-fruit.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-8",
-    "slug": "boba-mojito-lemon-mint",
-    "nameAr": "بوبا موخيتو ليمون نعناع",
-    "nameEn": "Boba Mojito Lemon Mint",
-    "descriptionAr": "موخيتو الليمون والنعناع الفريش مع حبيبات البوبا",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 100,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 100,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-mojito-lemon-mint.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-9",
-    "slug": "boba-mojito-blueberry",
-    "nameAr": "بوبا موخيتو بلو بيري",
-    "nameEn": "Boba Mojito Blueberry",
-    "descriptionAr": "موخيتو التوت الأزرق الفوار المزين بحبيبات البوبا",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 100,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 100,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-mojito-blueberry.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "bb-10",
-    "slug": "boba-mojito-green-apple",
-    "nameAr": "بوبا موخيتو تفاح أخضر",
-    "nameEn": "Boba Mojito Green Apple",
-    "descriptionAr": "موخيتو التفاح الأخضر المقرمش والحامض مع حبيبات البوبا",
-    "categorySlug": "boba-fruitella",
-    "categoryNameAr": "بوبا فروتيلا",
-    "basePrice": 100,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كأس بوبا L",
-        "nameEn": "Boba Cup L",
-        "price": 100,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/products/boba-mojito-green-apple.png",
-    "tags": [
-      "بوبا",
-      "ميلك شيك",
-      "موخيتو"
-    ],
-    "ingredientsAr": [
-      "حبيبات بوبا Boba",
-      "صودا / حليب",
-      "نكهة طبيعية"
-    ],
-    "dietary": {
-      "isNatural": false,
-      "isSugarFreeAvailable": false,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/843591924_122230952102500364_3712706342241472189_n.jpg",
-    "extractionStatus": "verified",
     "availability": "available"
   },
   {
@@ -12398,14 +10506,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -12520,14 +10620,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -12631,14 +10723,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -12752,14 +10836,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -12863,14 +10939,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -12984,14 +11052,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -13095,14 +11155,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -13216,14 +11268,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -13327,14 +11371,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -13448,14 +11484,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -13564,14 +11592,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -13675,14 +11695,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -13797,14 +11809,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -13909,14 +11913,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -14030,14 +12026,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -14141,14 +12129,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -14262,14 +12242,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -14373,14 +12345,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -14495,14 +12459,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -14605,14 +12561,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -14724,14 +12672,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -14838,14 +12778,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -14947,14 +12879,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -15070,14 +12994,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -15199,14 +13115,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -15317,14 +13225,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -15445,14 +13345,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -15563,14 +13455,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -15692,14 +13576,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -15810,14 +13686,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -15940,14 +13808,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -16060,14 +13920,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -16190,14 +14042,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -16315,14 +14159,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -16435,14 +14271,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -16566,14 +14394,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -16691,14 +14511,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -16811,14 +14623,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -16942,14 +14746,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -17062,14 +14858,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -17192,14 +14980,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -17317,14 +15097,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -17437,14 +15209,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -17568,14 +15332,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -17689,14 +15445,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -17819,14 +15567,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -17939,14 +15679,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -18070,14 +15802,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -18191,14 +15915,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -18318,14 +16034,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -18452,14 +16160,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -18578,14 +16278,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -18699,14 +16391,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -18834,14 +16518,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -18955,14 +16631,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -19086,14 +16754,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -19207,14 +16867,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -19338,14 +16990,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -19459,14 +17103,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -19590,14 +17226,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -19712,14 +17340,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -19824,14 +17444,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -19945,14 +17557,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -20056,14 +17660,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -20178,14 +17774,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -20294,14 +17882,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -20405,14 +17985,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -20530,14 +18102,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -20662,14 +18226,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -20783,14 +18339,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -20914,14 +18462,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -21040,14 +18580,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -21160,14 +18692,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -21291,14 +18815,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -21412,14 +18928,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -21543,14 +19051,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -21664,14 +19164,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -21794,14 +19286,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -21914,14 +19398,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -22045,14 +19521,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -22164,14 +19632,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -22295,14 +19755,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -22407,14 +19859,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -22528,14 +19972,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -22639,14 +20075,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -22761,14 +20189,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -22878,14 +20298,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -22989,14 +20401,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -23111,14 +20515,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -23223,14 +20619,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -23346,14 +20734,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -23463,14 +20843,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -23575,14 +20947,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -23698,14 +21062,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -23810,14 +21166,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -23932,14 +21280,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -24044,14 +21384,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -24167,14 +21499,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -24279,14 +21603,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -24401,14 +21717,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -24512,14 +21820,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -24634,14 +21934,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -24750,14 +22042,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -24861,14 +22145,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -24991,14 +22267,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -25111,14 +22379,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -25240,14 +22500,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -25359,14 +22611,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -25488,14 +22732,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -25598,14 +22834,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -25728,14 +22956,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -25847,14 +23067,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -25976,14 +23188,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -26095,14 +23299,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -26224,14 +23420,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -26343,14 +23531,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -26472,14 +23652,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -26591,14 +23763,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -26722,14 +23886,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -26841,14 +23997,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -26971,14 +24119,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -27086,14 +24226,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -27196,14 +24328,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -27326,14 +24450,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -27445,14 +24561,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -27574,14 +24682,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -27698,14 +24798,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -27817,14 +24909,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -27947,14 +25031,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -28057,14 +25133,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -28186,14 +25254,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -28296,14 +25356,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -28416,14 +25468,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -28526,14 +25570,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -28646,14 +25682,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -28761,14 +25789,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -28794,2869 +25814,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
       "containsDairy": false
     },
     "verifiedFromAsset": "raw_assets/788766524_122224677374500364_8901415176824020145_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-1",
-    "slug": "espresso-single-double",
-    "nameAr": "إسبريسو سينجل / دبل",
-    "nameEn": "Espresso Single / Double",
-    "descriptionAr": "إسبريسو إيطالي أصلي غني بالكريمة والنكهة القوية",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 50,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (سينجل)",
-        "nameEn": "Single (S)",
-        "price": 50,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "d",
-        "nameAr": "حجم D (دبل)",
-        "nameEn": "Double (D)",
-        "price": 65,
-        "volumeLabel": "D",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isBestSeller": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-2",
-    "slug": "espresso-con-panna",
-    "nameAr": "إسبريسو كوبا بالكريمة",
-    "nameEn": "Espresso Con Panna",
-    "descriptionAr": "شوت إسبريسو غني تعلوه طبقة من الكريمة المخفوقة الفاخرة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 70,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 70,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-3",
-    "slug": "macchiato",
-    "nameAr": "ماكياتو سينجل / دبل",
-    "nameEn": "Macchiato Single / Double",
-    "descriptionAr": "إسبريسو مع نقطة حليب ورغوة مخملية",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 60,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (سينجل)",
-        "nameEn": "Single (S)",
-        "price": 60,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "d",
-        "nameAr": "حجم D (دبل)",
-        "nameEn": "Double (D)",
-        "price": 70,
-        "volumeLabel": "D",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-4",
-    "slug": "cappuccino",
-    "nameAr": "كابتشينو إيطالي",
-    "nameEn": "Italian Cappuccino",
-    "descriptionAr": "توازن مثالي بين الإسبريسو والحليب المبخر والرغوة الكثيفة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 85,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (صغير)",
-        "nameEn": "Small (S)",
-        "price": 85,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "m",
-        "nameAr": "حجم M (متوسط)",
-        "nameEn": "Medium (M)",
-        "price": 100,
-        "volumeLabel": "M",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isBestSeller": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-5",
-    "slug": "caffe-latte",
-    "nameAr": "كافيه لاتيه ناعم",
-    "nameEn": "Caffè Latte",
-    "descriptionAr": "إسبريسو غني مع كمية سخية من الحليب المبخر الناعم",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 80,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (صغير)",
-        "nameEn": "Small (S)",
-        "price": 80,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "m",
-        "nameAr": "حجم M (متوسط)",
-        "nameEn": "Medium (M)",
-        "price": 100,
-        "volumeLabel": "M",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-6",
-    "slug": "flat-white",
-    "nameAr": "فلات وايت أسترالي",
-    "nameEn": "Flat White",
-    "descriptionAr": "دبل ريستريتو مع حليب ميكروفوم حريري",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 80,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (صغير)",
-        "nameEn": "Small (S)",
-        "price": 80,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "m",
-        "nameAr": "حجم M (متوسط)",
-        "nameEn": "Medium (M)",
-        "price": 100,
-        "volumeLabel": "M",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isFeatured": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-7",
-    "slug": "americano",
-    "nameAr": "أمريكانو ساخن",
-    "nameEn": "Hot Americano",
-    "descriptionAr": "إسبريسو ممدد بالماء الساخن لنكهة قهوة سوداء نقية",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 70,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (صغير)",
-        "nameEn": "Small (S)",
-        "price": 70,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "m",
-        "nameAr": "حجم M (متوسط)",
-        "nameEn": "Medium (M)",
-        "price": 90,
-        "volumeLabel": "M",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-8",
-    "slug": "cortado",
-    "nameAr": "كورتادو إسباني",
-    "nameEn": "Spanish Cortado",
-    "descriptionAr": "نسبة متساوية تماماً 1:1 من الإسبريسو والحليب المبخر الدافئ",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 70,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 70,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-9",
-    "slug": "spanish-latte-hot",
-    "nameAr": "إسبانيش لاتيه ساخن",
-    "nameEn": "Hot Spanish Latte",
-    "descriptionAr": "إسبريسو مع الحليب المكثف المحلى والحليب المبخر الفاخر",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 125,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 125,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isFeatured": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-10",
-    "slug": "hot-lotus-latte",
-    "nameAr": "هوت لوتس لاتيه",
-    "nameEn": "Hot Lotus Biscoff Latte",
-    "descriptionAr": "لاتيه ساخن ممزوج بزبدة وبسكويت اللوتس المقرمش",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 125,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 125,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-11",
-    "slug": "salted-caramel-latte",
-    "nameAr": "سولتد كاراميل لاتيه",
-    "nameEn": "Salted Caramel Latte",
-    "descriptionAr": "لاتيه دافئ بالكراميل المملح ونكهة غنية فاخرة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 125,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 125,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-12",
-    "slug": "pistachio-latte-hot",
-    "nameAr": "بيستاشيو لاتيه ساخن",
-    "nameEn": "Hot Pistachio Latte",
-    "descriptionAr": "إسبريسو مع صوص الفستق الحلبي الطبيعي والحليب المبخر",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 135,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 135,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isFeatured": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": true,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-13",
-    "slug": "hot-mocha",
-    "nameAr": "موكا ساخنة",
-    "nameEn": "Hot Caffè Mocha",
-    "descriptionAr": "إسبريسو وشوكولاتة بلجيكية وحليب مبخر ساخن",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 120,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 120,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-14",
-    "slug": "hot-white-mocha",
-    "nameAr": "وايت موكا ساخنة",
-    "nameEn": "Hot White Chocolate Mocha",
-    "descriptionAr": "إسبريسو مع الشوكولاتة البيضاء والحليب المبخر المخملي",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 120,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 120,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-15",
-    "slug": "hot-chocolate",
-    "nameAr": "هوت شوكليت فاخر",
-    "nameEn": "Rich Hot Chocolate",
-    "descriptionAr": "شوكولاتة بالحليب غنية ومكثفة ودافئة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 80,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S",
-        "nameEn": "Small (S)",
-        "price": 80,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "m",
-        "nameAr": "حجم M",
-        "nameEn": "Medium (M)",
-        "price": 100,
-        "volumeLabel": "M",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isBestSeller": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-16",
-    "slug": "hot-apple-cider",
-    "nameAr": "هوت أبل سيدر بالقرفة",
-    "nameEn": "Hot Apple Cider Cinnamon",
-    "descriptionAr": "عصير تفاح ساخن مع عيدان القرفة العطرية",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 70,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 70,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-17",
-    "slug": "black-tea",
-    "nameAr": "شاي أحمر كلاسيك",
-    "nameEn": "Classic Black Tea",
-    "descriptionAr": "شاي أسود فاخر مخمر ومقدم ساخناً",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 25,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 25,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-18",
-    "slug": "green-tea",
-    "nameAr": "شاي أخضر نقي",
-    "nameEn": "Pure Green Tea",
-    "descriptionAr": "أوراق الشاي الأخضر الطبيعي النقي والصحي",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 25,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 25,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-19",
-    "slug": "green-tea-mint",
-    "nameAr": "شاي أخضر بالنعناع",
-    "nameEn": "Green Tea with Fresh Mint",
-    "descriptionAr": "شاي أخضر مع أوراق النعناع الفريش العطرة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 30,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 30,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-20",
-    "slug": "tea-latte",
-    "nameAr": "شاي لاتيه (كرك)",
-    "nameEn": "Tea Latte Karak",
-    "descriptionAr": "شاي أسود مغلي بالحليب الطبيعي والهيل بنكهة شرقية",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 40,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 40,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-21",
-    "slug": "turkish-coffee",
-    "nameAr": "قهوة تركي على الريحة / مضبوط",
-    "nameEn": "Turkish Coffee Single / Double",
-    "descriptionAr": "بن تركي مطحون طازج ومطهو على الرمال الساخنة بوش كثيف",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 40,
-    "sizes": [
-      {
-        "id": "s",
-        "nameAr": "حجم S (سينجل)",
-        "nameEn": "Single (S)",
-        "price": 40,
-        "volumeLabel": "S",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      },
-      {
-        "id": "d",
-        "nameAr": "حجم D (دبل)",
-        "nameEn": "Double (D)",
-        "price": 55,
-        "volumeLabel": "D",
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "isBestSeller": true,
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-22",
-    "slug": "french-coffee",
-    "nameAr": "قهوة فرنساوي باللبن",
-    "nameEn": "French Coffee with Milk",
-    "descriptionAr": "بن فاخر مع الحليب المبخر بنكهة فرنسية ناعمة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 60,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 60,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": true
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-23",
-    "slug": "hazelnut-coffee",
-    "nameAr": "قهوة بندق فواحة",
-    "nameEn": "Hazelnut Infused Coffee",
-    "descriptionAr": "قهوة غنية بنكهة البندق المحمص المطحون",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 70,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 70,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": true,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
-    "extractionStatus": "verified",
-    "availability": "available"
-  },
-  {
-    "id": "hd-24",
-    "slug": "caramel-coffee",
-    "nameAr": "قهوة بالكراميل",
-    "nameEn": "Caramel Infused Coffee",
-    "descriptionAr": "قهوة تركية مع لمسة كراميل سكرية دافئة",
-    "categorySlug": "hot-drinks",
-    "categoryNameAr": "المشروبات الساخنة",
-    "basePrice": 60,
-    "sizes": [
-      {
-        "id": "regular",
-        "nameAr": "كوب ساخن قياسي",
-        "nameEn": "Standard Hot Cup",
-        "price": 60,
-        "volumeLabel": "L",
-        "isDefault": true,
-        "availability": "available",
-        "extractionStatus": "verified"
-      }
-    ],
-    "availableAddons": [
-      {
-        "id": "flavor-caramel",
-        "nameAr": "إضافة سيرب كراميل",
-        "nameEn": "Caramel Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-vanilla",
-        "nameAr": "إضافة سيرب فانيليا",
-        "nameEn": "Vanilla Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-hazelnut",
-        "nameAr": "إضافة سيرب بندق",
-        "nameEn": "Hazelnut Syrup",
-        "price": 25,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "flavor-white-cream",
-        "nameAr": "إضافة وايت كريم فاخر",
-        "nameEn": "Premium White Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nuts",
-        "nameAr": "مكسرات فاخرة (كاجو ولوز وبندق)",
-        "nameEn": "Mixed Premium Nuts",
-        "price": 40,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "nutella",
-        "nameAr": "إضافة نوتيلا أصلية",
-        "nameEn": "Nutella Drizzle",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "cream",
-        "nameAr": "قشطة بلدي طبيعية",
-        "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "honey",
-        "nameAr": "عسل نحل طبيعي",
-        "nameEn": "Pure Natural Honey",
-        "price": 10,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      }
-    ],
-    "image": "/images/brand/fruitella-logo.jpg",
-    "tags": [
-      "ساخن",
-      "قهوة",
-      "شاي",
-      "إسبريسو"
-    ],
-    "ingredientsAr": [
-      "بن مميز / شاي",
-      "حليب حسب الطلب"
-    ],
-    "dietary": {
-      "isNatural": true,
-      "isSugarFreeAvailable": true,
-      "containsNuts": false,
-      "containsDairy": false
-    },
-    "verifiedFromAsset": "raw_assets/788385102_122224677386500364_2708389542535036758_n.jpg",
     "extractionStatus": "verified",
     "availability": "available"
   },
@@ -31734,14 +25891,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -31851,14 +26000,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -31982,14 +26123,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -32093,14 +26226,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -32215,14 +26340,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -32327,14 +26444,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -32448,14 +26557,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -32564,14 +26665,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -32675,14 +26768,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -32798,14 +26883,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -32910,14 +26987,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -33033,14 +27102,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -33146,14 +27207,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -33268,14 +27321,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -33380,14 +27425,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -33498,14 +27535,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -33622,14 +27651,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -33735,14 +27756,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -33859,14 +27872,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -33977,14 +27982,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -34090,14 +28087,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -34214,14 +28203,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -34327,14 +28308,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -34446,14 +28419,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -34571,14 +28536,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -34685,14 +28642,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -34809,14 +28758,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -34924,14 +28865,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -35056,14 +28989,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -35171,14 +29096,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -35296,14 +29213,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -35415,14 +29324,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -35529,14 +29430,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -35654,14 +29547,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -35768,14 +29653,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -35893,14 +29770,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36012,14 +29881,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36126,14 +29987,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -36251,14 +30104,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36370,14 +30215,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36484,14 +30321,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -36609,14 +30438,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36724,14 +30545,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -36848,14 +30661,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -36962,14 +30767,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "id": "cream",
         "nameAr": "قشطة بلدي طبيعية",
         "nameEn": "Fresh Clotted Cream",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
         "price": 30,
         "categoryId": "add-flavor",
         "availability": "available"
@@ -37087,14 +30884,6 @@ export const FRUITELLA_PRODUCTS: Product[] = [
         "availability": "available"
       },
       {
-        "id": "boba",
-        "nameAr": "حبيبات بوبا Boba Pearls",
-        "nameEn": "Boba Pearls",
-        "price": 30,
-        "categoryId": "add-flavor",
-        "availability": "available"
-      },
-      {
         "id": "honey",
         "nameAr": "عسل نحل طبيعي",
         "nameEn": "Pure Natural Honey",
@@ -37183,14 +30972,6 @@ export const FRUITELLA_ADDONS: ProductAddon[] = [
     "id": "cream",
     "nameAr": "قشطة بلدي طبيعية",
     "nameEn": "Fresh Clotted Cream",
-    "price": 30,
-    "categoryId": "add-flavor",
-    "availability": "available"
-  },
-  {
-    "id": "boba",
-    "nameAr": "حبيبات بوبا Boba Pearls",
-    "nameEn": "Boba Pearls",
     "price": 30,
     "categoryId": "add-flavor",
     "availability": "available"
