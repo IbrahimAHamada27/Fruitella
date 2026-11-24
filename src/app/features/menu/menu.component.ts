@@ -279,7 +279,7 @@ import { CategoryInformationComponent } from '../../shared/components/category-i
     /* 2. Sticky Category Navigation Chips (Flush with Header, Opaque Background) */
     .category-nav-bar {
       position: sticky;
-      top: var(--header-height, 56px);
+      top: 0;
       z-index: 990;
       background: #ffffff;
       border-bottom: 1px solid rgba(13, 41, 20, 0.08);

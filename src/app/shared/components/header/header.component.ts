@@ -336,8 +336,7 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
   styles: [`
     :host {
       display: block;
-      position: sticky;
-      top: 0;
+      position: relative;
       z-index: 1000;
       width: 100%;
     }
@@ -456,16 +455,15 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     /* Main Header: Antigravity Glassmorphism */
     .main-header {
       position: relative;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(13, 41, 20, 0.08);
-      box-shadow: inset 0 -1px 0 rgba(13, 41, 20, 0.04), 0 4px 18px rgba(13, 41, 20, 0.03);
+      box-shadow: 0 2px 10px rgba(13, 41, 20, 0.04);
       transition: box-shadow var(--transition-normal);
     }
     .main-header.scrolled {
-      box-shadow: inset 0 -1px 0 rgba(13, 41, 20, 0.06), 0 8px 30px rgba(13, 41, 20, 0.08);
+      box-shadow: 0 4px 18px rgba(13, 41, 20, 0.08);
     }
     .header-inner {
       display: flex;
@@ -540,7 +538,8 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1rem;
+      flex-shrink: 0;
     }
     .nav-item {
       font-size: 0.92rem;
@@ -585,6 +584,8 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
       text-decoration: none;
       transition: all var(--transition-fast);
       cursor: pointer;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
     .branch-pill:hover {
       border-color: var(--fruitella-lime);
@@ -601,6 +602,7 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
       align-items: center;
       justify-content: center;
       font-size: 0.82rem;
+      flex-shrink: 0;
     }
     .branch-details {
       display: flex;
@@ -622,7 +624,8 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     /* Search Box */
     .search-form {
       position: relative;
-      width: 200px;
+      width: 170px;
+      flex-shrink: 0;
     }
     .search-input {
       width: 100%;
@@ -631,7 +634,7 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
       border-radius: var(--radius-full);
       border: 1.5px solid var(--border-subtle);
       background: #f7faf7;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       outline: none;
       transition: all var(--transition-fast);
     }
@@ -1025,12 +1028,12 @@ import { FulfillmentType } from '../../../core/models/fulfillment.model';
     }
 
     /* Responsive */
-    @media (max-width: 1100px) {
+    @media (max-width: 1250px) {
       .branch-pill {
         display: none;
       }
     }
-    @media (max-width: 992px) {
+    @media (max-width: 1050px) {
       .desktop-nav {
         display: none;
       }
@@ -1142,18 +1145,20 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
-      this.isScrolled.set(window.scrollY > 20);
+      this.isScrolled.set(window.scrollY > 30);
 
       this.ngZone.runOutsideAngular(() => {
         let ticking = false;
         window.addEventListener('scroll', () => {
           if (!ticking) {
             window.requestAnimationFrame(() => {
-              const scrolled = window.scrollY > 20;
-              if (this.isScrolled() !== scrolled) {
-                this.ngZone.run(() => {
-                  this.isScrolled.set(scrolled);
-                });
+              const currentY = window.scrollY;
+              const currentlyScrolled = this.isScrolled();
+              // Hysteresis threshold to prevent rapid toggle flickering
+              if (!currentlyScrolled && currentY > 40) {
+                this.ngZone.run(() => this.isScrolled.set(true));
+              } else if (currentlyScrolled && currentY < 15) {
+                this.ngZone.run(() => this.isScrolled.set(false));
               }
               ticking = false;
             });
